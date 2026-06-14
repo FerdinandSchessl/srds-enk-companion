@@ -112,9 +112,9 @@
 
 ## 7. Disclosure (§9.5)
 
-- **Patent:** USPTO Provisional Patent Application 63/892,677 (eingereicht 2. Oktober 2025)
-- **Eingeschränkt:** ausschließlich operative Kalibrierungs-Schwellwerte der Budget-Zustandsmaschine
-- **Publiziert:** Axiomatik, Theoreme, Lean-4-Beweise, Architektur, alle hier dokumentierten Substrate
+- **Modell:** Responsible Disclosure — offener Mechanismus, zurückgehaltene „Dosis" (**kein Patent-Bezug**).
+- **Zurückgehalten:** ausschließlich die operativen Kalibrier-Schwellwerte der Budget-Zustandsmaschine; die Architektur ist schwellwert-unabhängig.
+- **Publiziert:** Axiomatik, Theoreme, Lean-4-Beweise, Architektur, alle hier dokumentierten Substrate.
 
 ---
 
