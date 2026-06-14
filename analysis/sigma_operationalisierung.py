@@ -513,7 +513,7 @@ def write_report(summary, all_results, output_path):
     lines.append(f"**Datum:** {__import__('datetime').date.today()}")
     lines.append(f"**n:** {len(all_results)} Chats")
     lines.append(f"**Referenz:** delta_NC2~NC2 R²_detrended=0.07, rho=-0.160 (n.s.)")
-    lines.append(f"**Spec:** ~/archive/spec_sigma_operationalisierung.md\n")
+    lines.append(f"**Spec:** operative Spezifikation der Sigma_c-Konjektur\n")
     lines.append("---\n")
     lines.append("## Ergebnis-Tabelle\n")
     lines.append("| Kandidat | n | R²_level | R²_detr | |cor(σ,ε)| | ρ(R²,mal) | p | MW p | Grade |")

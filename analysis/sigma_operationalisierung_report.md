@@ -3,7 +3,7 @@
 **Datum:** 2026-03-29
 **n:** 176 Chats
 **Referenz:** delta_NC2~NC2 R²_detrended=0.07, rho=-0.160 (n.s.)
-**Spec:** ~/archive/spec_sigma_operationalisierung.md
+**Spec:** operative Spezifikation der Σ_c-Konjektur (§9.2 Programm C)
 
 ---
 

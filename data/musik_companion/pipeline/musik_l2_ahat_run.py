@@ -2,7 +2,7 @@
 """
 Musik-Substrat auf ℓ₂ (Stück-Skala) — Pro-Stück-â auf MIDI/MusicXML.
 
-Konstrukt-Anker: paper/v2/audit/preregistration_musik_l2.md
+Konstrukt-Anker: Musik-L2-Praeregistrierung (intern, 2026-05-16)
 Strain-Achse: cumsum(|interval|/12) — Pitch-Bewegungs-Energie
 Stress-Achse: cumsum(neue_edge) — Vocabulary-Aufbau
 

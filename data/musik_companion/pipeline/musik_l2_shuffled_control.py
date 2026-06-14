@@ -13,7 +13,7 @@ Erwartung (falls Sequenz-Geometrie):
 Falsifikations-Bedingung:
   - Wenn Genre-Trennung im Shuffled-Run BLEIBT → Vocabulary-Effekt, nicht Sigmoid-Geometrie
 
-Konstrukt-Anker: paper/v2/audit/preregistration_musik_l2.md §5
+Konstrukt-Anker: Musik-L2-Praeregistrierung (intern, 2026-05-16)
 """
 
 import argparse

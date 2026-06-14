@@ -4,6 +4,25 @@
 
 Dieser Ordner enthält alle Reproduktions-Artefakte, die das Concise-Paper allein abdecken (Lean-4 Beweise, Roh-Daten der zehn Substrate, Pipeline-Skripte, Genealogie). Der Ordner ist so strukturiert, dass ein Reviewer ihn isoliert klonen oder navigieren kann.
 
+## Die zehn Substrate (Überblick)
+
+Details je Substrat im `REPRODUCIBILITY_MANIFEST.md` (§-Nummern rechts).
+
+| # | Substrat | n | Kern-Befund | Manifest |
+|---|---|---|---|---|
+| 1 | Holz (DIN EN 408) | 230 | $r = -0.83$; $\tilde{a} = 0.567$ | §4.1 |
+| 2 | Multi-Material Multiaxial Fatigue | 914 | $R^2 \geq 0.5$ in 74 % der Metalle | §4.2 |
+| 3 | Finance (SPY) | 10 / 135 | Crash $R^2 = 0.973$ / Calm $0.483$ | §4.3 |
+| 4 | Lignin (Kraft-Aufschluss) | 90 | $\rho_S = -0.77$; $\tilde{a} = 0.325$ | §4.4 |
+| 5 | V-Dem Autokratisierungen | 117 | Median $R^2 = 0.983$ | §4.5 |
+| 6 | Erdbeben (USGS) | 284 | $\rho(\hat{a}, \text{Mainshock}) = +0.673$ | §4.7 |
+| 7 | Batterie (CALB) | 26 | KS-D $= 0.733$; $\tilde{a} = 0.646$; $\rho(\text{EOL}) = +0.18$ n.s. | §4.8 |
+| 8 | Kolorektal (TCGA) | 579 | $\Delta\tilde{a}$ (MSI–MSS) $= -0.153$ | §4.9 |
+| 9 | LLM-Konversation (ENK Gold) | 202 | $\rho = -0.359$; Ridge $0.700$ | §4.10 |
+| 10 | Musik (MetaMIDI / music21) | 2.840 | Median $R^2 = 0.975$; $\tau = +1.000$ | §4.11 |
+
+**Kein Substrat:** Politische Reden (Bundestag/ParlaMint) sind eine V-Dem-Failure-Mode (§4.6). Vorhergesagte Null-Kontrollen (keine Substrate): ProsocialDialog, Sotopia, Google COVID Mobility (§8.1).
+
 ## Inhalt
 
 | Pfad | Inhalt |
@@ -37,6 +56,6 @@ Dieser Ordner enthält alle Reproduktions-Artefakte, die das Concise-Paper allei
 
 Der Code (Lean 4, Python-Skripte) steht unter MIT (siehe `LICENSE`). Die Roh-Daten unterliegen den jeweiligen Quell-Lizenzen (siehe externe URLs).
 
-## v2-Paper
+## Längere Fassung
 
-Dieses `concise/`-Companion ist self-contained. Ein längeres v2-Paper (~100 S.) ist in Vorbereitung.
+Dieses Companion ist self-contained und deckt das SRDS+ENK-Paper ab. Eine ausführlichere Fassung ist in Vorbereitung.

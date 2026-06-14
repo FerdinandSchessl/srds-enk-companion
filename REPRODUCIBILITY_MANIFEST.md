@@ -23,7 +23,7 @@
 ## 2. Cross-Domain Substrate (§4)
 
 ### §4.1 Holz (Anker) — DIN EN 408:2012-10
-- **Roh-Daten:** `data/holz_master/Probekörper_Zugprüfung_original.xlsx` ($n = 319$ Prüfkörper, balanced $n = 230$ aus S7+S10+S13)
+- **Roh-Daten:** Zenodo-DOI `10.5281/zenodo.18340365` ($n = 319$ Prüfkörper, balanced $n = 230$ aus S7+S10+S13; Verweis in `data/holz_master/README.md`)
 - **Externe Quelle:** Master-Thesis Schessl 2025, Zenodo `10.5281/zenodo.18340365`
 - **Werte:** $\tilde{a} = 0.567$ (Mean), $r(\hat{a}, \sigma_\text{break}) = -0.83$ (Pearson; Spearman $\rho = -0.99$), $p_\mathrm{perm} < 10^{-30}$
 
@@ -67,7 +67,7 @@
 - **Werte:** $\rho = -0.359$ cluster-robust, Ridge $\rho = 0.700 \pm 0.076$
 
 ### §4.11 Musik (MetaMIDI + music21 + Tagtraum)
-- **Pre-Registrierung:** `paper/v2/audit/preregistration_musik_l2.md` (im ENK-Repo, datiert 2026-05-16)
+- **Pre-Registrierung:** Musik-L2-Präregistrierung (im Haupt-Repo, datiert 2026-05-16)
 - **Pipeline-Skripte:** `data/musik_companion/pipeline/`
   - `musik_l2_lakh_cross_genre.py` — Hauptpipeline für 5 Lakh-Pop-Genres
   - `musik_l2_ahat_run.py` — Sigmoid-Fit + $\hat{a}$-Extraktion
@@ -86,7 +86,7 @@
 ## 3. Cross-Corpus Konversationen (§6)
 
 - 12 Konversations-Korpora ($\approx 35{,}300$ Gespräche): ENK-Gold, BothBosu v3, GasConv, Awry (CGA Wikipedia), LegalCon, MentalManip, P4G, SafeDialBench, CoSafe, ProsocialDialog, Sotopia, Google COVID Mobility
-- **Cross-Method-Triangulation:** im ENK-Repo unter `analysis/nc2_zigzag_validation/` (CORRECTNESS_AUDIT + RUN_REPORT)
+- **Cross-Method-Triangulation:** im Haupt-Repo (`nc2_zigzag_validation/`, CORRECTNESS_AUDIT + RUN_REPORT)
 
 ## 4. Genealogie (§9.4)
 

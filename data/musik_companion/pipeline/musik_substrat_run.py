@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Musik-Substrat — SRDS-â auf MIDI-Korpus (Variante A).
 
-Briefing: ~/todos/2026-05-16_musik_substrat_briefing.md
+Briefing: Musik-Substrat-Briefing (intern, 2026-05-16)
 Zweck:    â-Hierarchie pro Genre + Komplexitaets-Kollaps-Trend ueber Zeit.
 
 Methodik: MIDI → Note-Stream → Sliding-Window → Network-Density →
