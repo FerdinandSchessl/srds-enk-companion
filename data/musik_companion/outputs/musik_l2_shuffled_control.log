@@ -1,0 +1,33 @@
+SHUFFLED-CONTROL: loading tagtraum...
+  Electronic  : 200 MIDIs
+  Jazz        : 184 MIDIs
+  Pop         : 200 MIDIs
+  Rap         : 87 MIDIs
+  Rock        : 200 MIDIs
+./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+  [50] last=Jazz ok=50 valid=50
+  [100] last=Jazz ok=100 valid=100
+  [150] last=Jazz ok=150 valid=150
+  [200] last=Pop ok=200 valid=200
+  [250] last=Pop ok=250 valid=250
+  [300] last=Pop ok=300 valid=300
+  [350] last=Pop ok=350 valid=350
+  [400] last=Rock ok=400 valid=400
+  [450] last=Rock ok=450 valid=450
+  [500] last=Rock ok=500 valid=500
+  [550] last=Rock ok=550 valid=550
+  [600] last=Electronic ok=600 valid=600
+  [650] last=Electronic ok=650 valid=650
+  [700] last=Electronic ok=700 valid=700
+  [750] last=Electronic ok=749 valid=749
+  [800] last=Rap ok=798 valid=798
+  [850] last=Rap ok=847 valid=847
+
+=== SHUFFLED-CONTROL SUMMARY (Negativkontroll-Erwartung: ã alle ~0.5, Genre-Trennung verschwindet) ===
+n_total=871, n_valid=867, median R²=0.975
+  Rock         n= 200 ã=0.265 IQR=[0.226, 0.298] σ=0.058
+  Electronic   n= 199 ã=0.272 IQR=[0.213, 0.326] σ=0.089
+  Pop          n= 200 ã=0.273 IQR=[0.237, 0.306] σ=0.059
+  Rap          n=  84 ã=0.282 IQR=[0.233, 0.331] σ=0.091
+  Jazz         n= 184 ã=0.342 IQR=[0.296, 0.372] σ=0.053
