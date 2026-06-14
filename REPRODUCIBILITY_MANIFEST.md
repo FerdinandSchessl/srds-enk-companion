@@ -58,7 +58,7 @@
 - **Werte:** KS-D $= 0.733$ ($p = 5.7 \cdot 10^{-14}$), $\tilde{a} = 0.646$ (Median), $\rho(\hat{a}, \text{EOL}) = +0.18$ n.s. (7/26 bis EOL, rechts-zensiert). *(War NASA-PCoE-Surrogat $+0.853$ / $0.616$ — synthetisch, superseded durch CALB-Real-Lauf 06-03.)*
 
 ### §4.9 Kolorektal TCGA
-- **Roh-Daten:** `data/crc/tcga_crc_combined.csv` (Quell-Daten), `data/crc/crc_results.json` + `crc_results_v2.json` (Sigmoid-Fits)
+- **Roh-Daten:** `data/crc/tcga_crc_combined.csv` (Quell-Daten), `data/crc/crc_results_v2.json` (Sigmoid-Fits, MSI/MSS getrennt: $n_\text{MSI}=76$, $n_\text{MSS}=503$)
 - **Externe Quelle:** TCGA Pan-Cancer-Atlas (`portal.gdc.cancer.gov`)
 - **Werte:** $n = 579$, MSI–MSS $\Delta\hat{a} = -0.153$, $p < 10^{-4}$
 
