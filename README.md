@@ -23,7 +23,7 @@ Details je Substrat im `REPRODUCIBILITY_MANIFEST.md` (§-Nummern rechts).
 | 1 | Holz (DIN EN 408) | 230 | $r = -0.83$; $\tilde{a} = 0.567$ | §4.1 |
 | 2 | Multi-Material Multiaxial Fatigue | 914 | $R^2 \geq 0.5$ in 74 % der Metalle | §4.2 |
 | 3 | Finance (SPY) | 10 / 135 | Crash $R^2 = 0.973$ / Calm $0.483$ | §4.3 |
-| 4 | Lignin/LCC (SP-LCC, Alopaeus 2025) | 72 | $\rho_S = -0.78$ (β-O-4 vs P-Faktor); $\tilde{a} = 0.325$ | §4.4 |
+| 4 | Lignin/LCC (SP-LCC, Alopaeus 2025) | 72 Bed. | $\rho_S = -0.78$ (β-O-4 vs P-Faktor); $\tilde{a} = 0.21$ (Logistic) | §4.4 |
 | 5 | V-Dem Autokratisierungen | 117 | Median $R^2 = 0.983$ | §4.5 |
 | 6 | Erdbeben (USGS) | 284 | $\rho(\hat{a}, \text{Mainshock}) = +0.673$ | §4.7 |
 | 7 | Batterie (CALB) | 26 | KS-D $= 0.733$; $\tilde{a} = 0.646$; $\rho(\text{EOL}) = +0.18$ n.s. | §4.8 |
