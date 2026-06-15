@@ -24,15 +24,17 @@ No-package scripts (Python standard library only) are marked **[stdlib]**; the r
 The paper uses **two** thresholds; keeping them apart matters:
 
 1. **Strict `p < 10⁻³`** — the headline: of the six Table-18 substrates, **five** clear it;
-   **DSC** sits at `p = 0.0016` (n = 6), a named borderline.
+   **DSC** sits at `D = 0.42, p = 0.18` (n = 6, per supplement S8.6), a named borderline that
+   does not clear `p < 10⁻³`.
 2. **γ_M = α/9 ≈ 0.00556** — the engineering safety-factor analogue, a Bonferroni-style
-   threshold over the nine-test family. DSC clears this (0.0016 < 0.00556), so under γ_M the
-   count is 6/6.
+   threshold over the nine-test family. DSC does **not** clear this (p = 0.18 > 0.00556), so under
+   γ_M the count is **5/6** as well. (An earlier draft listed DSC at p = 0.0016, which is not
+   reproducible from D = 0.42, n = 6 by any KS procedure; the S8.6 value p = 0.18 is canonical.)
 
 The earlier **"19 of 26"** figure was the γ_M count over the *extended 26-substructure*
 exploratory set (sector ETFs, forced materials, etc. — supplement S8), **not** over these six
-main substrates. `bonferroni_gamma_m.py` reproduces the 5/6 (strict) and 6/6 (γ_M) counts and
-prints this note.
+main substrates. `bonferroni_gamma_m.py` reproduces the 5/6 count (DSC fails both the strict and
+the γ_M threshold) and prints this note.
 
 ## Null model (what the KS test is against)
 

@@ -6,7 +6,7 @@
   Run `lake build` to verify all proofs.
 
   Revision: 23 Feb 2026
-  - Added NumericalCertificate.lean (certified Q̇(1/2) ∈ [1.858, 1.879])
+  - Added NumericalCertificate.lean (Arb enclosure Q̇(1/2) ∈ [1.8412, 1.8963]; axiom conservative [1.75, 1.99])
   - Added AxiomAudit.lean (complete inventory of all axioms)
   - Refactored NoGo.lean: nogo_step5 now derives from certificate
 -/
@@ -50,7 +50,7 @@ import PositivityProofs.AxiomAudit
 - `no_universal_transition`: No universal transition point exists
 
 ### Certified Numerical Result
-- `Q_dot_half_in_certified_interval`: Q̇(1/2) ∈ [1.858, 1.879]
+- `Q_dot_half_in_certified_interval`: Q̇(1/2) ∈ [1.75, 1.99] (conservative axiom; Arb enclosure [1.8412, 1.8963])
 - `Q_dot_half_nonzero`: Q̇(1/2) ≠ 0 (from interval)
 - `nogo_step5_certified`: Step 5 verified via Arb 256-bit arithmetic
 

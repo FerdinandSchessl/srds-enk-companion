@@ -105,7 +105,7 @@ def linearizedEquation (DR : C01 → C01) (perturbation : C01) (Q_dot : C01) : P
      The gauge normalization A introduces symmetric mixing, forcing Q̇_s(1/2) ≠ 0.
 
   2. NUMERICAL (NumericalCertificate.lean):
-     Q̇(1/2) ∈ [1.858, 1.879] certified via Arb 256-bit interval arithmetic.
+     Q̇(1/2) ∈ [1.8412, 1.8963] certified via Arb 256-bit interval arithmetic (Lean axiom conservative [1.75, 1.99]).
      For ε = 0.0625, η = 0.3.
 
   The numerical certificate provides rigorous verification for specific parameters.

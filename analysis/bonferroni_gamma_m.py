@@ -65,12 +65,12 @@ def main():
     n = len(rows)
     print("-" * 78)
     print(f"unter strikter Schwelle p < {STRICT:g}:   {n_strict}/{n}   "
-          f"(erwartet 5/6 — DSC Grenzfall p=0.0016 > 1e-3)")
+          f"(erwartet 5/6 — DSC Grenzfall p=0.18 > 1e-3)")
     print(f"unter gamma_M = {GAMMA_M:.5f}:          {n_gamma}/{n}   "
-          f"(DSC zaehlt hier mit: 0.0016 < {GAMMA_M:.5f})")
+          f"(DSC faellt auch hier: 0.18 > {GAMMA_M:.5f})")
     print()
-    ok = (n_strict == 5 and n_gamma == 6)
-    print("REPRODUKTION DER HEADLINE:", "OK (5/6 strikt, 6/6 unter gamma_M)" if ok else "ABWEICHUNG")
+    ok = (n_strict == 5 and n_gamma == 5)
+    print("REPRODUKTION DER HEADLINE:", "OK (5/6 strikt, 5/6 unter gamma_M — DSC faellt beide)" if ok else "ABWEICHUNG")
     print("Hinweis: die historische '19 von 26'-Zaehlung war der gamma_M-Count ueber die")
     print("erweiterte 26-Substruktur-Aufstellung (S8), NICHT ueber diese sechs Haupt-Substrate.")
     return 0 if ok else 1

@@ -1,0 +1,67 @@
+{
+  "substrate": "Lignin (SP-LCC)",
+  "source": "Alopaeus et al. 2025, Scientific Data, doi:10.1038/s41597-025-05327-8",
+  "n": 72,
+  "spearman_bO4_vs_Pfactor": -0.7843,
+  "linear_P": {
+    "severity_axis": "linear-P",
+    "winner_by_AICc": "Logistic",
+    "models": {
+      "Logistic": {
+        "AICc": -259.27,
+        "R2": 0.703,
+        "a_hat": 0.212,
+        "k_or_shape": 4.84
+      },
+      "Gompertz": {
+        "AICc": -259.12,
+        "R2": 0.703,
+        "a_hat": 0.101,
+        "k_or_shape": 3.28
+      },
+      "Hill": {
+        "AICc": -235.98,
+        "R2": 0.59,
+        "a_hat": 0.0,
+        "k_or_shape": 0.41
+      },
+      "Weibull": {
+        "AICc": -235.98,
+        "R2": 0.59,
+        "a_hat": 0.0,
+        "k_or_shape": 0.42
+      }
+    }
+  },
+  "log_P": {
+    "severity_axis": "log-P (Kraft severity is a log time-temperature integral)",
+    "winner_by_AICc": "Logistic",
+    "models": {
+      "Logistic": {
+        "AICc": -258.92,
+        "R2": 0.702,
+        "a_hat": 0.407,
+        "k_or_shape": 3.1
+      },
+      "Gompertz": {
+        "AICc": -258.65,
+        "R2": 0.701,
+        "a_hat": 0.307,
+        "k_or_shape": 1.7
+      },
+      "Hill": {
+        "AICc": -235.73,
+        "R2": 0.588,
+        "a_hat": 0.0,
+        "k_or_shape": 0.53
+      },
+      "Weibull": {
+        "AICc": -235.73,
+        "R2": 0.588,
+        "a_hat": 0.0,
+        "k_or_shape": 0.53
+      }
+    }
+  },
+  "note": "Form ranking is invariant across severity axes: Logistic wins AICc, Weibull is dominated. a_hat is construction-dependent: ~0.21 (linear-P) / ~0.42 (log-P); both < 0.5 (early/creep regime). Headline rho_S = -0.78 is axis-free."
+}
