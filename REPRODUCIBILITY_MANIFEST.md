@@ -3,6 +3,7 @@
 **Stand:** 2026-05-25
 **Paper:** "SRDS+ENK — Selbstreferentielle Dissipative Systeme als Klassen-Theorie cross-substrater Sigmoid-Inflektion" (Schessl 2026, arXiv submission).
 **Zweck:** Jede im Paper genannte Zahl ist über diesen Manifest auf eine Quell-Datei rückverfolgbar — entweder im `concise/`-Ordner oder über die externen URLs in `README.md`.
+**Verifikation:** `python3 reproduce.py` rechnet alle Headline-Zahlen aus den gebündelten Daten neu (23 Checks, PASS/FAIL, Exit ≠ 0 bei Abweichung). `REPRODUCE.md` ist die Landkarte Zahl → Datei → Roh-Quelle → Test-Befehl.
 
 ---
 
@@ -58,9 +59,15 @@
 - **Werte:** KS-D $= 0.733$ ($p = 5.7 \cdot 10^{-14}$), $\tilde{a} = 0.646$ (Median), $\rho(\hat{a}, \text{EOL}) = +0.18$ n.s. (7/26 bis EOL, rechts-zensiert). *(War NASA-PCoE-Surrogat $+0.853$ / $0.616$ — synthetisch, superseded durch CALB-Real-Lauf 06-03.)*
 
 ### §4.9 Kolorektal TCGA
-- **Roh-Daten:** `data/crc/tcga_crc_combined.csv` (Quell-Daten), `data/crc/crc_results_v2.json` (Sigmoid-Fits, MSI/MSS getrennt: $n_\text{MSI}=76$, $n_\text{MSS}=503$)
+- **Roh-Daten:** `data/crc/tcga_crc_combined.csv` (Quell-Daten), `data/crc/crc_results_v2.json` (Population/Mutations/Bootstrap, MSI/MSS getrennt: $n_\text{MSI}=76$, $n_\text{MSS}=503$)
+- **Stage-Headline:** `data/crc/crc_stage_aggregated.json` (MSI $\hat{a}=0.286$ / MSS $0.439$, $\Delta=-0.153$); Re-Fit `python3 data/crc/domain_crc_v2.py` (+ `srds_core.py`) auf der CSV
 - **Externe Quelle:** TCGA Pan-Cancer-Atlas (`portal.gdc.cancer.gov`)
-- **Werte:** $n = 579$, MSI–MSS $\Delta\hat{a} = -0.153$, $p < 10^{-4}$
+- **Werte:** $n = 579$; **kanonisch (Last-Achse) stage-aggregiert** MSI–MSS $\Delta\hat{a} = -0.153$; Population/Count-Sortierung $+0.05$ = Zähl-Artefakt (`crc_results_v2.json → group_results`)
+
+### §4.12 Tabelle-18 Forced-Materials (Al-6061, DP1180) und Fatigue-Fit
+- **Al-6061:** `data/al6061/per_specimen_al6061.tsv` + `summary_al6061.tsv`; $\tilde{a}=0.084$ (Median `logistic_inflection`, 146 valide Fits), $\rho(\hat{a},\sigma_{\max})=-0.703$, KS-D $=1.000$. Roh-Spannungs-Dehnung: Mendeley `10.17632/rd6jm9tyb6.2`.
+- **DP1180:** `data/dp1180/numisheet_results.json`; $\tilde{a}=0.975$ ($a\_hat\_mean$, $n=19$), KS-D $=1.000$. Roh: NIST Numisheet 2020 (`data.nist.gov`).
+- **Multiaxial Fatigue:** `data/fatigue/multiaxial_fatigue_results.json`; $\tilde{a}=0.578$, $n_\text{strain}=914$. Roh: Heng 2024 Sci Data `10.1038/s41597-024-03862-4`.
 
 ### §4.10 LLM Konversationen (ENK Gold)
 - **Roh-Daten:** ENK Gold-Korpus ($n = 202$, Auf-Anfrage unter Data-Use-Agreement — siehe Paper §9.3 Disclosure)

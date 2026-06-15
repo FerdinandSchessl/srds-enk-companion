@@ -1,0 +1,16 @@
+{
+  "method": "Per-stage cumulative FGA sigmoid over the 4 AJCC stages (domain_crc_v2.py, ANALYSIS 2)",
+  "study": "coadread_tcga_pan_can_atlas_2018",
+  "n_patients": 579,
+  "n_msi": 76,
+  "n_mss": 503,
+  "MSI": {"a_hat": 0.286, "R2": 0.976},
+  "MSS": {"a_hat": 0.439, "R2": 0.987},
+  "delta_a_hat": -0.153,
+  "prespecified_sign": "negative",
+  "interpretation": "MSI (mismatch-repair-deficient) tumours reach the genomic-damage inflection earlier along the stage/load axis than MSS.",
+  "note_population_vs_stage": "Population-sorted FGA gives delta=+0.053 and within-stage mutation-count sorting gives +0.090; both are counting-sort artefacts (see crc_results_v2.json -> group_results). The canonical load-axis result is the stage-aggregated delta=-0.153.",
+  "bootstrap_check": "crc_results_v2.json -> bootstrap (msi 0.567 / mss 0.534, KS-D 0.350, p<1e-10)",
+  "reproduce": "python3 domain_crc_v2.py   (needs pandas + scipy + numpy + matplotlib; reads tcga_crc_combined.csv in this folder; ANALYSIS 2 prints the stage-aggregated a_hat per group)",
+  "source_report": "srds-paper-companion/analysis/srds_new_domains/REPORT.md lines 96-101 (full working repo)"
+}
