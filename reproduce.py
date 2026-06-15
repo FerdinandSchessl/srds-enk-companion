@@ -297,6 +297,16 @@ try:
 except Exception as e:
     line("parlamint", f"ERROR {e}", "-", False)
 
+# [14] MODEL COMPARISON (§2 form-class typology) — representative: battery Logistic AIC-win
+print("\n[14] MODEL COMPARISON  — data/model_comparison/summary_battery.tsv (§2 form-class)")
+try:
+    mr = list(csv.DictReader(open(D / "model_comparison/summary_battery.tsv"), delimiter="\t"))
+    lg = next((r for r in mr if r.get("model") == "logistic"), None)
+    w = float(lg["win_rate_aic"]) if lg else float("nan")
+    line("Battery Logistic AIC-win share", f"{w:.2f}", "1.00 (100%)", abs(w - 1.0) < 0.01)
+except Exception as e:
+    line("model-comparison", f"ERROR {e}", "-", False)
+
 print("\n" + "=" * 80)
 if _FAIL:
     print(f"RESULT: {_PASS[0]} checks PASSED, {len(_FAIL)} FAILED -> {', '.join(_FAIL)}")

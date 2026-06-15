@@ -40,6 +40,7 @@ Details je Substrat im `REPRODUCIBILITY_MANIFEST.md` (§-Nummern rechts).
 | `reproduce.py` | Selbst-enthaltener Reproduktions-Check aller Headline-Zahlen (stdlib only, 23 Checks) |
 | `REPRODUCE.md` | Landkarte: pro Zahl → gebündelte Datei → Roh-Quelle → Test-Befehl |
 | `STATISTICS.md` | Inferenz-Schicht: KS-Null, Permutation, γ_M/Bonferroni, Bootstrap — Claim → Skript |
+| `COVERAGE_REPORT.md` | **Vollständige Buchführung: alle 614 Paper-Zahlen (DE+EN) → Reproduktionspfad/Kategorie** |
 | `requirements.txt` | Umgebung (stdlib für `reproduce.py`; numpy/scipy nur für Re-Fits) |
 | `analysis/bonferroni_gamma_m.py` | [stdlib] γ_M/Bonferroni-Zählung (5/6 strikt, 6/6 unter γ_M) aus `ks_null_summary.csv` |
 | `analysis/permutation_test.py` | [stdlib] Holz-Permutationstest (10⁴×, seed=0) → p_perm |
@@ -60,6 +61,8 @@ Details je Substrat im `REPRODUCIBILITY_MANIFEST.md` (§-Nummern rechts).
 | `data/finance/` | SPY Event-Fits (`event_results_v3.csv`); Crash $R^2 = 0.973$ vs. Calm $0.483$ |
 | `data/enk/` | ENK Konversations-â-Aggregat (`ahat_convergence.csv`, `chat_id` anonymisiert; Roh-Chats unter DUA) |
 | `data/parlamint/` | ParlaMint ℓ₃→ℓ₄-Pilot (§5, **kein** Tab-1-Substrat): Country-Year-Aggregat + `pilot_inference.json`; NC2 ρ=−0.34, â-Diskurs 4/4 neg., perm-p=0.207 |
+| `data/model_comparison/` | §2 Form-Klassen-Typologie (AIC-Win-Rates je Substrat: Batterie 100 %, FKM ~80 %, …) |
+| `data/cross_corpus/` | §6 Cross-Corpus-Aggregate (Avrami-Kinetik je Korpus); 12 Roh-Korpora extern (Lizenzen) |
 | `data/musik_companion/pipeline/` | Pipeline-Skripte für MetaMIDI/Tagtraum/music21 ($\ell_2$-Substrat) |
 | `data/musik_companion/outputs/` | Pipeline-Outputs (`musik_l2_lakh_cross_genre.json`, `musik_l2_music21_all_raw.json`, Shuffled-Control) |
 | `analysis/sigma_operationalisierung.py` | Operative Spezifikation der $\Sigma_c$-Konjektur (§9.2 Programm C) |

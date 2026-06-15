@@ -1,0 +1,81 @@
+[
+  {
+    "substrate": "al6061",
+    "n_specimens": 146,
+    "n_valid": 146,
+    "win_rates_aic": {
+      "gompertz": 0.3219178082191781,
+      "hill": 0.2671232876712329,
+      "weibull": 0.2534246575342466,
+      "logistic": 0.15753424657534246
+    },
+    "win_rates_bic": {
+      "gompertz": 0.3219178082191781,
+      "hill": 0.2671232876712329,
+      "weibull": 0.2534246575342466,
+      "logistic": 0.15753424657534246
+    },
+    "models": [
+      {
+        "substrate": "al6061",
+        "model": "logistic",
+        "n_valid": 146,
+        "mean_aic": -1321.5571063987054,
+        "median_aic": -1541.0679285659949,
+        "mean_bic": -1314.3405088447334,
+        "mean_r2": 0.9830681125648909,
+        "median_r2": 0.9877791462739602,
+        "win_rate_aic": 0.15753424657534246,
+        "win_rate_bic": 0.15753424657534246,
+        "rho_inflection_outcome": -0.7034232115141759,
+        "p_inflection_outcome": 4.177354938911591e-23,
+        "n_corr": 146
+      },
+      {
+        "substrate": "al6061",
+        "model": "gompertz",
+        "n_valid": 146,
+        "mean_aic": -1443.5592773205553,
+        "median_aic": -1589.1039341034957,
+        "mean_bic": -1436.342679766583,
+        "mean_r2": 0.9876934338603377,
+        "median_r2": 0.991843657342308,
+        "win_rate_aic": 0.3219178082191781,
+        "win_rate_bic": 0.3219178082191781,
+        "rho_inflection_outcome": -0.6939566001176096,
+        "p_inflection_outcome": 2.721872786408542e-22,
+        "n_corr": 146
+      },
+      {
+        "substrate": "al6061",
+        "model": "weibull",
+        "n_valid": 146,
+        "mean_aic": -1450.9031286048378,
+        "median_aic": -1607.8662876207873,
+        "mean_bic": -1443.6865310508654,
+        "mean_r2": 0.9866696521365741,
+        "median_r2": 0.9918601397017275,
+        "win_rate_aic": 0.2534246575342466,
+        "win_rate_bic": 0.2534246575342466,
+        "rho_inflection_outcome": -0.555741851309284,
+        "p_inflection_outcome": 9.81349419072553e-12,
+        "n_corr": 128
+      },
+      {
+        "substrate": "al6061",
+        "model": "hill",
+        "n_valid": 146,
+        "mean_aic": -1277.3185252670908,
+        "median_aic": -1473.6058728321632,
+        "mean_bic": -1270.1019277131184,
+        "mean_r2": 0.9785651515536268,
+        "median_r2": 0.9839697939934517,
+        "win_rate_aic": 0.2671232876712329,
+        "win_rate_bic": 0.2671232876712329,
+        "rho_inflection_outcome": -0.6179383609844505,
+        "p_inflection_outcome": 9.665811955494871e-17,
+        "n_corr": 146
+      }
+    ]
+  }
+]
