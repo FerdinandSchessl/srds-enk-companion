@@ -190,10 +190,10 @@ try:
     rows = list(csv.DictReader(open(D / "finance/event_results_v3.csv")))
     col = "sigmoid_r2_sigma_t"
     calm = [float(r[col]) for r in rows if r["type"].lower() == "calm" and r.get(col) not in (None, "", "nan")]
-    crash = [float(r[col]) for r in rows if r["type"].lower() == "crash" and r.get(col) not in (None, "", "nan")]
+    crash = [float(r[col]) for r in rows if r["type"].lower() in ("crash", "correction") and r.get(col) not in (None, "", "nan")]
     line("calm R2 (random-walk)", f"{sum(calm)/len(calm):.3f} (n={len(calm)})", "0.483", abs(sum(calm)/len(calm) - 0.483) < 0.02)
-    print(f"  {'crash R2 (sigmoid)':36s} repro={sum(crash)/len(crash):.3f} (n={len(crash)})          "
-          f"paper=0.973 (n=10; crash >> calm contrast reproduced)")
+    cm = sum(crash) / len(crash)
+    line("crash R2 (10 severe = crash+correction)", f"{cm:.3f} (n={len(crash)})", "0.973", abs(cm - 0.973) < 0.01)
 except Exception as e:
     line("finance", f"ERROR {e}", "-", False)
 
@@ -208,9 +208,9 @@ try:
         except (ValueError, KeyError):
             pass
     rho = spearman(a, m)
-    line("Spearman rho(a_hat, manipulation)", f"{rho:+.4f} (n={len(a)})", "-0.359 (canon n=202)",
-         abs(rho + 0.359) < 0.06)
-    print("       (bundled a_hat_full variant n=193 ~ -0.33; canonical -0.359 = cummean-strain a_hat n=202, same sign/size)")
+    line("rho(a_hat,manip) DUA-proxy (n=193)", f"{rho:+.4f}", "~-0.33 (proxy)", abs(rho + 0.33) < 0.05)
+    print("       (PROXY ONLY: bundled a_hat_full variant, n=193 -> -0.33. The canonical headline -0.359 / n=202 needs")
+    print("        the gold corpus (DUA) and is NOT reproducible from this file -- same sign/size, not the exact number.)")
 except Exception as e:
     line("enk", f"ERROR {e}", "-", False)
 

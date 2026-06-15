@@ -7,10 +7,10 @@ Dieser Ordner enthält alle Reproduktions-Artefakte, die das Concise-Paper allei
 ## Reproduktion (ein Befehl)
 
 ```bash
-python3 reproduce.py     # nur Standard-Bibliothek; erwartet: "all 23 numeric checks PASSED"
+python3 reproduce.py     # nur Standard-Bibliothek; erwartet: "all 32 numeric checks PASSED"
 ```
 
-Das Skript rechnet jede Headline-Zahl aus den gebündelten Daten neu und vergleicht mit dem Paper-Wert (PASS/FAIL, Exit-Code ≠ 0 bei Abweichung; aktuell 26 Checks inkl. Statistik). **`REPRODUCE.md`** ist die maßgebliche Landkarte: pro Zahl → gebündelte Datei → externe Roh-Quelle (DOI/URL) → Test-Befehl. Wo der Roh-Datensatz extern/groß ist, liegt die **Fit-Ausgabe** im Ordner (Zahl hier prüfbar) und die **Roh-Quelle** ist verlinkt (Fit end-to-end nachvollziehbar).
+Das Skript rechnet jede Headline-Zahl aus den gebündelten Daten neu und vergleicht mit dem Paper-Wert (PASS/FAIL, Exit-Code ≠ 0 bei Abweichung; aktuell 32 Checks inkl. Statistik). **`REPRODUCE.md`** ist die maßgebliche Landkarte: pro Zahl → gebündelte Datei → externe Roh-Quelle (DOI/URL) → Test-Befehl. Wo der Roh-Datensatz extern/groß ist, liegt die **Fit-Ausgabe** im Ordner (Zahl hier prüfbar) und die **Roh-Quelle** ist verlinkt (Fit end-to-end nachvollziehbar).
 
 **Statistik-Schicht:** `STATISTICS.md` + `analysis/` reproduzieren die Inferenz (KS gegen synthetische Null, Permutationstest, γ_M/Bonferroni-Zählung, Bootstrap). Die stdlib-Tests (γ_M-Count, Holz-Permutation) laufen direkt in `reproduce.py`; die scipy-Skripte (`analysis/null_model.py`, `data/crc/domain_crc_v2.py`) brauchen `requirements.txt`. Die ENK-cluster-robuste Inferenz ist DUA-begrenzt (nur Aggregat teilbar) — Details in `STATISTICS.md`.
 
@@ -37,7 +37,7 @@ Details je Substrat im `REPRODUCIBILITY_MANIFEST.md` (§-Nummern rechts).
 
 | Pfad | Inhalt |
 |---|---|
-| `reproduce.py` | Selbst-enthaltener Reproduktions-Check aller Headline-Zahlen (stdlib only, 23 Checks) |
+| `reproduce.py` | Selbst-enthaltener Reproduktions-Check aller Headline-Zahlen (stdlib only, 32 Checks) |
 | `REPRODUCE.md` | Landkarte: pro Zahl → gebündelte Datei → Roh-Quelle → Test-Befehl |
 | `STATISTICS.md` | Inferenz-Schicht: KS-Null, Permutation, γ_M/Bonferroni, Bootstrap — Claim → Skript |
 | `COVERAGE_REPORT.md` | **Vollständige Buchführung: alle 614 Paper-Zahlen (DE+EN) → Reproduktionspfad/Kategorie** |
@@ -47,7 +47,7 @@ Details je Substrat im `REPRODUCIBILITY_MANIFEST.md` (§-Nummern rechts).
 | `analysis/null_model.py` | [scipy] Synthetik-Null-Generator (AR(1)/RW/WN) + KS, Al-6061-Beispiel |
 | `analysis/ks_null_summary.csv` | Sechs Tab.-18-Substrate: KS-D + p (Quelle der γ_M-Zählung) |
 | `REPRODUCIBILITY_MANIFEST.md` | Pro Tabelle/Abbildung im Paper: Skript-Pfad, Roh-Daten-Pfad, externe URLs |
-| `lean4/PositivityProofs/` | No-Go-Theorem maschinell verifiziert in Lean 4 (`AxiomAudit.lean`, `NoGo.lean`, `HilbertMetric.lean`, `Main.lean` etc.); sorry-frei |
+| `lean4/PositivityProofs/` | No-Go-Theorem **computer-assistiert** in Lean 4: Birkhoff-Hopf-Struktur + zertifizierte Spektralschranke; das No-Go-**Kernresultat ist als auditiertes Axiom** geführt (`AxiomAudit.lean`), die abgeleiteten Lemmas sind sorry-frei |
 | `genealogy_of_frames.md` | 8 datierte Vorform-Frame-Klassen (Master-Thesis 2025 → SRDS 2026) |
 | `data/earthquake/` | USGS-FDSN-API-Sequenzen, 284 Sequenzen, sechs Regionen (`usgs_earthquakes.csv`, `earthquake_results.csv`) |
 | `data/battery/` | CALB Li-Ion Degradation, $n = 26$ Zellen / 3 Temperaturen (`battery_calb_results.json`; Roh extern HF `Battery-Life/BatteryLife_Raw`) |

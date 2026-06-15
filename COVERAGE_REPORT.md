@@ -8,7 +8,7 @@ path in this companion. This is the full accounting; no number is left unaccount
 
 | category | count | reproducible? |
 |---|---:|---|
-| **substrate-data** (bundled) | 234 | ✅ from `data/…` + `reproduce.py` (30 stdlib checks cover the headlines) |
+| **substrate-data** (bundled) | 234 | ✅ from `data/…` + `reproduce.py` (32 stdlib checks cover the headlines) |
 | **cross-corpus** (§6) | 158 | ◑ per-corpus aggregates in `data/cross_corpus/`; raw 12 corpora external (licences) + working repo |
 | **withheld-gold** | 119 | ⛔ by design — depend on the ENK gold-corpus raw chats (DUA); aggregate in `data/enk/` |
 | **external-DOI** | 52 | ✅ with the named public dataset (Zenodo / Mendeley / NIST / Sci Data / V-Dem / Yahoo / TCGA / MetaMIDI) |
@@ -23,7 +23,7 @@ path in this companion. This is the full accounting; no number is left unaccount
   AIC summaries bundled in `data/model_comparison/`.
 - **§6 cross-corpus**: consolidated Avrami aggregates bundled in `data/cross_corpus/`.
 - (Earlier this session: the ten substrates + DP1180 + the ParlaMint §5 pilot were made
-  self-reproducing via `reproduce.py` — 30/30 checks.)
+  self-reproducing via `reproduce.py` — 32/32 checks.)
 
 ## Honest remaining limitations (not free gaps)
 
@@ -35,6 +35,22 @@ path in this companion. This is the full accounting; no number is left unaccount
    / cross-corpus, not independently bundleable.
 3. **CCP60** (n=9) and the **multiaxial-fatigue path-shift** (ρ≈−0.30, p=0.029): same pipeline as
    the bundled model-comparison summaries, results in the working repo (`analysis/null_model_comparison/`).
+
+## What `reproduce.py` does and does not recompute (honest)
+
+The 32 checks are of two kinds:
+- **recompute-from-raw** (the majority): wood r + permutation, earthquake, V-Dem median R²,
+  Al-6061 median + ρ, battery median, finance calm + crash R² (n=10 = crash+correction),
+  ParlaMint ρ's, γ_M/Bonferroni count, battery model-comparison win-rate — each computed from
+  the bundled data.
+- **result-file consistency** (a few): battery KS-D, CRC stage (0.286/0.439), DP1180 a_hat_mean,
+  fatigue mean are read from a bundled result file and checked against the paper literal. The CRC
+  stage file `crc_stage_aggregated.json` is hand-authored but **regenerable** by running
+  `data/crc/domain_crc_v2.py` (ANALYSIS 2 prints the stage â) on the bundled CSV.
+
+**ENK is a DUA proxy:** bundled `ahat_convergence.csv` (n=193, a_hat_full variant) gives ρ≈−0.33;
+the canonical headline ρ=−0.359 / n=202 needs the gold corpus and is **not** reproducible here
+(same sign/magnitude, not the exact number) — `reproduce.py` checks the proxy and labels it so.
 
 ## Excluded as non-claims (verified)
 

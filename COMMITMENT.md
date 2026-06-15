@@ -22,11 +22,12 @@ Only the calibration constants — the "dose" — are withheld.
 ## Integrity statement
 
 1. The withheld values were **frozen on 2026-03-18**, before the confirmatory hold-out run
-   (see `sources/b5_holdout/PREREGISTRATION_v2_n150.md`: "frozen, no re-tuning"), and have
-   not been changed since. No reported result was obtained by adjusting them after that date.
-2. All numbers reported in the paper are reproducible from the frozen run outputs in this
-   repository (`data/frozen_runs/`, `sources/b5_holdout/`) **without** access to the withheld
-   values — the runs are committed as data with md5 manifests.
+   (pre-registration "frozen, no re-tuning"; the pre-registration lives in the working repo,
+   not in this lean companion), and have not been changed since. No reported result was
+   obtained by adjusting them after that date.
+2. The paper's headline numbers are reproducible from the bundled data in this repository
+   (`data/…`; run `reproduce.py`, see `REPRODUCE.md`) **without** access to the withheld
+   values.
 3. The hash below binds the exact withheld-parameter file. It proves (a) the values existed
    in this exact form at commitment time and (b) any later disclosure can be verified
    against this commitment.

@@ -1,9 +1,9 @@
 # Reproducibility Manifest — Concise Paper
 
-**Stand:** 2026-05-25
+**Stand:** 2026-06-15
 **Paper:** "SRDS+ENK — Selbstreferentielle Dissipative Systeme als Klassen-Theorie cross-substrater Sigmoid-Inflektion" (Schessl 2026, arXiv submission).
 **Zweck:** Jede im Paper genannte Zahl ist über diesen Manifest auf eine Quell-Datei rückverfolgbar — entweder im `concise/`-Ordner oder über die externen URLs in `README.md`.
-**Verifikation:** `python3 reproduce.py` rechnet alle Headline-Zahlen aus den gebündelten Daten neu (26 Checks inkl. Statistik-Ebene, PASS/FAIL, Exit ≠ 0 bei Abweichung). `REPRODUCE.md` = Landkarte Zahl → Datei → Roh-Quelle → Test; `STATISTICS.md` + `analysis/` = Inferenz-Schicht (KS-Null, Permutation, γ_M/Bonferroni, Bootstrap).
+**Verifikation:** `python3 reproduce.py` rechnet alle Headline-Zahlen aus den gebündelten Daten neu (32 Checks inkl. Statistik-Ebene, PASS/FAIL, Exit ≠ 0 bei Abweichung). `REPRODUCE.md` = Landkarte Zahl → Datei → Roh-Quelle → Test; `STATISTICS.md` + `analysis/` = Inferenz-Schicht (KS-Null, Permutation, γ_M/Bonferroni, Bootstrap).
 
 ---
 
@@ -14,12 +14,12 @@
   - `AxiomAudit.lean` — Axiom-Konsistenz-Check
   - `Basic.lean` — Grundlagen-Definitionen
   - `HilbertMetric.lean` — Hilbert-Metrik für $TP_2$-Kernel
-  - `NoGo.lean` — Maschinelle Verifikation des No-Go-Theorems
+  - `NoGo.lean` — No-Go-Theorem: Kernaussage als **auditiertes Axiom** (`AxiomAudit.lean`), abgeleitete Lemmas maschinell geprüft
   - `Main.lean` — Top-level Statements
   - `NumericalCertificate.lean` — Zertifizierte Spektralschranke $\rho < 0.45$
   - `SpectralGap.lean`, `Symmetry.lean`, `TP2Kernels.lean` — Hilfs-Lemmas
-- **Status:** sorry-frei
-- **Build:** Lean 4 + Mathlib (`lean4/lakefile.lean`, `lean4/lean-toolchain`)
+- **Status:** sorry-frei (abgeleitete Lemmas); das No-Go-Kernresultat ist **computer-assistiert** (Arb-Zertifikat) und als auditiertes Axiom geführt — Axiom-Inventar in `AxiomAudit.lean`. „computer-assistiert", nicht „from-scratch in Lean bewiesen".
+- **Build:** Lean 4 + Mathlib (`lean4/lakefile.lean`, `lean4/lean-toolchain`); Mathlib-Rev in `lean4/lake-manifest.json` gepinnt
 
 ## 2. Cross-Domain Substrate (§4)
 
