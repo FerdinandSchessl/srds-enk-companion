@@ -1,0 +1,14 @@
+# Reproduction environment for the SRDS+ENK concise companion.
+#
+# NO packages needed (Python 3.8+ standard library only):
+#   reproduce.py
+#   analysis/bonferroni_gamma_m.py
+#   analysis/permutation_test.py
+#
+# Needed ONLY for the scipy-based re-fits (optional, full end-to-end reproduction):
+#   analysis/null_model.py
+#   data/crc/domain_crc_v2.py
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+matplotlib>=3.7

@@ -3,7 +3,7 @@
 **Stand:** 2026-05-25
 **Paper:** "SRDS+ENK — Selbstreferentielle Dissipative Systeme als Klassen-Theorie cross-substrater Sigmoid-Inflektion" (Schessl 2026, arXiv submission).
 **Zweck:** Jede im Paper genannte Zahl ist über diesen Manifest auf eine Quell-Datei rückverfolgbar — entweder im `concise/`-Ordner oder über die externen URLs in `README.md`.
-**Verifikation:** `python3 reproduce.py` rechnet alle Headline-Zahlen aus den gebündelten Daten neu (23 Checks, PASS/FAIL, Exit ≠ 0 bei Abweichung). `REPRODUCE.md` ist die Landkarte Zahl → Datei → Roh-Quelle → Test-Befehl.
+**Verifikation:** `python3 reproduce.py` rechnet alle Headline-Zahlen aus den gebündelten Daten neu (26 Checks inkl. Statistik-Ebene, PASS/FAIL, Exit ≠ 0 bei Abweichung). `REPRODUCE.md` = Landkarte Zahl → Datei → Roh-Quelle → Test; `STATISTICS.md` + `analysis/` = Inferenz-Schicht (KS-Null, Permutation, γ_M/Bonferroni, Bootstrap).
 
 ---
 

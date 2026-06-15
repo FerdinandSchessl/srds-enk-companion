@@ -15,6 +15,7 @@ See REPRODUCE.md for the value -> file -> command map of all ten substrates.
 """
 import csv
 import json
+import random
 import statistics as st
 import sys
 from pathlib import Path
@@ -241,6 +242,33 @@ try:
     print("       (KS-D=1.000 vs synthetic null = report-anchored: analysis/srds_nullmodell_report.md, full working repo)")
 except Exception as e:
     line("dp1180", f"ERROR {e}", "-", False)
+
+# [12] STATISTICS LAYER (inferential, stdlib) — full layer in analysis/ + STATISTICS.md
+print("\n[12] STATISTICS  — gamma_M/Bonferroni count + wood permutation (stdlib; details in analysis/)")
+try:
+    rows = list(csv.DictReader(open(ROOT / "analysis/ks_null_summary.csv")))
+    strict = sum(1 for r in rows if r["p_relation"] == "lt" or float(r["p_reported"]) < 1e-3)
+    gamma = sum(1 for r in rows if r["p_relation"] == "lt" or float(r["p_reported"]) < 0.05 / 9)
+    line("KS p<1e-3 count (Tab. 18)", f"{strict}/{len(rows)}", "5/6", strict == 5)
+    line("KS p<gamma_M (alpha/9) count", f"{gamma}/{len(rows)}", "6/6", gamma == 6)
+except Exception as e:
+    line("bonferroni/gamma_M", f"ERROR {e}", "-", False)
+try:
+    a, s = [], []
+    for row in csv.DictReader(open(ROOT / "data/holz_master/wood_data_all.csv")):
+        try:
+            a.append(float(row["a_hat"])); s.append(float(row["sigma_max"]))
+        except (ValueError, KeyError):
+            pass
+    r_obs = pearson(a, s)
+    random.seed(0); perm = list(s); ge = 0; Np = 2000
+    for _ in range(Np):
+        random.shuffle(perm)
+        if abs(pearson(a, perm)) >= abs(r_obs):
+            ge += 1
+    line(f"wood permutation {Np}x (r / exceed)", f"{r_obs:+.3f} / {ge}", "-0.83 / 0", ge == 0 and r_obs < -0.8)
+except Exception as e:
+    line("permutation", f"ERROR {e}", "-", False)
 
 print("\n" + "=" * 80)
 if _FAIL:
