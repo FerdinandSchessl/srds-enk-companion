@@ -8,7 +8,7 @@ path in this companion. This is the full accounting; no number is left unaccount
 
 | category | count | reproducible? |
 |---|---:|---|
-| **substrate-data** (bundled) | 234 | ✅ from `data/…` + `reproduce.py` (32 stdlib checks cover the headlines) |
+| **substrate-data** (bundled) | 234 | ✅ from `data/…` + `reproduce.py` (33 stdlib checks cover the headlines) |
 | **cross-corpus** (§6) | 158 | ◑ per-corpus aggregates in `data/cross_corpus/`; raw 12 corpora external (licences) + working repo |
 | **withheld-gold** | 119 | ⛔ by design — depend on the ENK gold-corpus raw chats (DUA); aggregate in `data/enk/` |
 | **external-DOI** | 52 | ✅ with the named public dataset (Zenodo / Mendeley / NIST / Sci Data / V-Dem / Yahoo / TCGA / MetaMIDI) |
@@ -23,13 +23,15 @@ path in this companion. This is the full accounting; no number is left unaccount
   AIC summaries bundled in `data/model_comparison/`.
 - **§6 cross-corpus**: consolidated Avrami aggregates bundled in `data/cross_corpus/`.
 - (Earlier this session: the ten substrates + DP1180 + the ParlaMint §5 pilot were made
-  self-reproducing via `reproduce.py` — 32/32 checks.)
+  self-reproducing via `reproduce.py` — 33/33 checks.)
 
 ## Honest remaining limitations (not free gaps)
 
-1. **Lignin** (ρ_S=−0.77, n=90): documented in `data/lignin/…docx` + `REPRODUCIBILITY_MANIFEST.md §4.4`,
-   but there is **no per-sample CSV** — the headline is not recomputable from bundled data; it
-   requires the source biopolymer dataset. Stated openly, not hidden.
+1. **Lignin — RESOLVED (2026-06-15):** source identified and bundled — SP-LCC (Alopaeus et al. 2025,
+   *Scientific Data*, doi:10.1038/s41597-025-05327-8) + machine-readable `data/lignin/sp_lcc_data_master.csv`
+   (72-sample subset). ρ_S(β-O-4, P-factor) = **−0.78** is now recomputed by `reproduce.py` [15].
+   No longer a limitation. *(The earlier draft's −0.77/n=90 came from a lost text module; the
+   data-backed −0.78/n=72 supersede it.)*
 2. **Crystallisation signature** (§9: χ²=18.813, V=0.310, p=0.0001) and several §6 meta-tests
    (Fisher-meta χ²=68.96) are computed on the **ENK gold corpus / external corpora** → withheld-gold
    / cross-corpus, not independently bundleable.
@@ -38,7 +40,7 @@ path in this companion. This is the full accounting; no number is left unaccount
 
 ## What `reproduce.py` does and does not recompute (honest)
 
-The 32 checks are of two kinds:
+The 33 checks are of two kinds:
 - **recompute-from-raw** (the majority): wood r + permutation, earthquake, V-Dem median R²,
   Al-6061 median + ρ, battery median, finance calm + crash R² (n=10 = crash+correction),
   ParlaMint ρ's, γ_M/Bonferroni count, battery model-comparison win-rate — each computed from
@@ -64,5 +66,6 @@ figures are explicitly cited as *superseded/removed*. Grouping counts ("eight re
 Every empirical number is one of: reproducible from bundled data (`reproduce.py`), reproducible
 with a named public dataset, withheld by design (gold corpus / calibration thresholds), a
 cross-corpus number traceable to bundled aggregates + external corpora, or an excluded editing
-artifact. The two genuine "documented-but-not-recomputable-here" cases (Lignin; gold/corpus-bound
-meta-tests) are named above rather than glossed over.
+artifact. The genuine documented-but-not-recomputable-here case (the gold-/corpus-bound
+meta-tests) is named above rather than glossed over. (Lignin, previously the one un-sourced
+substrate, was resolved 2026-06-15 — see above.)

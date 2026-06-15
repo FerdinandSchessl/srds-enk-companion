@@ -7,10 +7,10 @@ Dieser Ordner enthält alle Reproduktions-Artefakte, die das Concise-Paper allei
 ## Reproduktion (ein Befehl)
 
 ```bash
-python3 reproduce.py     # nur Standard-Bibliothek; erwartet: "all 32 numeric checks PASSED"
+python3 reproduce.py     # nur Standard-Bibliothek; erwartet: "all 33 numeric checks PASSED"
 ```
 
-Das Skript rechnet jede Headline-Zahl aus den gebündelten Daten neu und vergleicht mit dem Paper-Wert (PASS/FAIL, Exit-Code ≠ 0 bei Abweichung; aktuell 32 Checks inkl. Statistik). **`REPRODUCE.md`** ist die maßgebliche Landkarte: pro Zahl → gebündelte Datei → externe Roh-Quelle (DOI/URL) → Test-Befehl. Wo der Roh-Datensatz extern/groß ist, liegt die **Fit-Ausgabe** im Ordner (Zahl hier prüfbar) und die **Roh-Quelle** ist verlinkt (Fit end-to-end nachvollziehbar).
+Das Skript rechnet jede Headline-Zahl aus den gebündelten Daten neu und vergleicht mit dem Paper-Wert (PASS/FAIL, Exit-Code ≠ 0 bei Abweichung; aktuell 33 Checks inkl. Statistik). **`REPRODUCE.md`** ist die maßgebliche Landkarte: pro Zahl → gebündelte Datei → externe Roh-Quelle (DOI/URL) → Test-Befehl. Wo der Roh-Datensatz extern/groß ist, liegt die **Fit-Ausgabe** im Ordner (Zahl hier prüfbar) und die **Roh-Quelle** ist verlinkt (Fit end-to-end nachvollziehbar).
 
 **Statistik-Schicht:** `STATISTICS.md` + `analysis/` reproduzieren die Inferenz (KS gegen synthetische Null, Permutationstest, γ_M/Bonferroni-Zählung, Bootstrap). Die stdlib-Tests (γ_M-Count, Holz-Permutation) laufen direkt in `reproduce.py`; die scipy-Skripte (`analysis/null_model.py`, `data/crc/domain_crc_v2.py`) brauchen `requirements.txt`. Die ENK-cluster-robuste Inferenz ist DUA-begrenzt (nur Aggregat teilbar) — Details in `STATISTICS.md`.
 
@@ -23,7 +23,7 @@ Details je Substrat im `REPRODUCIBILITY_MANIFEST.md` (§-Nummern rechts).
 | 1 | Holz (DIN EN 408) | 230 | $r = -0.83$; $\tilde{a} = 0.567$ | §4.1 |
 | 2 | Multi-Material Multiaxial Fatigue | 914 | $R^2 \geq 0.5$ in 74 % der Metalle | §4.2 |
 | 3 | Finance (SPY) | 10 / 135 | Crash $R^2 = 0.973$ / Calm $0.483$ | §4.3 |
-| 4 | Lignin (Kraft-Aufschluss) | 90 | $\rho_S = -0.77$; $\tilde{a} = 0.325$ | §4.4 |
+| 4 | Lignin/LCC (SP-LCC, Alopaeus 2025) | 72 | $\rho_S = -0.78$ (β-O-4 vs P-Faktor); $\tilde{a} = 0.325$ | §4.4 |
 | 5 | V-Dem Autokratisierungen | 117 | Median $R^2 = 0.983$ | §4.5 |
 | 6 | Erdbeben (USGS) | 284 | $\rho(\hat{a}, \text{Mainshock}) = +0.673$ | §4.7 |
 | 7 | Batterie (CALB) | 26 | KS-D $= 0.733$; $\tilde{a} = 0.646$; $\rho(\text{EOL}) = +0.18$ n.s. | §4.8 |
@@ -37,7 +37,7 @@ Details je Substrat im `REPRODUCIBILITY_MANIFEST.md` (§-Nummern rechts).
 
 | Pfad | Inhalt |
 |---|---|
-| `reproduce.py` | Selbst-enthaltener Reproduktions-Check aller Headline-Zahlen (stdlib only, 32 Checks) |
+| `reproduce.py` | Selbst-enthaltener Reproduktions-Check aller Headline-Zahlen (stdlib only, 33 Checks) |
 | `REPRODUCE.md` | Landkarte: pro Zahl → gebündelte Datei → Roh-Quelle → Test-Befehl |
 | `STATISTICS.md` | Inferenz-Schicht: KS-Null, Permutation, γ_M/Bonferroni, Bootstrap — Claim → Skript |
 | `COVERAGE_REPORT.md` | **Vollständige Buchführung: alle 614 Paper-Zahlen (DE+EN) → Reproduktionspfad/Kategorie** |
@@ -53,7 +53,7 @@ Details je Substrat im `REPRODUCIBILITY_MANIFEST.md` (§-Nummern rechts).
 | `data/battery/` | CALB Li-Ion Degradation, $n = 26$ Zellen / 3 Temperaturen (`battery_calb_results.json`; Roh extern HF `Battery-Life/BatteryLife_Raw`) |
 | `data/crc/` | TCGA Colorectal, $n = 579$ (`tcga_crc_combined.csv`, `crc_results_v2.json`, `crc_stage_aggregated.json`; Re-Fit `domain_crc_v2.py` + `srds_core.py`) |
 | `data/holz_master/` | Holz DIN EN 408, $n = 319$ → balanced $n = 230$; Roh-Daten via Zenodo-DOI (siehe `data/holz_master/README.md`) |
-| `data/lignin/` | Kraft-Aufschluss Bindungs-Hierarchie ($n = 90$, $\rho_S = -0.77$) |
+| `data/lignin/` | SP-LCC-Datensatz (Alopaeus 2025, doi:10.1038/s41597-025-05327-8): `sp_lcc_data_master.csv` (72 Proben); $\rho_S(\beta\text{-O-4},P)=-0.78$, `reproduce.py` [15] |
 | `data/al6061/` | Al-6061-Zugversuch Per-Specimen-Fits (`per_specimen_al6061.tsv`, `summary_al6061.tsv`); ã = 0.084 Median valider Fits, $n = 146$ |
 | `data/dp1180/` | DP1180 NIST Numisheet 2020 (`numisheet_results.json`); ã = 0.975, KS-D = 1.000, $n = 19$ |
 | `data/fatigue/` | Multi-Material Multiaxial Fatigue Ergebnis (`multiaxial_fatigue_results.json`); ã = 0.578, $n = 914$ |

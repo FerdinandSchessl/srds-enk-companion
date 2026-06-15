@@ -307,6 +307,21 @@ try:
 except Exception as e:
     line("model-comparison", f"ERROR {e}", "-", False)
 
+# [15] LIGNIN (SP-LCC) — rho_S(b-O-4, P-factor) from the bundled SP-LCC subset (firsthand recompute)
+print("\n[15] LIGNIN SP-LCC  — data/lignin/sp_lcc_data_master.csv (Alopaeus 2025, doi:10.1038/s41597-025-05327-8)")
+try:
+    lr = list(csv.DictReader(open(D / "lignin/sp_lcc_data_master.csv")))
+    bx, px = [], []
+    for r in lr:
+        try:
+            bx.append(float(r["b-O-4"])); px.append(float(r["p-factor"]))
+        except (ValueError, KeyError):
+            pass
+    rl = spearman(bx, px)
+    line("rho_S(b-O-4, P-factor)", f"{rl:+.4f} (n={len(bx)})", "-0.78 (SP-LCC subset)", abs(rl + 0.78) < 0.02)
+except Exception as e:
+    line("lignin", f"ERROR {e}", "-", False)
+
 print("\n" + "=" * 80)
 if _FAIL:
     print(f"RESULT: {_PASS[0]} checks PASSED, {len(_FAIL)} FAILED -> {', '.join(_FAIL)}")

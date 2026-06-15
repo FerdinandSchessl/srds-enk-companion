@@ -8,7 +8,7 @@ python3 reproduce.py
 
 It prints, for each substrate, the paper value next to the value recomputed from the
 bundled data, with `PASS`/`FAIL`, and exits non-zero if anything deviates. Expected:
-`RESULT: all 32 numeric checks PASSED.`
+`RESULT: all 33 numeric checks PASSED.`
 
 Every number in the paper maps to a bundled file below. Where the raw dataset is large
 or third-party, the **fit output** is bundled (so the headline is verifiable from this
@@ -36,7 +36,7 @@ folder) and the **raw source** is linked (so the fit itself can be re-run end-to
 
 ## What is NOT recomputed stdlib-only
 
-`reproduce.py` recomputes 32 numbers from the bundled data with the standard library.
+`reproduce.py` recomputes 33 numbers from the bundled data with the standard library.
 The colorectal stage fit and the DP1180 KS test against the synthetic null require a
 curve fit / null model (numpy+scipy); for those the bundled **result** is checked, and the
 **raw data + script** are bundled (CRC) or linked (DP1180) so a reviewer with numpy/scipy

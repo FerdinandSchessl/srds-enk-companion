@@ -3,7 +3,7 @@
 **Stand:** 2026-06-15
 **Paper:** "SRDS+ENK — Selbstreferentielle Dissipative Systeme als Klassen-Theorie cross-substrater Sigmoid-Inflektion" (Schessl 2026, arXiv submission).
 **Zweck:** Jede im Paper genannte Zahl ist über diesen Manifest auf eine Quell-Datei rückverfolgbar — entweder im `concise/`-Ordner oder über die externen URLs in `README.md`.
-**Verifikation:** `python3 reproduce.py` rechnet alle Headline-Zahlen aus den gebündelten Daten neu (32 Checks inkl. Statistik-Ebene, PASS/FAIL, Exit ≠ 0 bei Abweichung). `REPRODUCE.md` = Landkarte Zahl → Datei → Roh-Quelle → Test; `STATISTICS.md` + `analysis/` = Inferenz-Schicht (KS-Null, Permutation, γ_M/Bonferroni, Bootstrap).
+**Verifikation:** `python3 reproduce.py` rechnet alle Headline-Zahlen aus den gebündelten Daten neu (33 Checks inkl. Statistik-Ebene, PASS/FAIL, Exit ≠ 0 bei Abweichung). `REPRODUCE.md` = Landkarte Zahl → Datei → Roh-Quelle → Test; `STATISTICS.md` + `analysis/` = Inferenz-Schicht (KS-Null, Permutation, γ_M/Bonferroni, Bootstrap).
 
 ---
 
@@ -37,9 +37,10 @@
 - **Externe Quelle:** Yahoo Finance via `yfinance`, SPY 1993–2026
 - **Werte:** Crash $R^2 = 0.973 \pm 0.025$ ($n=10$), Calm $R^2 = 0.483$ ($n=135$)
 
-### §4.4 Lignin Kraft-Aufschluss
-- **Roh-Daten:** `data/lignin/SRDS_Section4-5_Biopolymer_Textbaustein.docx` (Volltext-Belege)
-- **Werte:** $n = 90$, $\rho_S = -0.77$, $\tilde{a} = 0.325$, $k = 2.86$
+### §4.4 Lignin / Lignin-Carbohydrate-Complexes (SP-LCC)
+- **Externe Quelle:** Alopaeus et al. 2025, *SP-LCC*, Scientific Data 12, **doi:10.1038/s41597-025-05327-8** (95 LCC-Proben, AqSO-Biorefinery)
+- **Daten (gebündelt):** `data/lignin/sp_lcc_data_master.csv` (72-Proben-Subset: p-factor, b-O-4, RSI, Tg, Oberflächenspannung, chain-length) + Writeup `…Biopolymer_Textbaustein.docx`
+- **Werte (firsthand aus CSV):** $\rho_S(\beta\text{-O-4}, \text{P-Faktor}) = -0.78$ ($n = 72$; `reproduce.py` [15]); Sigmoid-Fit $\tilde{a} = 0.325$, $k = 2.86$ (Q–Σ, scipy). *(Früherer Draft: −0,77/n=90 aus verschollenem Text-Modul; maßgeblich sind die data-backed −0,78/n=72.)*
 
 ### §4.5 V-Dem Autokratisierungen
 - **Externe Quelle:** V-Dem ERT-v14 (`v-dem.net/data/ert/`), 117 Episoden
