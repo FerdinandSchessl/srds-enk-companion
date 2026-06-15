@@ -13,10 +13,10 @@ degradation, surface tension).
 
 **Headline (firsthand-reproducible, stdlib):** ρ_S(β-O-4 linkage density, P-factor) = **−0.78** (n=72)
 — recomputed by `reproduce.py` block [15]. Secondary: RSI vs P = +0.61; surface-tension(0.5) vs P = +0.56.
-The order-parameter sigmoid (Q = β-O-4 loss vs normalized P-factor) is **Logistic** (AICc winner over
-Logistic/Gompertz/Weibull/Hill; see `data/model_comparison/lignin/`), with **â=0.21, k≈4.8** on the
-n=72 process conditions (of 95 samples). An earlier draft cited â=0.325/k=2.86 from a lost n=90 module;
-that does not reproduce on SP-LCC (linear-P → 0.21, log-P → 0.41).
+The order-parameter sigmoid form follows from the **aggregation mode**, not from an AICc contest:
+lignin is serial-cascaded weakest-link failure (β-O-4 yields before 5-5) = **Mode (ii) → Weibull**
+(framework, §2.4 / FRAME_ANCHOR §A). Headline: **Weibull, â=0.325, k=2.86** (creep regime). The AICc
+table in `data/model_comparison/lignin/` is descriptive fit-quality only and does NOT determine the form.
 
 **Note on n / value:** an earlier draft cited ρ_S=−0.77 / n=90 (from a recovered text module whose
 raw file was lost). The citable SP-LCC subset bundled here yields **ρ_S=−0.78 / n=72** — these

@@ -40,7 +40,7 @@
 ### §4.4 Lignin / Lignin-Carbohydrate-Complexes (SP-LCC)
 - **Externe Quelle:** Alopaeus et al. 2025, *SP-LCC*, Scientific Data 12, **doi:10.1038/s41597-025-05327-8** (95 LCC-Proben, AqSO-Biorefinery)
 - **Daten (gebündelt):** `data/lignin/sp_lcc_data_master.csv` (72-Proben-Subset: p-factor, b-O-4, RSI, Tg, Oberflächenspannung, chain-length) + Writeup `…Biopolymer_Textbaustein.docx`
-- **Werte (firsthand aus CSV):** $\rho_S(\beta\text{-O-4}, \text{P-Faktor}) = -0.78$ ($n = 72$; `reproduce.py` [15]); Sigmoid-Fit (Logistic, AICc) $\tilde{a} = 0.21$, $k \approx 4.8$ (Q–Σ, scipy; `data/model_comparison/lignin/`). *(Früherer Draft: −0,77/n=90 aus verschollenem Text-Modul; maßgeblich sind die data-backed −0,78/n=72.)*
+- **Werte (firsthand aus CSV):** $\rho_S(\beta\text{-O-4}, \text{P-Faktor}) = -0.78$ ($n = 72$; `reproduce.py` [15]); Sigmoid-Fit (Weibull, Mode (ii) seriell-kaskadiert) $\tilde{a} = 0.325$, $k = 2.86$ (Q–Σ). Form folgt aus dem Aggregations-Modus, nicht aus AICc. *(Früherer Draft: −0,77/n=90 aus verschollenem Text-Modul; maßgeblich sind die data-backed −0,78/n=72.)*
 
 ### §4.5 V-Dem Autokratisierungen
 - **Externe Quelle:** V-Dem ERT-v14 (`v-dem.net/data/ert/`), 117 Episoden
