@@ -37,7 +37,7 @@ theorem J_preserves_normalized (Q : C01) (hQ : Q ∈ NormalizedProfiles) :
       simp only [reflectionOp, ContinuousMap.coe_mk]
       -- Q(1-x) ≤ Q(0) = 1, so 1 - Q(1-x) ≥ 0
       have h1 : Q ⟨1 - x.val, one_minus_mem_I x⟩ ≤ Q ⟨0, by norm_num⟩ := by
-        apply hQ_mono; simp; linarith [x.prop.2]
+        apply hQ_mono; simp; exact (one_minus_mem_I x).1
       rw [hQ_at0] at h1
       linarith
     · -- (JQ) is non-increasing

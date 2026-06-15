@@ -16,8 +16,10 @@ import PositivityProofs.HilbertMetric
 import PositivityProofs.TP2Kernels
 import PositivityProofs.SpectralGap
 import PositivityProofs.Symmetry
+import PositivityProofs.TwoPointGauge
 import PositivityProofs.NumericalCertificate
 import PositivityProofs.NoGo
+import PositivityProofs.IFTBridge
 import PositivityProofs.AxiomAudit
 
 /-!

@@ -9,10 +9,22 @@
 
   ## Summary
 
-  Total axioms: 17
+  Total axioms: 18 (was 19, twoPointGauge_J_equivariant formalized 2026-05-30)
   - Category A (Standard structural, Mathlib gaps): 12
-  - Category B (Numerical certificate): 1
-  - Category C (Paper-specific analytical): 4
+  - Category B (Numerical certificate): 2 (Q_dot_half_continuum named constant + interval)
+  - Category C (Paper-specific analytical): 4 (was 5; twoPointGauge proved)
+
+  ## 2026-05-30 update
+  - twoPointGauge_J_equivariant: AXIOM → THEOREM (TwoPointGauge.lean).
+    Proof via Subtype reductions + explicit algebraic manipulation. No Mathlib gap.
+  - Mathlib4 IFT status REVISED: Mathlib HAS `ImplicitFunctionData.implicitFunction`
+    on Banach spaces (Analysis/Calculus/Implicit.lean) and `HasStrictFDerivAt.to_localInverse`
+    (Analysis/Calculus/InverseFunctionTheorem/FDeriv.lean). Bochner integration on
+    continuous-map-valued functions is in MeasureTheory/Integral/Bochner/.
+    The remaining gap is NOT Mathlib but the operator-side: renormOp itself is axiom
+    (definition gap; the Bochner integral on C([0,1]) is available but constructing
+    the smoothing operator is multi-step). So infinite-dim IFT for our operator
+    is bounded but multi-month work.
 
   ## Acceptance Argument for Reviewer
 
@@ -29,6 +41,7 @@
 -/
 
 import PositivityProofs.NoGo
+import PositivityProofs.IFTBridge
 import PositivityProofs.HilbertMetric
 import PositivityProofs.SpectralGap
 
@@ -88,8 +101,9 @@ Axiom 9 is a standard application of the p-series convergence test.
 | 10 | smoothingOp_commutes_J | Paper Lemma 4.2, Step 2 | Requires integral operator |
 
 Axiom 10 encodes the equivariance T∘J = J∘T under kernel mirror symmetry.
-The proof is a direct substitution in the integral, but requires the
-Bochner integral on C([0,1]) which is not available in Mathlib4.
+The proof is a direct substitution in the integral. The Bochner integral
+on C([0,1]) IS available in Mathlib4 (MeasureTheory/Integral/Bochner/);
+the obstruction is constructing the specific smoothing operator concretely.
 
 Note: `symmetry_forward` (the converse direction Q*(1/2) = 1/2 ⟹ K-SYM)
 was previously listed here but has been reclassified to Category C,
@@ -101,49 +115,99 @@ as it encodes a conjectured result not proved in the paper.
 /-!
 ### A.4: No-Go Structural (NoGo.lean)
 
-| # | Axiom | Reference | Mathlib4 Status |
+| # | Axiom | Reference | Mathlib4 Status (revised 2026-05-30) |
 |---|-------|-----------|-----------------|
-| 12 | renormOp | Definition via Bochner integral | Requires measure theory |
-| 13 | fixedPoint_smooth | IFT on Banach spaces | Finite-dim version in Mathlib |
+| 12 | renormOp | Definition via Bochner integral | Bochner IS in Mathlib; operator construction is bounded but multi-step |
+| 13 | fixedPoint_smooth | IFT on Banach spaces | Mathlib HAS Banach IFT (`ImplicitFunctionData.implicitFunction`) |
 
 Axiom 12 is a DEFINITION (the renormalization operator as an integral operator).
-Axiom 13 encodes the Implicit Function Theorem for Fréchet-differentiable
-operators on Banach spaces. Mathlib4 has the finite-dimensional version:
-  Analysis.Calculus.ImplicitFunctionTheorem
-The infinite-dimensional generalization requires bounded linear operators
-and the Banach space inverse function theorem.
+Axiom 13 asserts existence of the family Q_star α — does NOT include differentiability
+in α. (Differentiability is needed by `nogo_theorem_certified_from_continuum` and
+will be encoded separately when Item 1 of the v2 plan is implemented.)
 -/
 
 #check @renormOp
 #check @fixedPoint_smooth
 
-/-! ## Category B: Numerical Certificate (1 axiom)
+/-! ## Category B: Numerical Certificate (2 axioms, advisor 4.8 honest refactor May 2026)
 
-| # | Axiom | Verification | Precision |
-|---|-------|-------------|-----------|
-| 14 | Q_dot_half_in_certified_interval | Arb 256-bit + Krawczyk | [1.858, 1.879] |
+| # | Axiom | Verification | Status |
+|---|-------|--------------|--------|
+| 14a | Q_dot_half_continuum | NAMED constant for the continuum value | (∈ ℝ) |
+| 14b | Q_dot_half_continuum_in_interval | A-posteriori certified enclosure | [≈1, 3] |
 
-This is the ONLY axiom that encodes a numerical computation.
-It is verified by:
-1. Arb ball arithmetic at 256-bit precision (python-flint 0.8.0)
-2. Krawczyk fixed-point enclosure (residual 6.57 × 10⁻¹⁷)
-3. Discretization error bound via trapezoidal quadrature (δ_N ≈ 0.0105)
-4. J-symmetry cross-check (violation ≤ 1.11 × 10⁻¹⁶)
+REVISION (May 2026, advisor 4.8): The old single-axiom formulation
+`∃ v, 1.858 ≤ v ∧ v ≤ 1.879` was diagnosed as RELOCATED HOLLOWNESS
+(v not bound to Q̇). The honest version uses a NAMED constant
+`Q_dot_half_continuum : ℝ` representing the continuum value of
+(dQ*_α/dα|_{α=0}) (1/2), bound to the certified interval.
+
+The verification chain (verified-numerics/verified_computation.py):
+1. Phase A: NumPy approximation of Q*_0, L_N, b_N, Q̇_N at N=200
+2. Phase B (Arb 256-bit):
+   - Krawczyk fixed-point enclosure of Q*_0 (residual ~ 10⁻¹⁷)
+   - Re-compute L_N, b_N, Q̇_N as Arb balls
+   - Krawczyk-certified ‖Y‖_∞, ‖I − Y(I-L_N)‖_∞ < 1
+   - ⟹ ρ_inv_disc := ‖Y‖_∞ / (1-c) bounded rigorously in Arb
+3. Phase C (a-posteriori box enclosure, advisor 4.8 pivot):
+   - Anselone continuum-discrete correction:
+     ρ_inv_cont ≤ ρ_inv_disc / (1 - ρ_inv_disc · (h²/8) · A_2(ε))
+     where A_2(ε) is the heat-kernel constant from B0.2 (explicit Arb formula)
+   - Defect d := (I - L) Q̃ - b for piecewise-linear interpolant Q̃
+   - Box enclosure of |d| on each [x_i, x_{i+1}] with subbox refinement
+     (K=500) to control Arb interval dependency inflation
+   - Identity Q̇ - Q̃ = -(I - L)⁻¹ d ⟹ ‖Q̇ - Q̃‖_∞ ≤ ρ_inv_cont · ‖d‖_∞
+
+J-symmetry cross-check: violation ≤ 1.11 × 10⁻¹⁶ (verifies Q*_0 J-symm).
+
+References (advisor-cited literature):
+- Rall (1969): Krawczyk operator
+- Anselone (1971): Collectively compact operator approximation
+- Nakao-Plum-Watanabe (2019): a-posteriori box enclosure
+- Kress (2014) §12: Nyström convergence
+- Johansson (2017): Arb interval arithmetic
+- Davies (1989): Heat kernels (for A_2 constant)
 
 The certificate is machine-readable: verified-numerics/certificate.json
 Reproduction: `make verify` in verified-numerics/
+Companion docs:  proof_attempts/defect_bound_writeup.md
+                 proof_attempts/analytic_constants.md
 -/
 
-#check @Q_dot_half_in_certified_interval
+#check @Q_dot_half_continuum
+#check @Q_dot_half_continuum_in_interval
 
-/-! ## Category C: Paper-Specific Analytical (4 axioms)
+/-! ## Category C: Paper-Specific Analytical (4 axioms — was 5; #18 formalized 2026-05-30)
 
 | # | Axiom | Reference | Note |
 |---|-------|-----------|------|
 | 11 | symmetry_forward | Paper Remark 4.5 | Conjectured converse direction |
-| 15 | nogo_step5_general | Paper Thm 4.4 Step 5 | Gauge mixing argument |
-| 16 | nogo_theorem_certified | Paper Thm 4.4 | IFT + certificate |
-| 17 | nogo_theorem | Paper Thm 4.4 | General version |
+| 15 | nogo_step5_general | Paper Thm 4.4 Step 5 | Open conjecture (gauge equiv. argument) |
+| 16 | nogo_theorem_certified_from_continuum | Paper Thm 4.4 + cert | Bridge: Q̇(1/2)≠0 → No-Go (v2 Item 1 target) |
+| 17 | nogo_theorem | Paper Thm 4.4 (general) | OPEN CONJECTURE all ε,η |
+| ~~18~~ | ~~twoPointGauge_J_equivariant~~ | ~~Paper Def 2.8 + Lem 4.5~~ | **PROVED 2026-05-30 (TwoPointGauge.lean)** |
+
+REVISION (advisor 4.8 wiring fix, May 2026):
+- nogo_theorem_certified was previously a free-standing axiom (`∃...deriv≠0`)
+  not connected to the numerical certificate.
+- Now PROVED via:  nogo_theorem_certified_from_continuum
+                   (Q_dot_half_continuum_nonzero : Q_dot_half_continuum ≠ 0)
+- This wires the certificate (Cat B) into the No-Go conclusion.
+- `#print axioms nogo_theorem_certified` now correctly lists Q_dot_half_continuum
+  + Q_dot_half_continuum_in_interval + the bridge axiom.
+
+REMAINING (future work, advisor 4.8 acknowledged):
+- nogo_theorem_certified_from_continuum is ITSELF an axiom (encodes the chain rule
+  dΣ_c/dα = -Q̇(1/2)/(Q*_0)'(1/2) + IFT + monotonicity). A proper proof requires:
+  (a) defining Q̇ as the Fréchet derivative of α ↦ Q*_α at α=0,
+  (b) constructing Σ_c as continuous function of α via IFT,
+  (c) applying the chain rule.
+  Mathlib HAS the IFT/Bochner pieces; the gap is constructing the specific operator
+  family and showing it's C¹ in α. v2 Item 1 plan: split this bridge into the
+  finite-dim chain-rule theorem (provable from Mathlib) + atomic operator axioms.
+- twoPointGauge_J_equivariant FORMALIZED 2026-05-30 (PROVED as theorem).
+  Proof uses Subtype reductions on the 1-0/1-1 endpoints + explicit algebraic
+  manipulation. See TwoPointGauge.lean for details.
 
 symmetry_forward encodes the conjectured converse of the symmetry theorem:
 Q*(1/2) = 1/2 ⟹ kernel has mirror symmetry. This is NOT proved in the
@@ -174,6 +238,9 @@ The following results are FULLY PROVED in this formalization:
 |---------|------|-------------|
 | reflectionOp_involution | Basic.lean | J is an involution |
 | transitionPoint_symmetric | Basic.lean | J-symmetric ⟹ Q*(1/2) = 1/2 |
+| twoPointGauge_J_equivariant | TwoPointGauge.lean | A_gauge ∘ J = J ∘ A_gauge (formalized 2026-05-30) |
+| twoPointGauge_apply_of_ne | TwoPointGauge.lean | Pointwise formula for the gauge |
+| reflectionOp_apply, _at_zero, _at_one | TwoPointGauge.lean | Pointwise formulas for J |
 | gaussianKernel_strictlyPositive | TP2Kernels.lean | Gaussian kernel is positive |
 | gaussianKernel_isTP2 | TP2Kernels.lean | Gaussian kernel is TP2 |
 | gaussianKernel_mirrorSymmetry | TP2Kernels.lean | Gaussian kernel has K-SYM |

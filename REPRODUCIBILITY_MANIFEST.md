@@ -17,8 +17,9 @@
   - `NoGo.lean` — No-Go-Theorem: Kernaussage als **auditiertes Axiom** (`AxiomAudit.lean`), abgeleitete Lemmas maschinell geprüft
   - `Main.lean` — Top-level Statements
   - `NumericalCertificate.lean` — Zertifizierte Spektralschranke $\rho < 0.45$
-  - `SpectralGap.lean`, `Symmetry.lean`, `TP2Kernels.lean` — Hilfs-Lemmas
-- **Status:** sorry-frei (abgeleitete Lemmas); das No-Go-Kernresultat ist **computer-assistiert** (Arb-Zertifikat) und als auditiertes Axiom geführt — Axiom-Inventar in `AxiomAudit.lean`. „computer-assistiert", nicht „from-scratch in Lean bewiesen".
+  - `SpectralGap.lean`, `Symmetry.lean`, `TP2Kernels.lean`, `IFTBridge.lean`, `TwoPointGauge.lean`, `SRDS_Tier1/2/3.lean`, `SRDS_Lyapunov.lean` — Hilfs-Lemmas + IFT-Bridge-/Tier-Formalisierung
+  - `CheckAxioms.lean` — `#print axioms`-Verifizierer: druckt die **exakte** Axiom-Abhängigkeit des No-Go-Theorems
+- **Status (computer-assistiert, nicht „from-scratch in Lean bewiesen"):** abgeleitete Lemmas sorry-frei. Das No-Go-Theorem hängt von **18 Axiomen** ab — Kat. A 12 (strukturell, Mathlib-Lücken) + B 2 (Numerik-Zertifikat, Arb) + C 4 (paper-spezifisch); dokumentiert in `AxiomAudit.lean`, **maschinell prüfbar** via `CheckAxioms.lean` (`#print axioms nogo_theorem_certified`). **Zählungs-Hinweis (gegen Verwechslung):** ein nacktes `grep '^axiom'` über das Bundle findet **27 Deklarationen** — die zusätzlichen tragen Hilfs-/Alternativ-Resultate (z. B. IFT-Bridge), die *nicht* alle im No-Go-Abhängigkeits-Chain liegen. Maßgeblich ist die **18 aus `#print axioms`**, nicht der grep-Count.
 - **Build:** Lean 4 + Mathlib (`lean4/lakefile.lean`, `lean4/lean-toolchain`); Mathlib-Rev in `lean4/lake-manifest.json` gepinnt
 
 ## 2. Cross-Domain Substrate (§4)
