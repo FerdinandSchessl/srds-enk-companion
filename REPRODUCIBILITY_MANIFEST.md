@@ -45,8 +45,9 @@
 - **Werte:** $n = 117$, Median $R^2 = 0.983$ über 89 gefittete Episoden
 
 ### §4.6 Politische Reden (Bundestag/ParlaMint)
-- **Externe Quelle:** Bundestag Open Data + ParlaMint (HU+PL+RS+SI)
+- **Externe Quelle:** Bundestag Open Data + ParlaMint (HU+PL+RS+SI), CLARIN ERIC (öffentlich)
 - **Werte:** Cantilever-Bauteil-Vorhersage, $n_\text{Bundestag} = 6{,}874$
+- **ℓ₃→ℓ₄-Pilot (§5, kein Tab-1-Substrat):** `data/parlamint/pilot_country_year.csv` (65 Country-Years) + `pilot_inference.json`; NC2 $\rho=-0.34$ (BCa-CI $[-0.48,-0.09]$, $p=0.006$), â-Diskurs 4/4 Cluster negativ (BCa $[-0.34,-0.15]$), Country-Permutation $p=0.207$ (G=4, tail-arm, nicht load-bearing). Reproduktion: `reproduce.py` Block [13]. Status: POSTULIERT (Operationalisierung offen).
 
 ### §4.7 Erdbeben USGS
 - **Roh-Daten:** `data/earthquake/usgs_earthquakes.csv` (Quell-Daten), `data/earthquake/earthquake_results.csv` (Sigmoid-Fits)

@@ -27,6 +27,7 @@ folder) and the **raw source** is linked (so the fit itself can be re-run end-to
 | 9 | ENK LLM conversations | ρ = −0.359 (n = 202); Ridge 0.700 | `data/enk/ahat_convergence.csv` (chat_id anonymised) | raw chats under DUA — not redistributable (aggregated metrics only) |
 | 10 | Music MIDI | n = 2840; median R² = 0.975; Mann-Kendall τ = +1.000 | `data/musik_companion/outputs/` (+ `pipeline/`) | MetaMIDI Zenodo `10.5281/zenodo.5142664` + Tagtraum CD2C + music21 |
 | 11 | DP1180 high-strength steel (Tab. 18) | ã = 0.975; KS-D = 1.000; n = 19 | `data/dp1180/numisheet_results.json` | NIST Numisheet 2020 (`data.nist.gov`, DIC uniaxial tension) |
+| 12 | ParlaMint ℓ₃→ℓ₄ pilot (§5; *not* a substrate) | NC2 ρ=−0.34 (BCa [−0.48,−0.09]); â-discourse 4/4 neg.; country-perm p=0.207 | `data/parlamint/pilot_country_year.csv` + `pilot_inference.json` | ParlaMint CLARIN + V-Dem |
 
 ## Notes on two values that are *deliberately* dual
 

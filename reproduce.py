@@ -270,6 +270,33 @@ try:
 except Exception as e:
     line("permutation", f"ERROR {e}", "-", False)
 
+# [13] PARLAMINT ℓ3→ℓ4 pilot (§5 best-light directional; NOT a load-bearing substrate)
+print("\n[13] PARLAMINT pilot  — data/parlamint/pilot_country_year.csv (§5 bridge pilot, 65 country-years)")
+try:
+    prows = list(csv.DictReader(open(D / "parlamint/pilot_country_year.csv")))
+
+    def _pcol(name, sub=None):
+        xs, ys = [], []
+        for r in prows:
+            if sub and r["country"] != sub:
+                continue
+            try:
+                xs.append(float(r[name])); ys.append(float(r["drift_rate"]))
+            except (ValueError, KeyError):
+                pass
+        return xs, ys
+    x, y = _pcol("nc2_median"); rn = spearman(x, y)
+    line("NC2 rho vs polyarchy drift", f"{rn:+.4f} (n={len(x)})", "-0.34", abs(rn + 0.34) < 0.01)
+    x, y = _pcol("a_hat_diskurs"); ra = spearman(x, y)
+    line("a_hat-discourse rho", f"{ra:+.4f}", "-0.2365", abs(ra + 0.2365) < 0.01)
+    cl = {c: spearman(*_pcol("a_hat_diskurs", c)) for c in ["HU", "PL", "RS", "SI"]}
+    line("per-cluster a_hat (4/4 negativ)", "/".join(f"{cl[c]:+.2f}" for c in ["HU", "PL", "RS", "SI"]),
+         "-.40/-.52/-.21/-.40", all(v < 0 for v in cl.values()))
+    pp = json.load(open(D / "parlamint/pilot_inference.json"))["primary"]["country_permutation"]["p_perm"]
+    line("country-permutation p (G=4)", f"{pp:.3f}", "0.207 (tail-arm)", abs(pp - 0.207) < 0.005)
+except Exception as e:
+    line("parlamint", f"ERROR {e}", "-", False)
+
 print("\n" + "=" * 80)
 if _FAIL:
     print(f"RESULT: {_PASS[0]} checks PASSED, {len(_FAIL)} FAILED -> {', '.join(_FAIL)}")

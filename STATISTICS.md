@@ -16,6 +16,7 @@ No-package scripts (Python standard library only) are marked **[stdlib]**; the r
 | CRC bootstrap (MSI/MSS, KS-D = 0.350) | `data/crc/crc_results_v2.json → bootstrap` (500 resamples; re-run via `data/crc/domain_crc_v2.py`) | [scipy] |
 | CRC stage-aggregated Δâ = −0.153 | `data/crc/crc_stage_aggregated.json`; re-fit `data/crc/domain_crc_v2.py` | [scipy] |
 | ENK cluster-robust ρ = −0.359 (turn-pair level) | aggregate in `data/enk/ahat_convergence.csv`; **full cluster-robust needs the raw turn-pairs (under DUA, not redistributable)** | limited |
+| ParlaMint ℓ₃→ℓ₄ BCa-CI + country-permutation (§5 pilot) | `data/parlamint/pilot_inference.json` (country-cluster BCa B=10⁴ + 4! country permutation); `reproduce.py` [13] recomputes ρ from `pilot_country_year.csv` | [stdlib] ρ; BCa/perm machine-stored |
 | LOPO (Macro 0.339), Holm-Bonferroni hold-out | documented in the full working repo (not in this lean companion) | external |
 
 ## The two thresholds (this is the historical source of confusion)

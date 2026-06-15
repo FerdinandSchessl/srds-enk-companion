@@ -59,6 +59,7 @@ Details je Substrat im `REPRODUCIBILITY_MANIFEST.md` (§-Nummern rechts).
 | `data/vdem/` | V-Dem ERT-v14 Episoden-Fits (`srds_vdem_results.csv`); Median $R^2 = 0.983$, 89/117 |
 | `data/finance/` | SPY Event-Fits (`event_results_v3.csv`); Crash $R^2 = 0.973$ vs. Calm $0.483$ |
 | `data/enk/` | ENK Konversations-â-Aggregat (`ahat_convergence.csv`, `chat_id` anonymisiert; Roh-Chats unter DUA) |
+| `data/parlamint/` | ParlaMint ℓ₃→ℓ₄-Pilot (§5, **kein** Tab-1-Substrat): Country-Year-Aggregat + `pilot_inference.json`; NC2 ρ=−0.34, â-Diskurs 4/4 neg., perm-p=0.207 |
 | `data/musik_companion/pipeline/` | Pipeline-Skripte für MetaMIDI/Tagtraum/music21 ($\ell_2$-Substrat) |
 | `data/musik_companion/outputs/` | Pipeline-Outputs (`musik_l2_lakh_cross_genre.json`, `musik_l2_music21_all_raw.json`, Shuffled-Control) |
 | `analysis/sigma_operationalisierung.py` | Operative Spezifikation der $\Sigma_c$-Konjektur (§9.2 Programm C) |
