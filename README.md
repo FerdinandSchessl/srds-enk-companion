@@ -47,7 +47,7 @@ Details je Substrat im `REPRODUCIBILITY_MANIFEST.md` (§-Nummern rechts).
 | `analysis/null_model.py` | [scipy] Synthetik-Null-Generator (AR(1)/RW/WN) + KS, Al-6061-Beispiel |
 | `analysis/ks_null_summary.csv` | Sechs Tab.-18-Substrate: KS-D + p (Quelle der γ_M-Zählung) |
 | `REPRODUCIBILITY_MANIFEST.md` | Pro Tabelle/Abbildung im Paper: Skript-Pfad, Roh-Daten-Pfad, externe URLs |
-| `lean4/PositivityProofs/` | No-Go-Theorem **computer-assistiert** in Lean 4 (Birkhoff-Hopf + zertifizierte Spektralschranke). Es hängt von **18 Axiomen** ab (Kat. A 12 + B 2 + C 4, `AxiomAudit.lean`), maschinell prüfbar mit `CheckAxioms.lean` (`#print axioms`); abgeleitete Lemmas sorry-frei. *(Ein nacktes `grep axiom` zählt 27 Deklarationen — inkl. Hilfs-Axiome anderer Resultate, nicht alle im No-Go-Chain; maßgeblich ist die 18 aus `#print axioms`.)* |
+| `lean4/PositivityProofs/` | No-Go in Lean 4, **computer-assistiert**: das zertifizierte `nogo_theorem_certified` ist **sorry-frei** (firsthand gebaut, 0 `sorryAx` — Beleg `lean4/CHECKAXIOMS_OUTPUT.txt`) und hängt laut `#print axioms` von **12 Projekt-Axiomen** ab (2 Numerik-Zertifikat + 10 IFT-Bridge) + 3 Lean-Grundaxiomen. Das allgemeine `nogo_theorem` (alle ε,η) ist **Konjektur/Axiom**. *(Drei Bezugsgrößen: `#print axioms`=12 · `AxiomAudit.lean`-Inventar=18 · `grep '^axiom'`=27 — alle im Beleg erklärt.)* |
 | `genealogy_of_frames.md` | 8 datierte Vorform-Frame-Klassen (Master-Thesis 2025 → SRDS 2026) |
 | `data/earthquake/` | USGS-FDSN-API-Sequenzen, 284 Sequenzen, sechs Regionen (`usgs_earthquakes.csv`, `earthquake_results.csv`) |
 | `data/battery/` | CALB Li-Ion Degradation, $n = 26$ Zellen / 3 Temperaturen (`battery_calb_results.json`; Roh extern HF `Battery-Life/BatteryLife_Raw`) |

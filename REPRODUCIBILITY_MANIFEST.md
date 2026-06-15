@@ -14,12 +14,12 @@
   - `AxiomAudit.lean` — Axiom-Konsistenz-Check
   - `Basic.lean` — Grundlagen-Definitionen
   - `HilbertMetric.lean` — Hilbert-Metrik für $TP_2$-Kernel
-  - `NoGo.lean` — No-Go-Theorem: Kernaussage als **auditiertes Axiom** (`AxiomAudit.lean`), abgeleitete Lemmas maschinell geprüft
+  - `NoGo.lean` — zertifiziertes `nogo_theorem_certified` (sorry-frei; 12 Projekt-Axiome via `#print axioms`); allgemeines `nogo_theorem` (alle ε,η) = Konjektur/Axiom
   - `Main.lean` — Top-level Statements
   - `NumericalCertificate.lean` — Zertifizierte Spektralschranke $\rho < 0.45$
   - `SpectralGap.lean`, `Symmetry.lean`, `TP2Kernels.lean`, `IFTBridge.lean`, `TwoPointGauge.lean`, `SRDS_Tier1/2/3.lean`, `SRDS_Lyapunov.lean` — Hilfs-Lemmas + IFT-Bridge-/Tier-Formalisierung
   - `CheckAxioms.lean` — `#print axioms`-Verifizierer: druckt die **exakte** Axiom-Abhängigkeit des No-Go-Theorems
-- **Status (computer-assistiert, nicht „from-scratch in Lean bewiesen"):** abgeleitete Lemmas sorry-frei. Das No-Go-Theorem hängt von **18 Axiomen** ab — Kat. A 12 (strukturell, Mathlib-Lücken) + B 2 (Numerik-Zertifikat, Arb) + C 4 (paper-spezifisch); dokumentiert in `AxiomAudit.lean`, **maschinell prüfbar** via `CheckAxioms.lean` (`#print axioms nogo_theorem_certified`). **Zählungs-Hinweis (gegen Verwechslung):** ein nacktes `grep '^axiom'` über das Bundle findet **27 Deklarationen** — die zusätzlichen tragen Hilfs-/Alternativ-Resultate (z. B. IFT-Bridge), die *nicht* alle im No-Go-Abhängigkeits-Chain liegen. Maßgeblich ist die **18 aus `#print axioms`**, nicht der grep-Count.
+- **Status (firsthand gebaut, Lean v4.29.0-rc1 + gepinnte mathlib):** `lake env lean PositivityProofs/CheckAxioms.lean` läuft **ohne `sorryAx`/Fehler** — Beleg `lean4/CHECKAXIOMS_OUTPUT.txt`. Das zertifizierte **`nogo_theorem_certified`** (Paper: computer-assistiert via Arb-Zertifikat Q̇(½)∈Intervall) hängt laut `#print axioms` von **12 Projekt-Axiomen** ab: 2 Numerik-Zertifikat (`Q_dot_half_continuum`, `…_in_interval`) + 10 IFT-Bridge (`Q_star`/`Sigma_c`-Familie), plus die 3 Lean-Grundaxiome (`propext`, `Classical.choice`, `Quot.sound`). Das **allgemeine** `nogo_theorem` (alle ε,η) bleibt **Konjektur** (als Axiom geführt). **Drei wohldefinierte Bezugsgrößen (Auflösung der 17/21/27-Verwechslung):** `#print axioms` = **12 Projekt-Axiome** (worauf das zertifizierte No-Go ruht, maßgeblich) · `AxiomAudit.lean`-Inventar = **18** (Gesamt-Formalisierung inkl. struktureller Birkhoff-Hopf-Achse, die das zertifizierte Theorem nicht nutzt) · `grep '^axiom'` = **27** Deklarationen im Bundle.
 - **Build:** Lean 4 + Mathlib (`lean4/lakefile.lean`, `lean4/lean-toolchain`); Mathlib-Rev in `lean4/lake-manifest.json` gepinnt
 
 ## 2. Cross-Domain Substrate (§4)

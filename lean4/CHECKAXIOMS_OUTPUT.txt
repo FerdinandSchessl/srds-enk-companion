@@ -1,0 +1,64 @@
+# Output of:  lake env lean PositivityProofs/CheckAxioms.lean
+# Toolchain: leanprover/lean4 v4.29.0-rc1; mathlib pinned (lake-manifest.json).
+# Run 2026-06-15 in the built bundle (authoritative ~/ENK, byte-identical to this lean4/PositivityProofs/).
+# Result: 0 sorryAx, 0 errors => the certified results are genuinely sorry-free.
+#
+# nogo_theorem_certified depends on 12 PROJECT axioms (2 numerical-certificate + 10 IFT-bridge)
+# plus Leans 3 foundational axioms (propext, Classical.choice, Quot.sound).
+# AxiomAudit.lean inventories 18 across the whole formalization; a raw `grep "^axiom"` finds 27 declarations.
+# The general nogo_theorem (all eps,eta) is stated as an open conjecture (axiom), see AxiomAudit.lean.
+# ----------------------------------------------------------------------------------
+
+'nogo_step5_certified' depends on axioms: [Q_dot_half_continuum,
+ Q_dot_half_continuum_in_interval,
+ propext,
+ Classical.choice,
+ Quot.sound]
+'nogo_theorem_certified' depends on axioms: [Q_dot_half_continuum,
+ Q_dot_half_continuum_in_interval,
+ propext,
+ Classical.choice,
+ IFTBridge.Q_eval_has_strict_fderiv_at_origin,
+ IFTBridge.Q_star,
+ IFTBridge.Q_star_in_normalized,
+ IFTBridge.Q_star_zero_spatial_slope,
+ IFTBridge.Q_star_zero_spatial_slope_neg,
+ IFTBridge.Sigma_c,
+ IFTBridge.Sigma_c_at_zero,
+ IFTBridge.Sigma_c_differentiable_at_zero,
+ IFTBridge.Sigma_c_differentiable_everywhere,
+ IFTBridge.Sigma_c_identity_at_zero,
+ Quot.sound]
+'no_universal_transition_certified' depends on axioms: [Q_dot_half_continuum,
+ Q_dot_half_continuum_in_interval,
+ propext,
+ Classical.choice,
+ IFTBridge.Q_eval_has_strict_fderiv_at_origin,
+ IFTBridge.Q_star,
+ IFTBridge.Q_star_in_normalized,
+ IFTBridge.Q_star_zero_spatial_slope,
+ IFTBridge.Q_star_zero_spatial_slope_neg,
+ IFTBridge.Sigma_c,
+ IFTBridge.Sigma_c_at_zero,
+ IFTBridge.Sigma_c_differentiable_at_zero,
+ IFTBridge.Sigma_c_differentiable_everywhere,
+ IFTBridge.Sigma_c_identity_at_zero,
+ Quot.sound]
+'Q_dot_half_continuum_nonzero' depends on axioms: [Q_dot_half_continuum,
+ Q_dot_half_continuum_in_interval,
+ propext,
+ Classical.choice,
+ Quot.sound]
+'IFTBridge.Sigma_c_derivative_formula' depends on axioms: [Q_dot_half_continuum,
+ propext,
+ Classical.choice,
+ IFTBridge.Q_eval_has_strict_fderiv_at_origin,
+ IFTBridge.Q_star,
+ IFTBridge.Q_star_zero_spatial_slope,
+ IFTBridge.Q_star_zero_spatial_slope_neg,
+ IFTBridge.Sigma_c,
+ IFTBridge.Sigma_c_at_zero,
+ IFTBridge.Sigma_c_differentiable_at_zero,
+ IFTBridge.Sigma_c_identity_at_zero,
+ Quot.sound]
+'twoPointGauge_J_equivariant' depends on axioms: [propext, Classical.choice, Quot.sound]
