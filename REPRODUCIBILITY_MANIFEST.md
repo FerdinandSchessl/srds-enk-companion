@@ -64,11 +64,6 @@
 - **Externe Quelle:** TCGA Pan-Cancer-Atlas (`portal.gdc.cancer.gov`)
 - **Werte:** $n = 579$; **kanonisch (Last-Achse) stage-aggregiert** MSI–MSS $\Delta\hat{a} = -0.153$; Population/Count-Sortierung $+0.05$ = Zähl-Artefakt (`crc_results_v2.json → group_results`)
 
-### §4.12 Tabelle-18 Forced-Materials (Al-6061, DP1180) und Fatigue-Fit
-- **Al-6061:** `data/al6061/per_specimen_al6061.tsv` + `summary_al6061.tsv`; $\tilde{a}=0.084$ (Median `logistic_inflection`, 146 valide Fits), $\rho(\hat{a},\sigma_{\max})=-0.703$, KS-D $=1.000$. Roh-Spannungs-Dehnung: Mendeley `10.17632/rd6jm9tyb6.2`.
-- **DP1180:** `data/dp1180/numisheet_results.json`; $\tilde{a}=0.975$ ($a\_hat\_mean$, $n=19$), KS-D $=1.000$. Roh: NIST Numisheet 2020 (`data.nist.gov`).
-- **Multiaxial Fatigue:** `data/fatigue/multiaxial_fatigue_results.json`; $\tilde{a}=0.578$, $n_\text{strain}=914$. Roh: Heng 2024 Sci Data `10.1038/s41597-024-03862-4`.
-
 ### §4.10 LLM Konversationen (ENK Gold)
 - **Roh-Daten:** ENK Gold-Korpus ($n = 202$, Auf-Anfrage unter Data-Use-Agreement — siehe Paper §9.3 Disclosure)
 - **Werte:** $\rho = -0.359$ cluster-robust, Ridge $\rho = 0.700 \pm 0.076$
@@ -89,6 +84,11 @@
   - `musik_l2_lakh_run.log`, `musik_l2_shuffled_control.log` — Pipeline-Logs
 - **Externe Daten-Quellen:** MetaMIDI Dataset Zenodo `10.5281/zenodo.5142664` (Ens & Pasquier 2021); Tagtraum CD2C `tagtraum.com/genres/msd_tagtraum_cd2c.cls.zip`
 - **Werte:** $n = 2{,}840$ MIDI-Stücke, 6-Genre Mann-Kendall $\tau = +1.000$, $p = 0.003$, Median $R^2 = 0.975$
+
+### §4.12 Tabelle-18 Forced-Materials (Al-6061, DP1180) und Fatigue-Fit
+- **Al-6061:** `data/al6061/per_specimen_al6061.tsv` + `summary_al6061.tsv`; $\tilde{a}=0.084$ (Median `logistic_inflection`, 146 valide Fits), $\rho(\hat{a},\sigma_{\max})=-0.703$, KS-D $=1.000$. Roh-Spannungs-Dehnung: Mendeley `10.17632/rd6jm9tyb6.2`.
+- **DP1180:** `data/dp1180/numisheet_results.json`; $\tilde{a}=0.975$ ($a\_hat\_mean$, $n=19$), KS-D $=1.000$. Roh: NIST Numisheet 2020 (`data.nist.gov`).
+- **Multiaxial Fatigue:** `data/fatigue/multiaxial_fatigue_results.json`; $\tilde{a}=0.578$, $n_\text{strain}=914$. Roh: Heng 2024 Sci Data `10.1038/s41597-024-03862-4`.
 
 ## 3. Cross-Corpus Konversationen (§6)
 
