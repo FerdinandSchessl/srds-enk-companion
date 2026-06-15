@@ -8,9 +8,11 @@
 # Needed ONLY for the scipy-based re-fits (optional, full end-to-end reproduction):
 #   analysis/null_model.py
 #   data/crc/domain_crc_v2.py
-numpy>=1.24
-scipy>=1.10
-pandas>=2.0
-matplotlib>=3.7
+# Exact versions used by the author (for bit-stable re-fits). Older numpy>=1.24 / scipy>=1.10
+# also work for the scripts; pinned here for reproducibility.
+numpy==2.4.2
+scipy==1.17.0
+pandas==3.0.1
+matplotlib==3.10.8
 # analysis/sigma_operationalisierung.py (Sigma_c program C, optional) additionally needs:
 #   transformers, torch   (GPT-2 surprisal) — heavy; not required for reproduce.py
