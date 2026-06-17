@@ -1,6 +1,6 @@
 # Genealogy of Frames — Companion zu SRDS+ENK (Schessl 2026)
 
-**Status:** Companion-Material, nicht Teil des Haupttextes. Dokumentiert die elf-Monats-Trajektorie der Frame-Konsolidierung, die zur Klasse SRDS führte. Aus dem Hauptpaper (Schessl 2026, *SRDS+ENK*) bewusst herausgenommen, weil die externe Konvergenz (§3) den Frame stärker stützt als eine interne Selbst-Genealogie. Erhalten als Verortung der Arbeit und für eine spätere methodologisch-historische Folge-Arbeit.
+**Status:** Companion-Material, nicht Teil des Haupttextes. Dokumentiert die elf-Monats-Trajektorie der Frame-Konsolidierung, die zur Klasse SRDS führte. Aus dem Hauptpaper (Schessl 2026, *SRDS+ENK*) bewusst herausgenommen, weil die externe Konvergenz (§3) den Frame stärker stützt als eine interne Selbst-Genealogie. Erhalten als Verortung der Arbeit und für eine spätere Folge-Arbeit zur Genealogie.
 
 ---
 
@@ -52,4 +52,4 @@ Wenn Forscher in Nature Physics, Deep-Learning-Theorie und ICLR **unabhängig** 
 - 2026-04 — Autocorrelation Blind Spot (arXiv:2604.14414)
 - 2026-05 — SRDS+ENK (Schessl 2026)
 
-Eine ausgearbeitete methodologisch-historische Folge-Arbeit zur Genealogie der SRDS-Konsolidierung ist nach der Hauptpaper-Submission vorgesehen.
+Eine ausgearbeitete Folge-Arbeit zur Genealogie der SRDS-Konsolidierung ist nach der Hauptpaper-Submission vorgesehen.
