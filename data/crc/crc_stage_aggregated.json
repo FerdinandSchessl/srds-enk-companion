@@ -12,5 +12,5 @@
   "note_population_vs_stage": "Population-sorted FGA gives delta=+0.053 and within-stage mutation-count sorting gives +0.090; both are counting-sort artefacts (see crc_results_v2.json -> group_results). The canonical load-axis result is the stage-aggregated delta=-0.153.",
   "bootstrap_check": "crc_results_v2.json -> bootstrap (msi 0.567 / mss 0.534, KS-D 0.350, p<1e-10)",
   "reproduce": "python3 domain_crc_v2.py   (needs pandas + scipy + numpy + matplotlib; reads tcga_crc_combined.csv in this folder; ANALYSIS 2 prints the stage-aggregated a_hat per group)",
-  "source_report": "srds-paper-companion/analysis/srds_new_domains/REPORT.md lines 96-101 (full working repo)"
+  "source_report": "analysis/srds_new_domains/REPORT.md lines 96-101 (full working repo)"
 }

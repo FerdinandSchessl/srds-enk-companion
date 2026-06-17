@@ -13,4 +13,5 @@ the twelve raw corpora themselves and the per-conversation tables. Public ones: 
 (Awry), ProsocialDialog, Sotopia, P4G, CoSafe, SafeDialBench, Google COVID-Mobility. Restricted /
 on-request: ENK-Gold (DUA), BothBosu, GasConv, LegalCon, MentalManip. The full per-corpus
 pipeline + the Fisher-meta and 47/113 cluster-robust tables live in the working repo
-(`analysis/`, `nc2_zigzag_validation/`); see `../../COVERAGE_REPORT.md` for the per-number map.
+(`analysis/`); the cross-method triangulation runs on a DUA-restricted ENK subset (on request);
+see `../../COVERAGE_REPORT.md` for the per-number map.

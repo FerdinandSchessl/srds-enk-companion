@@ -7,400 +7,400 @@ Walking ./data/lakh/lmd_matched...
   Pop         : 200 MIDIs collected
   Rap         : 87 MIDIs collected
   Rock        : 200 MIDIs collected
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
+site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
   warnings.warn(
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'C\xe9line Dion: ZORA SOURIT '>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'C\xe9line Dion: ZORA SOURIT '>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'\xe9'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'\xe9'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'd\x92hui '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'd\x92hui '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'D\xe9'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'D\xe9'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'b\xe9'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'b\xe9'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'd\x92autres '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'd\x92autres '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'\xefe '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'\xefe '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'd\xe9'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'd\xe9'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'\xe0 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'\xe0 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'\xe7oit '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'\xe7oit '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b't\xe9'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b't\xe9'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'd\x92\xea'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'd\x92\xea'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'l\xe0 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'l\xe0 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'l\xe0-'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=18, data=b'l\xe0-'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe0 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe0 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'f\xe9'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'f\xe9'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe9'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe9'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'p\xeache'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'p\xeache'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'r\xea'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'r\xea'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'o\xf9 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'o\xf9 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=3, data=b'voice\x85 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=3, data=b'voice\x85 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=3, data=b'face\x85 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=3, data=b'face\x85 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=15, data=b'Mello-D\xaa'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=15, data=b'Mello-D\xaa'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe8 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe8 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'gi\xe0 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'gi\xe0 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'pi\xf9 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'pi\xf9 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'r\xf2 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'r\xf2 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'dr\xf2 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'dr\xf2 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b's\xec '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b's\xec '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'ch\xe9 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'ch\xe9 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe8 un '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe8 un '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'r\xe0 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'r\xe0 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'pi\xf9 in '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'pi\xf9 in '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe8 mat'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe8 mat'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b"c'\xe8 "> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b"c'\xe8 "> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=16, data=b'Seq \xa9  1999 VJ Miele'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=16, data=b'Seq \xa9  1999 VJ Miele'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'don\xb4t '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'don\xb4t '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'Don\xb4t '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'Don\xb4t '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
   [50] last=Pop, ok=50, valid=50
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b"Jennifer L\xf3pez - Ain't it funny / Qu\xe9 iron\xeda">; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b"Jennifer L\xf3pez - Ain't it funny / Qu\xe9 iron\xeda">; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=1, data=b'JENNIFER L\xd3PEZ'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=1, data=b'JENNIFER L\xd3PEZ'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=3, data=b'QU\xc9 IRON\xcdA'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=3, data=b'QU\xc9 IRON\xcdA'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'Wei\xdft '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'Wei\xdft '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'wu\xdf'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'wu\xdf'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'T\xfcr'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'T\xfcr'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'K\xf6'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'K\xf6'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'fr\xfc'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'fr\xfc'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'M\xf6nch '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'M\xf6nch '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'w\xe4hl'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'w\xe4hl'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'f\xfcr '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'f\xfcr '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'T\xfcr.'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'T\xfcr.'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b"c'\xe8"> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b"c'\xe8"> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b"s'\xe8?"> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b"s'\xe8?"> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xc8 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xc8 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b't\xe0'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b't\xe0'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'ch\xe9'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'ch\xe9'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b"C'\xe8 "> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b"C'\xe8 "> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'gi\xf9'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'gi\xf9'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'gi\xe0'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'gi\xe0'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'ch\xe8?'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'ch\xe8?'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'pi\xf9'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'pi\xf9'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'ch\xe8'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'ch\xe8'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
   [100] last=Pop, ok=100, valid=100
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=2, data=b'Jos\xe9 Carreras'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=2, data=b'Jos\xe9 Carreras'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'MP M\x81de '>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'MP M\x81de '>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'st\xf6'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'st\xf6'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'st\xe4n'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'st\xe4n'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'T\xfcr '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'T\xfcr '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'wei\xdf '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'wei\xdf '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'l\xe4n'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'l\xe4n'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'scha\xfc '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'scha\xfc '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'frag\xb4 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'frag\xb4 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'\xa6b\xad\xe2\xb1\xe1'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'\xa6b\xad\xe2\xb1\xe1'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
   [150] last=Pop, ok=150, valid=150
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'Amanh\xe3 '>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'Amanh\xe3 '>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=11, data=b'\xa9 1993, MidiGig\xaa'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=11, data=b'\xa9 1993, MidiGig\xaa'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'R\xdd\xccNG GO\xf2I'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'R\xdd\xccNG GO\xf2I'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xea\xcc'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xea\xcc'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'a\xf2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'a\xf2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf4\xec'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf4\xec'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf4\xcc'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf4\xcc'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf0'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf0'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'u\xf2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'u\xf2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xfd'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xfd'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf4'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf4'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe3\xf2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe3\xf2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'a\xec'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'a\xec'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xfd\xcc'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xfd\xcc'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'o\xcc'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'o\xcc'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xea\xf2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xea\xf2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xea'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xea'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf5'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf5'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe2\xcc'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe2\xcc'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf5\xcc'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf5\xcc'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'u\xde'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'u\xde'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'a\xcc'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'a\xcc'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'a\xde'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'a\xde'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'u\xd2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'u\xd2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe2\xec'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe2\xec'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'a\xd2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'a\xd2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'o\xde'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'o\xde'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf5\xf2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf5\xf2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'i\xcc'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'i\xcc'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'u\xec'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'u\xec'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf4\xd2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf4\xd2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf4\xf2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf4\xf2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe3\xec'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe3\xec'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf5\xec'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf5\xec'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xea\xec'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xea\xec'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xfd\xf2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xfd\xf2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'o\xf2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'o\xf2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'e\xec'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'e\xec'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'o\xec'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'o\xec'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'e\xf2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'e\xf2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'i\xec'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'i\xec'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xfd\xde'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xfd\xde'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xfd\xd2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xfd\xd2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe3\xcc'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe3\xcc'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
   [200] last=Pop, ok=200, valid=200
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'H\xd5I TH\xd5\xd2 MU\xccA XU\xc2N'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'H\xd5I TH\xd5\xd2 MU\xccA XU\xc2N'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'u\xcc'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'u\xcc'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf5\xd2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf5\xd2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xea\xd2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xea\xd2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=5, data=b'By RhYm\xc9 and Izzet Selanik'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=5, data=b'By RhYm\xc9 and Izzet Selanik'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=10, data=b'Copyright \xa9 1997'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=10, data=b'Copyright \xa9 1997'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
   [250] last=Electronic, ok=250, valid=250
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=12, data=b'Copyright \xa92002 CYBERMIDI.COM'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=12, data=b'Copyright \xa92002 CYBERMIDI.COM'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=5, data=b'\xcf\xe0\xe4\xe0\xfe\xf9\xe8\xe9 \xf1\xee \xf1\xea\xe0\xeb\xfb \xe8\xed\xe4\xe5\xe5\xf6'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=5, data=b'\xcf\xe0\xe4\xe0\xfe\xf9\xe8\xe9 \xf1\xee \xf1\xea\xe0\xeb\xfb \xe8\xed\xe4\xe5\xe5\xf6'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
   [300] last=Electronic, ok=300, valid=300
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=14, data=b'Rog\xe9rio T. de Mello - MIDI productions'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=14, data=b'Rog\xe9rio T. de Mello - MIDI productions'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'g\xe9 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'g\xe9 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'b\xe9e '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'b\xe9e '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'd\xe9e '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'd\xe9e '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'd\xe9'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'd\xe9'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'Fr\xf4'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'Fr\xf4'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'\xe9'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'\xe9'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'tr\xe8s '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'tr\xe8s '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b"qu'\xe0 "> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b"qu'\xe0 "> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'l\xe0 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'l\xe0 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'\xeatre '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'\xeatre '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'\xcatre '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=1, data=b'\xcatre '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
   [350] last=Electronic, ok=349, valid=349
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'hei\xdft'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'hei\xdft'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'h\xf6rt'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'h\xf6rt'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'mu\xdf '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'mu\xdf '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'f\xfch'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'f\xfch'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'sch\xf6'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'sch\xf6'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'da\xdf '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'da\xdf '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'sch\xf6n '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'sch\xf6n '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'w\xe4hlt'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'w\xe4hlt'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'h\xe4lt'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'h\xe4lt'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'N\xe4ch'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'N\xe4ch'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'Schlu\xdf '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'Schlu\xdf '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\x91cause '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\x91cause '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\x91till '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\x91till '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=17, data=b'Performance: Carlos Feij\xe3o'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=17, data=b'Performance: Carlos Feij\xe3o'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=1, data=b'fl\x84chen '>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=1, data=b'fl\x84chen '>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=4, data=b'Fl\x84che  '>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=4, data=b'Fl\x84che  '>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
   [400] last=Electronic, ok=399, valid=399
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'to\x85 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'to\x85 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'woh\x85 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'woh\x85 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=5, data=b'R.J.Mari\xa4o'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=5, data=b'R.J.Mari\xa4o'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\x91'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\x91'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
   [450] last=Jazz, ok=449, valid=449
   [500] last=Jazz, ok=499, valid=499
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'C\xd4 \xd0\xd5N TRONG VO\xccNG TAY'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'C\xd4 \xd0\xd5N TRONG VO\xccNG TAY'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'i\xf2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'i\xf2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe3\xd2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe3\xd2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'y\xd2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'y\xd2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe3'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe3'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'e\xde'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'e\xde'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xfd\xec'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xfd\xec'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf5\xde'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf5\xde'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe2\xde'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe2\xde'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
   [550] last=Jazz, ok=549, valid=549
   [600] last=Rock, ok=599, valid=599
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b't\xe4g'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b't\xe4g'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
   [650] last=Rock, ok=649, valid=649
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'l\xec'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'l\xec'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
   [700] last=Rock, ok=699, valid=699
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'BA\xd2N TI\xccNH CA CO\xccN \xd0O\xec'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'BA\xd2N TI\xccNH CA CO\xccN \xd0O\xec'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=5, data=b'Viol\xe3o'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=5, data=b'Viol\xe3o'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'N\xd4\xdeI NH\xd5\xec RI\xcaNG EM'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'N\xd4\xdeI NH\xd5\xec RI\xcaNG EM'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'i\xd2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'i\xd2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
   [750] last=Rock, ok=749, valid=749
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=7, data=b'Accord\xe9on'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=7, data=b'Accord\xe9on'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
   [800] last=Rap, ok=799, valid=798
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'rr\xe0'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'rr\xe0'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'r\xe0'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'r\xe0'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'c\xec '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'c\xec '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'r\xf2,'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'r\xf2,'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'r\xe0.'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'r\xe0.'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'ch\xe8 '> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'ch\xe8 '> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=1, data=b'\xa9 absdrakt \xb2\xb0\xb0\xb2'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=1, data=b'\xa9 absdrakt \xb2\xb0\xb0\xb2'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=2, data=b'\xa9 absdrakt \xb2\xb0\xb0\xb2'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=2, data=b'\xa9 absdrakt \xb2\xb0\xb0\xb2'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=3, data=b'\xa9 absdrakt \xb2\xb0\xb0\xb2'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=3, data=b'\xa9 absdrakt \xb2\xb0\xb0\xb2'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'\xd0\xdd\xd5\xccNG V\xca\xcc \xd0\xd5N C\xd4I'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'\xd0\xdd\xd5\xccNG V\xca\xcc \xd0\xd5N C\xd4I'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'e\xd2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'e\xd2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xd0'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xd0'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
   [850] last=Rap, ok=848, valid=847
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'BAY VA\xccO NGA\xccY XANH'>; getting generic Instrument
+site-packages/music21/midi/translate.py:1993: TranslateWarning: Unable to determine instrument from <music21.midi.MidiEvent SEQUENCE_TRACK_NAME, track=0, data=b'BAY VA\xccO NGA\xccY XANH'>; getting generic Instrument
   metaObj = midiEventToInstrument(e, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf4\xde'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xf4\xde'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe3\xde'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe3\xde'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe2\xf2'> as utf-8
+site-packages/music21/midi/translate.py:2121: TranslateWarning: Unable to decode lyrics from <music21.midi.MidiEvent LYRIC, track=0, data=b'\xe2\xf2'> as utf-8
   lyricsDict = lyricTimingsFromEvents(timedEvents, encoding=encoding)
 
 === LAKH CROSS-GENRE SUMMARY ===

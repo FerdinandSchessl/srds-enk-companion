@@ -252,7 +252,7 @@ The following results are FULLY PROVED in this formalization:
 | symmetry_characterization | Symmetry.lean | Q*(1/2)=1/2 ⟺ K-SYM |
 | kernelPerturbation_odd | NoGo.lean | Perturbation kernel is odd |
 | nogo_step5_certified | NoGo.lean | Q̇(1/2) ≠ 0 (from certificate) |
-| Q_dot_half_nonzero | NumericalCertificate.lean | 0 ∉ [1.858, 1.879] |
+| Q_dot_half_nonzero | NumericalCertificate.lean | 0 ∉ [1.8412, 1.8963] |
 | Q_dot_half_pos | NumericalCertificate.lean | Q̇(1/2) > 0 |
 | no_universal_transition | NoGo.lean | No constant Σ_c |
 | no_universal_transition_certified | NoGo.lean | Same, from certificate |

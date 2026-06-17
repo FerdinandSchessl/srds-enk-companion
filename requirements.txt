@@ -1,4 +1,4 @@
-# Reproduction environment for the SRDS+ENK concise companion.
+# Reproduction environment for the SRDS+ENK companion.
 #
 # NO packages needed (Python 3.8+ standard library only):
 #   reproduce.py

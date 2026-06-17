@@ -1,8 +1,8 @@
-# Reproducibility Manifest — Concise Paper
+# Reproducibility Manifest — Paper
 
 **Stand:** 2026-06-15
 **Paper:** "SRDS+ENK — Selbstreferentielle Dissipative Systeme als Klassen-Theorie cross-substrater Sigmoid-Inflektion" (Schessl 2026, arXiv submission).
-**Zweck:** Jede im Paper genannte Zahl ist über diesen Manifest auf eine Quell-Datei rückverfolgbar — entweder im `concise/`-Ordner oder über die externen URLs in `README.md`.
+**Zweck:** Jede im Paper genannte Zahl ist über diesen Manifest auf eine Quell-Datei rückverfolgbar — entweder in den gebündelten Ordnern (`data/`, `lean4/`, `analysis/`) oder über die externen URLs in `README.md`.
 **Verifikation:** `python3 reproduce.py` rechnet alle Headline-Zahlen aus den gebündelten Daten neu (33 Checks inkl. Statistik-Ebene, PASS/FAIL, Exit ≠ 0 bei Abweichung). `REPRODUCE.md` = Landkarte Zahl → Datei → Roh-Quelle → Test; `STATISTICS.md` + `analysis/` = Inferenz-Schicht (KS-Null, Permutation, γ_M/Bonferroni, Bootstrap).
 
 ---
@@ -39,8 +39,8 @@
 
 ### §4.4 Lignin / Lignin-Carbohydrate-Complexes (SP-LCC)
 - **Externe Quelle:** Alopaeus et al. 2025, *SP-LCC*, Scientific Data 12, **doi:10.1038/s41597-025-05327-8** (95 LCC-Proben, AqSO-Biorefinery)
-- **Daten (gebündelt):** `data/lignin/sp_lcc_data_master.csv` (72-Proben-Subset: p-factor, b-O-4, RSI, Tg, Oberflächenspannung, chain-length) + Writeup `…Biopolymer_Textbaustein.docx`
-- **Werte (firsthand aus CSV):** $\rho_S(\beta\text{-O-4}, \text{P-Faktor}) = -0.78$ ($n = 72$; `reproduce.py` [15]); Sigmoid-Fit (Weibull, Mode (ii) seriell-kaskadiert) $\tilde{a} = 0.325$, $k = 2.86$ (Q–Σ). Form folgt aus dem Aggregations-Modus, nicht aus AICc. *(Früherer Draft: −0,77/n=90 aus verschollenem Text-Modul; maßgeblich sind die data-backed −0,78/n=72.)*
+- **Daten (gebündelt):** `data/lignin/sp_lcc_data_master.csv` (72-Proben-Subset: p-factor, b-O-4, RSI, Tg, Oberflächenspannung, chain-length)
+- **Werte (firsthand aus CSV):** $\rho_S(\beta\text{-O-4}, \text{P-Faktor}) = -0.78$ ($n = 72$; `reproduce.py` [15]); Form = Weibull (Mode (ii) seriell-kaskadiert), aus dem Aggregations-Modus, nicht aus AICc. **Kein inneres $\hat{a}$:** breite β-O-4-Festigkeitsverteilung → konkav ab Ursprung ($m<1$), keine Dauerfestigkeit, Inflektion unterhalb des getesteten Schärfebereichs (firsthand Re-Anker + Schlee 2023 / Mattsson 2017). *(Früherer Draft: −0,77/n=90 aus verschollenem Text-Modul; maßgeblich sind die data-backed −0,78/n=72.)*
 
 ### §4.5 V-Dem Autokratisierungen
 - **Externe Quelle:** V-Dem ERT-v14 (`v-dem.net/data/ert/`), 117 Episoden
@@ -72,7 +72,7 @@
 - **Werte:** $\rho = -0.359$ cluster-robust, Ridge $\rho = 0.700 \pm 0.076$
 
 ### §4.11 Musik (MetaMIDI + music21 + Tagtraum)
-- **Pre-Registrierung:** Musik-L2-Präregistrierung (im Haupt-Repo, datiert 2026-05-16)
+- **Pre-Registrierung:** Musik-L2-Präregistrierung (datiert 2026-05-16, auf Anfrage)
 - **Pipeline-Skripte:** `data/musik_companion/pipeline/`
   - `musik_l2_lakh_cross_genre.py` — Hauptpipeline für 5 Lakh-Pop-Genres
   - `musik_l2_ahat_run.py` — Sigmoid-Fit + $\hat{a}$-Extraktion
@@ -96,7 +96,7 @@
 ## 3. Cross-Corpus Konversationen (§6)
 
 - 12 Konversations-Korpora ($\approx 35{,}300$ Gespräche): ENK-Gold, BothBosu v3, GasConv, Awry (CGA Wikipedia), LegalCon, MentalManip, P4G, SafeDialBench, CoSafe, ProsocialDialog, Sotopia, Google COVID Mobility
-- **Cross-Method-Triangulation:** im Haupt-Repo (`nc2_zigzag_validation/`, CORRECTNESS_AUDIT + RUN_REPORT)
+- **Cross-Method-Triangulation:** DUA-begrenztes ENK-Subset, auf Anfrage (Methoden publiziert, vgl. Paper §6.4)
 
 ## 4. Genealogie (§9.4)
 
@@ -128,4 +128,4 @@
 
 ---
 
-**Diese Reproduktions-Datei reicht aus, um jede Tabelle, Abbildung und Aussage des Concise-Papers nachzuvollziehen. Wo Roh-Daten extern sind (USGS, TCGA, V-Dem, MetaMIDI), enthält Sektion 2 die direkten URLs.**
+**Diese Reproduktions-Datei reicht aus, um jede Tabelle, Abbildung und Aussage des Papers nachzuvollziehen. Wo Roh-Daten extern sind (USGS, TCGA, V-Dem, MetaMIDI), enthält Sektion 2 die direkten URLs.**

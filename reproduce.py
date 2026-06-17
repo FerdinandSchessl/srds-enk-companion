@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Self-contained reproduction of every headline number in the SRDS+ENK concise paper.
+"""Self-contained reproduction of every headline number in the SRDS+ENK paper.
 
 Run:   python3 reproduce.py
 Needs: only the Python standard library. Reads only files inside this companion
@@ -85,7 +85,7 @@ def line(label, got, paper, ok=None):
 
 
 print("=" * 80)
-print("SRDS+ENK concise paper — self-contained reproduction of all headline numbers")
+print("SRDS+ENK paper — self-contained reproduction of all headline numbers")
 print("=" * 80)
 
 # [1] HOLZ

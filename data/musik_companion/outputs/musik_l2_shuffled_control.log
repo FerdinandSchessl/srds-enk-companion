@@ -4,7 +4,7 @@ SHUFFLED-CONTROL: loading tagtraum...
   Pop         : 200 MIDIs
   Rap         : 87 MIDIs
   Rock        : 200 MIDIs
-./enk-suite/framework/monitor/.venv/lib/python3.12/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
+site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
   warnings.warn(
   [50] last=Jazz ok=50 valid=50
   [100] last=Jazz ok=100 valid=100

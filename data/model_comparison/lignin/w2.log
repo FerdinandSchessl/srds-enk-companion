@@ -1,0 +1,6 @@
+Weibull-CDF, L=1 fix (korrekte Sättigung). β-O-4-Degradation vs linear-P.
+  roh              â=0.000  m(k)=0.61  λ=0.438  R²=0.587
+  gebinnt 6        â=0.000  m(k)=0.58  λ=0.458  R²=0.919
+  gebinnt 8        â=0.000  m(k)=0.63  λ=0.448  R²=0.913
+  gebinnt 10       â=0.000  m(k)=0.61  λ=0.459  R²=0.807
+  Q-Verlauf: niedrig-Σ=0.27  mittel=0.65  hoch=0.80  (konkav wenn früh schon hoch)

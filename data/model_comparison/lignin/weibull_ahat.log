@@ -1,0 +1,6 @@
+Lignin SP-LCC, n=72 Bedingungen. Weibull-CDF (Form festgelegt = Mode ii).
+Ziel-Vergleich: alter Frame-Wert â=0.325, k=2.86
+  roh (alle Pkt)     â=0.000  m(k)=0.49  λ=1.592  L=1.500  R²=0.590
+  gebinnt (6 bins)   â=0.000  m(k)=0.49  λ=1.621  L=1.500  R²=0.940
+  gebinnt (8 bins)   â=0.000  m(k)=0.51  λ=1.513  L=1.500  R²=0.927
+  gebinnt (10 bins)  â=0.000  m(k)=0.50  λ=1.580  L=1.500  R²=0.824

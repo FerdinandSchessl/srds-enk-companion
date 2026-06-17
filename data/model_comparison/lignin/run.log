@@ -63,5 +63,5 @@
       }
     }
   },
-  "note": "Form ranking is invariant across severity axes: Logistic wins AICc, Weibull is dominated. a_hat is construction-dependent: ~0.21 (linear-P) / ~0.42 (log-P); both < 0.5 (early/creep regime). Headline rho_S = -0.78 is axis-free."
+  "note": "Lignin form is physically FIXED = Weibull Mode (ii), serial-cascaded weakest-link (phenolic b-O-4 breaks well before non-phenolic / 5-5). A free AICc form-contest is NOT decisive here: forcing a logistic shape imposes an inflection the data do not carry. The fixed-form Weibull fit (weibull_ahat.py, same n=72) gives m ~ 0.49 (< 1), concave from the origin -> NO interior a_hat: the broad b-O-4 strength distribution already yields at the smallest dose (Woehler creep side, no endurance limit). Reported headline: rho_S = -0.78 (axis-free, Spearman b-O-4 vs P-factor). The free-fit a_hat ~ 0.21/0.42 are form artefacts, not reported findings; the earlier a_hat=0.325, k=2.86 (lost n=90 module) does not reproduce."
 }
