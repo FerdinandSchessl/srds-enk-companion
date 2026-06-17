@@ -10,6 +10,7 @@
 % ============================================================
 
 \usepackage[utf8]{inputenc}
+\usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage[margin=1in]{geometry}
@@ -31,6 +32,7 @@
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{axiom}{Axiom}
 \renewcommand{\theaxiom}{A\arabic{axiom}}
+\setcounter{axiom}{-1}
 \newtheorem{regularity}{Regularity Condition}
 \renewcommand{\theregularity}{L\arabic{regularity}}
 \newtheorem{assumption}{Assumption}
@@ -510,7 +512,7 @@ A minimal self-similarity condition, whole-to-core as core-to-remainder, selects
 \end{conjecture}
 
 % ============================================================
-\section{The Second No-Go: No Universal Static Classifier under Interventional Monitoring}\label{sec:nogo2}
+\section[The Second No-Go: No Static Classifier]{The Second No-Go: No Universal Static Classifier under Interventional Monitoring}\label{sec:nogo2}
 % ============================================================
 
 Theorem~\ref{thm:nogo} eliminates universal \emph{numerical} structure: no inflection constant survives reparametrization freedom. This section eliminates, at the deployment level of Section~\ref{sec:operational}, universal \emph{verdict} structure: no static binary classifier survives the closure of the measurement--action loop, once the published score enters the subsequent dynamics and the reception is adversive. The two results are projections of one limit picture: what is universal is the structural grammar and the monitoring architecture, never a constant and never a static verdict.
