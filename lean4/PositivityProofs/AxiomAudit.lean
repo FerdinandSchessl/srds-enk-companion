@@ -9,10 +9,28 @@
 
   ## Summary
 
-  Total axioms: 18 (was 19, twoPointGauge_J_equivariant formalized 2026-05-30)
-  - Category A (Standard structural, Mathlib gaps): 12
-  - Category B (Numerical certificate): 2 (Q_dot_half_continuum named constant + interval)
-  - Category C (Paper-specific analytical): 4 (was 5; twoPointGauge proved)
+  Total axiom declarations: 27 (verified by `grep ^axiom`, 2026-06-19).
+  - Category A (standard structural, Mathlib gaps): 12
+      HilbertMetric 4, SpectralGap 5, Symmetry/smoothingOp_commutes_J 1, NoGo/renormOp+fixedPoint_smooth 2
+  - Category B (numerical certificate): 2 (Q_dot_half_continuum + Q_dot_half_continuum_in_interval)
+  - Category C (paper-specific analytical): 13
+      symmetry_forward 1, nogo_step5_general + nogo_theorem 2, and the 10 IFTBridge atomic operator axioms.
+      The earlier "18" predates the 2026-05-30 IFTBridge step, which REPLACED the single bridge axiom
+      `nogo_theorem_certified_from_continuum` by a PROVED chain-rule theorem + these 10 atomics.
+
+  ## Authoritative dependency of the certified No-Go (`#print axioms`, 2026-06-19, sorryAx = 0)
+
+  `nogo_theorem_certified` depends on exactly 12 project axioms: the 2 Category-B numerical
+  certificate axioms + the 10 Category-C IFTBridge atomic operator axioms (Q_star,
+  Q_star_in_normalized, Q_star_zero_spatial_slope(+_neg), Q_eval_has_strict_fderiv_at_origin,
+  Sigma_c(+_at_zero, _differentiable_at_zero, _differentiable_everywhere, _identity_at_zero)),
+  together with the three Lean foundations (propext, Classical.choice, Quot.sound). It is sorry-free.
+  The chain-rule core `IFTBridge.Sigma_c_derivative_formula` is a THEOREM, not an axiom.
+  The Category-A structural axioms do NOT appear in this chain; they support the operator/
+  fixed-point theory and the general (conjectural) No-Go `nogo_theorem` (open for all (ε,η)).
+  The 10 IFTBridge atomics encode "the smoothing fixed-point family Q*_α exists and is C¹ in α
+  with the certified midpoint derivative"; they are axiomatized only because `renormOp` is not yet
+  constructed in Lean (Mathlib has the IFT/Bochner pieces; the construction is multi-month work).
 
   ## 2026-05-30 update
   - twoPointGauge_J_equivariant: AXIOM → THEOREM (TwoPointGauge.lean).
@@ -252,7 +270,7 @@ The following results are FULLY PROVED in this formalization:
 | symmetry_characterization | Symmetry.lean | Q*(1/2)=1/2 ⟺ K-SYM |
 | kernelPerturbation_odd | NoGo.lean | Perturbation kernel is odd |
 | nogo_step5_certified | NoGo.lean | Q̇(1/2) ≠ 0 (from certificate) |
-| Q_dot_half_nonzero | NumericalCertificate.lean | 0 ∉ [1.8412, 1.8963] |
+| Q_dot_half_nonzero | NumericalCertificate.lean | 0 ∉ [1.858, 1.879] |
 | Q_dot_half_pos | NumericalCertificate.lean | Q̇(1/2) > 0 |
 | no_universal_transition | NoGo.lean | No constant Σ_c |
 | no_universal_transition_certified | NoGo.lean | Same, from certificate |
