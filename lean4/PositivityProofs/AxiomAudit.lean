@@ -152,7 +152,7 @@ will be encoded separately when Item 1 of the v2 plan is implemented.)
 | # | Axiom | Verification | Status |
 |---|-------|--------------|--------|
 | 14a | Q_dot_half_continuum | NAMED constant for the continuum value | (∈ ℝ) |
-| 14b | Q_dot_half_continuum_in_interval | A-posteriori certified enclosure | [≈1, 3] |
+| 14b | Q_dot_half_continuum_in_interval | A-posteriori certified enclosure | [1.75, 1.99] |
 
 REVISION (May 2026, advisor 4.8): The old single-axiom formulation
 `∃ v, 1.858 ≤ v ∧ v ≤ 1.879` was diagnosed as RELOCATED HOLLOWNESS
@@ -270,7 +270,7 @@ The following results are FULLY PROVED in this formalization:
 | symmetry_characterization | Symmetry.lean | Q*(1/2)=1/2 ⟺ K-SYM |
 | kernelPerturbation_odd | NoGo.lean | Perturbation kernel is odd |
 | nogo_step5_certified | NoGo.lean | Q̇(1/2) ≠ 0 (from certificate) |
-| Q_dot_half_nonzero | NumericalCertificate.lean | 0 ∉ [1.858, 1.879] |
+| Q_dot_half_nonzero | NumericalCertificate.lean | 0 ∉ [1.75, 1.99] |
 | Q_dot_half_pos | NumericalCertificate.lean | Q̇(1/2) > 0 |
 | no_universal_transition | NoGo.lean | No constant Σ_c |
 | no_universal_transition_certified | NoGo.lean | Same, from certificate |
