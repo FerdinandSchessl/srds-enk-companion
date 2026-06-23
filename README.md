@@ -76,7 +76,7 @@ Details je Substrat im `REPRODUCIBILITY_MANIFEST.md` (§-Nummern rechts).
 - **TCGA Pan-Cancer-Atlas:** `portal.gdc.cancer.gov` (Open-Access)
 - **V-Dem ERT-v14:** `v-dem.net/data/ert/`
 - **Yahoo Finance SPY:** `finance.yahoo.com` (via `yfinance`)
-- **Multi-Material Multiaxial Fatigue:** Heng et al. 2024 Sci Data `10.1038/s41597-024-03862-4` (914 strain-kontrollierte Proben, 136 Metalle)
+- **Multi-Material Multiaxial Fatigue:** Chen et al. 2024 Sci Data `10.1038/s41597-024-03862-4` (914 strain-kontrollierte Proben, 136 Metalle)
 - **Al-6061 Zugversuch (Roh-Spannungs-Dehnung):** Mendeley Data `10.17632/rd6jm9tyb6.2`
 - **DP1180 Hochfest-Stahl:** NIST Numisheet 2020 Benchmark, `data.nist.gov` (DIC Uniaxial Tension)
 - **Master-Thesis Schessl 2025 (Holz-Datenanker):** Zenodo `10.5281/zenodo.18340365`

@@ -1,6 +1,6 @@
 # Reproducibility Manifest — Paper
 
-**Stand:** 2026-06-15
+**Stand:** 2026-06-23
 **Paper:** "SRDS+ENK — Selbstreferentielle Dissipative Systeme als Klassen-Theorie cross-substrater Sigmoid-Inflektion" (Schessl 2026, arXiv submission).
 **Zweck:** Jede im Paper genannte Zahl ist über diesen Manifest auf eine Quell-Datei rückverfolgbar — entweder in den gebündelten Ordnern (`data/`, `lean4/`, `analysis/`) oder über die externen URLs in `README.md`.
 **Verifikation:** `python3 reproduce.py` rechnet alle Headline-Zahlen aus den gebündelten Daten neu (33 Checks inkl. Statistik-Ebene, PASS/FAIL, Exit ≠ 0 bei Abweichung). `REPRODUCE.md` = Landkarte Zahl → Datei → Roh-Quelle → Test; `STATISTICS.md` + `analysis/` = Inferenz-Schicht (KS-Null, Permutation, γ_M/Bonferroni, Bootstrap).
@@ -9,7 +9,7 @@
 
 ## 1. Theorie (Lean 4)
 
-### Axiome A0–A4, Regularitäts-Bedingungen L1–L3, Theoreme T1–T3, No-Go-Theorem (§2)
+### Axiome A0–A4, Regularitäts-Bedingungen L1–L4, Theoreme T1–T3, No-Go-Theorem (§2)
 - **Beweise:** `lean4/PositivityProofs/`
   - `AxiomAudit.lean` — Axiom-Konsistenz-Check
   - `Basic.lean` — Grundlagen-Definitionen
@@ -30,7 +30,7 @@
 - **Werte:** $\tilde{a} = 0.567$ (Mean), $r(\hat{a}, \sigma_\text{break}) = -0.83$ (Pearson; Spearman $\rho = -0.99$), $p_\mathrm{perm} < 10^{-30}$
 
 ### §4.2 Multi-Material Multiaxial Fatigue (Boundary)
-- **Externe Quelle:** Heng et al. 2024 Sci Data (`doi:10.1038/s41597-024-03862-4`), 914 strain-kontrollierte Proben über 136 Metalle
+- **Externe Quelle:** Chen et al. 2024 Sci Data (`doi:10.1038/s41597-024-03862-4`), 914 strain-kontrollierte Proben über 136 Metalle
 - **Werte:** $R^2 \geq 0.5$ in 74% der Materialien, cross-material aggregiert n.s.
 
 ### §4.3 Finance SPY
@@ -91,7 +91,7 @@
 ### §4.12 Tabelle-18 Forced-Materials (Al-6061, DP1180) und Fatigue-Fit
 - **Al-6061:** `data/al6061/per_specimen_al6061.tsv` + `summary_al6061.tsv`; $\tilde{a}=0.084$ (Median `logistic_inflection`, 146 valide Fits), $\rho(\hat{a},\sigma_{\max})=-0.703$, KS-D $=1.000$. Roh-Spannungs-Dehnung: Mendeley `10.17632/rd6jm9tyb6.2`.
 - **DP1180:** `data/dp1180/numisheet_results.json`; $\tilde{a}=0.975$ ($a\_hat\_mean$, $n=19$), KS-D $=1.000$. Roh: NIST Numisheet 2020 (`data.nist.gov`).
-- **Multiaxial Fatigue:** `data/fatigue/multiaxial_fatigue_results.json`; $\tilde{a}=0.578$, $n_\text{strain}=914$. Roh: Heng 2024 Sci Data `10.1038/s41597-024-03862-4`.
+- **Multiaxial Fatigue:** `data/fatigue/multiaxial_fatigue_results.json`; $\tilde{a}=0.578$, $n_\text{strain}=914$. Roh: Chen 2024 Sci Data `10.1038/s41597-024-03862-4`.
 
 ## 3. Cross-Corpus Konversationen (§6)
 

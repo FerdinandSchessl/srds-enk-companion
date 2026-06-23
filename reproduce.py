@@ -149,7 +149,7 @@ except Exception as e:
     line("earthquake", f"ERROR {e}", "-", False)
 
 # [5] MULTIAXIAL FATIGUE
-print("\n[5] MULTI-MATERIAL MULTIAXIAL FATIGUE  — data/fatigue/multiaxial_fatigue_results.json (Heng 2024 Sci Data)")
+print("\n[5] MULTI-MATERIAL MULTIAXIAL FATIGUE  — data/fatigue/multiaxial_fatigue_results.json (Chen 2024 Sci Data)")
 try:
     av = jvals(D / "fatigue/multiaxial_fatigue_results.json", "a_hat")
     d = json.load(open(D / "fatigue/multiaxial_fatigue_results.json"))
