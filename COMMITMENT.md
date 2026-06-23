@@ -4,7 +4,7 @@
 
 ## What is withheld, and why
 
-Following the responsible-disclosure model described in the paper (§9.5 / §11.5: open
+Following the responsible-disclosure model described in the paper (§9.5: open
 mechanism, regulated dose), the **numeric values** of the ENK budget calibration are not
 published. The withheld set covers, for both operating configs (PRODUCTION/ULS and
 DETECTION/SLS):

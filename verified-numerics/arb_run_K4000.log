@@ -1,0 +1,101 @@
+[verified] Certified computation: Q̇(1/2) ≠ 0
+[verified] Parameters: N=200, ε=0.0625, η=0.3, precision=256 bits
+[verified] 
+[verified] ═══ Phase A: Floating-point approximation ═══
+[verified] A1: Building kernel matrix...
+[verified] A2: Fixed-point iteration...
+[verified]   Converged at iteration 22, max|ΔQ| = 8.88e-16
+[verified] A3: Analytical Jacobian of R at Q*...
+[verified]   ρ(L) = 0.448931 (paper: ~0.4473)
+[verified]   σ_min(I-L) = 4.232085e-01
+[verified] A4: Perturbation direction b...
+[verified] A5: Solving (I-L)·Q̇ = b...
+[verified]   Q̇(grid[100]=0.5025) = 1.868743
+[verified]   Q̇(0.5) interpolated = 1.868838
+[verified]   J-symmetry: max|Q[i]+Q[N-1-i]-1| = 4.440892e-16
+[verified] 
+[verified] ═══ Phase B: Certified Arb computation ═══
+[verified] B1: Building certified kernel matrix...
+[verified] B2: Verifying fixed point (midpoint restart)...
+[verified]   Residual ‖R(Q̃) - Q̃‖_∞ = 5.729670e-16
+[verified]   Refining fixed point in Arb...
+[verified]   Arb refinement converged at step 0, residual = 6.57e-17
+[verified]   Final residual = 6.565612e-17
+[verified] B3: Analytical Jacobian L in Arb...
+[verified]   Jacobian computed.
+[verified] B4: Perturbation direction b in Arb...
+[verified]   Perturbation computed.
+[verified] B5: Solving certified linear system...
+[verified]   Q̇(x_100=0.5025) = [1.868743036537820678420514138554554797801972076540973074553187027874503376 +/- 1.75e-73]
+[verified]   Q̇ midpoint: 1.8687430365
+[verified]   Q̇ arb radius: 1.368949e-73
+[verified] B6: Krawczyk fixed-point verification...
+[verified]   ‖F(Q̃)‖_∞ = 6.565612e-17
+[verified]   ‖Y·F(Q̃)‖_∞ = 8.061437e-17
+[verified]   ‖I - Y·DF‖_∞ = 1.060995e-15
+[verified]   ‖Y‖_∞ = 3.251511
+[verified]   Krawczyk PASS: contraction with r_min = 8.061437e-17
+[verified]   Fixed point Q* certified unique in B(Q̃, 8.061437e-17)
+[verified] B7: Spectral radius cross-check...
+[verified]   ρ(L) = 0.448931 (paper: ~0.4473)
+[verified]   σ_min(I-L) = 4.232085e-01 (paper: ≥1.37e-3)
+[verified] B8: Discretization error bound...
+[verified]   h = 0.005025
+[verified]   sup|∂²k| ≤ 1056.00
+[verified]   Quadrature error ≤ 2.222166e-03
+[verified]   σ_min(I-L) = 4.232085e-01
+[verified]   Quadrature contribution: 1.050152e-02
+[verified]   Interpolation contribution: 6.376578e-09
+[verified]   Total ε_total ≤ 1.050153e-02
+[verified] B9: J-symmetry check...
+[verified]   max|Q*[i]+Q*[N-1-i]-1| = 1.110223e-16 → PASS
+[verified] 
+[verified] ═══ Phase C: A-posteriori defect bound (box enclosure) ═══
+[verified] C1: Continuum-ρ_inv-correction (Anselone, collectively-compact)...
+[verified]   Z_min = 0.221557
+[verified]   Z(1/2) = 0.441041
+[verified]   ‖Z'‖_∞ ≤ 1.000000
+[verified]   ‖Z''‖_∞ ≤ 6.862111
+[verified]   A_2(ε) ≤ 425.0370
+[verified]   ‖(I-P_N) L‖_∞ ≤ h²/8 · A_2 = 1.341623e-03
+[verified]   ρ_inv_disc ≤ 3.251511
+[verified]   ρ_inv_cont ≤ 3.265757 (correction 0.438%)
+[verified] C2: Defining closed-form integral helpers in Arb...
+[verified] C3: Pre-computing endpoint values s(0), s(1), T_Qtilde(0), T_Qtilde(1)...
+[verified]   s(0) = 0.329932, s(1) = 0.329932
+[verified]   T_Qtilde(0) = 0.573879, T_Qtilde(1) = 0.573879
+[verified] C4: Box enclosure with subbox refinement: 199 boxes × 4000 sub = 796000 total...
+[verified]   box 0/199: max sub |d|_upper = 4.5220e-03 (sub 2176), running max 4.5220e-03 at box 0
+[verified]   box 19/199: max sub |d|_upper = 5.5924e-03 (sub 3250), running max 5.5924e-03 at box 19
+[verified]   box 39/199: max sub |d|_upper = 7.4036e-03 (sub 3998), running max 7.4036e-03 at box 39
+[verified]   box 59/199: max sub |d|_upper = 8.4037e-03 (sub 3999), running max 8.4037e-03 at box 59
+[verified]   box 79/199: max sub |d|_upper = 8.1947e-03 (sub 0), running max 8.4367e-03 at box 64
+[verified]   box 99/199: max sub |d|_upper = 7.7513e-03 (sub 0), running max 8.4367e-03 at box 64
+[verified]   box 119/199: max sub |d|_upper = 7.9283e-03 (sub 3999), running max 8.4367e-03 at box 64
+[verified]   box 139/199: max sub |d|_upper = 7.9062e-03 (sub 0), running max 8.4367e-03 at box 64
+[verified]   box 159/199: max sub |d|_upper = 6.6435e-03 (sub 0), running max 8.4367e-03 at box 64
+[verified]   box 179/199: max sub |d|_upper = 4.4132e-03 (sub 295), running max 8.4367e-03 at box 64
+[verified]   ‖d‖_∞_continuum ≤ 8.436657e-03  (max at box 64, sub 3999)
+[verified] 
+[verified]   δ_N = ρ_inv_cont · ‖d‖_∞ ≤ 2.755207e-02
+[verified]   Q̃(0.5) midpoint = 1.8687430365
+[verified]   Q̃(0.5) arb radius = 2.744794e-73
+[verified] 
+[verified]   CERTIFIED INTERVAL: Q̇(1/2) ∈ [1.841191, 1.896295]
+[verified]   0 excluded? True
+[verified] 
+[verified] ═══ Generating certificate ═══
+[verified] Q̇(1/2) midpoint (Arb):  1.8687430365
+[verified] Q̇(1/2) arb radius:      1.368949e-73
+[verified] Bound method:            a-posteriori defect bound (box enclosure, Nakao-Plum-Watanabe + Anselone)
+[verified] δ_N (continuum):         2.755207e-02
+[verified] Certified interval:      [1.841191, 1.896295]
+[verified] 0 ∉ interval:            True
+[verified] Certificate written to certificate.json
+[verified] 
+[verified] ══════════════════════════════════════════════════
+[verified]   RESULT: CERTIFIED: Q̇(1/2) ≠ 0
+[verified]   Q̇(1/2) ∈ [1.841191, 1.896295]
+[verified]   δ_N (a-posteriori): 2.755207e-02
+[verified]   Total time: 3842.4s
+[verified] ══════════════════════════════════════════════════

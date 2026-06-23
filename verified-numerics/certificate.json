@@ -1,0 +1,58 @@
+{
+  "computation": "Certified Q\u0307(1/2) \u2260 0 for nogo_theorem axiom",
+  "paper": "Positivity (Sche\u00dfl 2025)",
+  "method": "a-posteriori defect bound (box enclosure, Nakao-Plum-Watanabe + Anselone)",
+  "parameters": {
+    "epsilon": 0.0625,
+    "eta": 0.3,
+    "N": 200,
+    "precision_bits": 256,
+    "grid": "linspace(0, 1, N)"
+  },
+  "result": {
+    "qdot_half_midpoint": 1.8687430365378206,
+    "qdot_half_arb_radius": 1.3689490069679812e-73,
+    "discretization_error_bound": 0.02755207436736736,
+    "certified_interval_lower": 1.8411909621704534,
+    "certified_interval_upper": 1.896295110905188,
+    "zero_excluded": true,
+    "x_evaluation": 0.5
+  },
+  "cross_checks": {
+    "spectral_radius_L": 0.44893057827945126,
+    "spectral_radius_L_paper": 0.4473,
+    "sigma_min_I_minus_L": 0.4232084920071592,
+    "qdot_half_numpy": 1.8688378742625975
+  },
+  "verification": {
+    "krawczyk_enclosure": true,
+    "fixed_point_residual": 6.565611571957737e-17,
+    "j_symmetry_pass": true,
+    "j_symmetry_max_violation": 1.1102230246251565e-16
+  },
+  "fixed_point_samples": {
+    "Q*(0.0000)": 1.0,
+    "Q*(0.2513)": 0.8237106707397656,
+    "Q*(0.5025)": 0.496356782622111,
+    "Q*(0.7538)": 0.1711370511056118,
+    "Q*(1.0000)": 0.0
+  },
+  "conclusion": "CERTIFIED: Q\u0307(1/2) \u2260 0",
+  "a_posteriori_defect_bound": {
+    "method": "Krawczyk-residual + Anselone collectively-compact + box enclosure",
+    "references": [
+      "Rall, Computational Solution of Nonlinear Operator Equations, 1969",
+      "Anselone, Collectively Compact Operator Approximation Theory, 1971",
+      "Nakao-Plum-Watanabe, Numerical Verification Methods, Springer 2019",
+      "Johansson, Arb: efficient arbitrary-precision interval arithmetic, 2017"
+    ],
+    "rho_inv_discrete": 3.2515109251753054,
+    "rho_inv_continuum": 3.2657571477207874,
+    "anselone_correction": 0.0013416233884266432,
+    "A_2_heat_kernel_constant": 425.03702244066795,
+    "max_box_d": 0.008436657449129767,
+    "max_box_idx": 64,
+    "Q_tilde_half_mid": 1.8687430365378206,
+    "Q_tilde_half_rad": 2.7447940820274483e-73
+  }
+}
