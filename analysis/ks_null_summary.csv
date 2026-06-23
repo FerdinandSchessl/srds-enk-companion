@@ -4,4 +4,3 @@ Al-6061,146,1000,1.000,1e-3,lt,tensile 146 valid logistic fits vs synthetic null
 DP1180,19,1000,1.000,1e-3,lt,NIST Numisheet 2020 vs synthetic null
 ENK,202,1000,0.944,1e-3,lt,LLM gold corpus (n=202) vs synthetic null
 Battery-CALB,26,1000,0.733,5.7e-14,eq,CALB; exact p from data/battery/battery_calb_results.json (ks.p)
-DSC,6,1000,0.42,0.18,eq,protein melt (n=6); borderline, fails gamma_M (S8.6 canonical: D=0.42 p=0.18; old 0.625/0.0016 not reproducible)

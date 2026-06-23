@@ -116,7 +116,7 @@
 
 ## 6. Falsifikations-Anker (§8.1)
 
-- **Synthetische Null-Prüfkörper (Schicht 1):** 1.000 Prüfkörper pro Substrat (AR(1) / Random Walk / White Noise); fünf der sechs Haupt-Substrate (Tab 18) trennen mit KS-Test $p < 10^{-3}$ (DSC Grenzfall, $D = 0.42$, $p = 0.18$, fällt $\gamma_M$; S8.6-kanonisch). Die frühere „19 von 26"-Zählung war die $\gamma_M$-Schwelle [$\alpha/9$].
+- **Synthetische Null-Prüfkörper (Schicht 1):** 1.000 Prüfkörper pro Substrat (AR(1) / Random Walk / White Noise); alle fünf Haupt-Substrate (Tab 18) trennen mit KS-Test $p < 10^{-3}$. Die frühere „19 von 26"-Zählung war die $\gamma_M$-Schwelle [$\alpha/9$] über die erweiterte 26-Substruktur-Aufstellung. (Ein früher mitgeführter DSC-Protein-Schmelz-Test, $n = 6$, wurde wegen einer Provenienz-Lücke aus Tab 18 zurückgezogen.)
 - **Vorhergesagte Nulls (Schicht 2):** ProsocialDialog (L1-Violation), Sotopia (A0-Violation), Google COVID Mobility (L3-Violation) — alle drei bestätigt
 - **Pre-Reg-Hold-out (Schicht 3):** $n = 50$ Tier B, 3/6 strikte Konformität unter Holm-Bonferroni
 

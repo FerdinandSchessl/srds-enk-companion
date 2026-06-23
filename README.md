@@ -42,10 +42,10 @@ Details je Substrat im `REPRODUCIBILITY_MANIFEST.md` (§-Nummern rechts).
 | `STATISTICS.md` | Inferenz-Schicht: KS-Null, Permutation, γ_M/Bonferroni, Bootstrap — Claim → Skript |
 | `COVERAGE_REPORT.md` | **Vollständige Buchführung: alle 614 Paper-Zahlen (DE+EN) → Reproduktionspfad/Kategorie** |
 | `requirements.txt` | Umgebung (stdlib für `reproduce.py`; numpy/scipy nur für Re-Fits) |
-| `analysis/bonferroni_gamma_m.py` | [stdlib] γ_M/Bonferroni-Zählung (5/6 strikt, 6/6 unter γ_M) aus `ks_null_summary.csv` |
+| `analysis/bonferroni_gamma_m.py` | [stdlib] γ_M/Bonferroni-Zählung (5/5 strikt, 5/5 unter γ_M) aus `ks_null_summary.csv` |
 | `analysis/permutation_test.py` | [stdlib] Holz-Permutationstest (10⁴×, seed=0) → p_perm |
 | `analysis/null_model.py` | [scipy] Synthetik-Null-Generator (AR(1)/RW/WN) + KS, Al-6061-Beispiel |
-| `analysis/ks_null_summary.csv` | Sechs Tab.-18-Substrate: KS-D + p (Quelle der γ_M-Zählung) |
+| `analysis/ks_null_summary.csv` | Fünf Tab.-18-Substrate: KS-D + p (Quelle der γ_M-Zählung) |
 | `REPRODUCIBILITY_MANIFEST.md` | Pro Tabelle/Abbildung im Paper: Skript-Pfad, Roh-Daten-Pfad, externe URLs |
 | `lean4/PositivityProofs/` | No-Go in Lean 4, **computer-assistiert**: das zertifizierte `nogo_theorem_certified` ist **sorry-frei** (firsthand gebaut, 0 `sorryAx` — Beleg `lean4/CHECKAXIOMS_OUTPUT.txt`) und hängt laut `#print axioms` von **12 Projekt-Axiomen** ab (2 Numerik-Zertifikat + 10 IFT-Bridge) + 3 Lean-Grundaxiomen. Das allgemeine `nogo_theorem` (alle ε,η) ist **Konjektur/Axiom**. *(Drei Bezugsgrößen: `#print axioms`=12 · `AxiomAudit.lean`-Inventar=18 · `grep '^axiom'`=27 — alle im Beleg erklärt.)* |
 | `genealogy_of_frames.md` | 8 datierte Vorform-Frame-Klassen (Master-Thesis 2025 → SRDS 2026) |

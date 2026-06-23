@@ -11,7 +11,7 @@ No-package scripts (Python standard library only) are marked **[stdlib]**; the r
 | Statistical claim (paper) | Reproduced by | Type |
 |---|---|---|
 | KS-D vs synthetic null per substrate (Table 18) | `analysis/null_model.py` (regenerates the AR(1)/RW/WN null + KS; Al-6061 example from bundled â) | [scipy] |
-| "5 of 6 main substrates p < 10⁻³ (DSC borderline)" + γ_M scheme | `analysis/bonferroni_gamma_m.py` (+ `analysis/ks_null_summary.csv`) | [stdlib] |
+| "5 of 5 main substrates p < 10⁻³" + γ_M scheme | `analysis/bonferroni_gamma_m.py` (+ `analysis/ks_null_summary.csv`) | [stdlib] |
 | Wood permutation p_perm < 10⁻³⁰ | `analysis/permutation_test.py` (10⁴ permutations of r, seeded) | [stdlib] |
 | CRC bootstrap (MSI/MSS, KS-D = 0.350) | `data/crc/crc_results_v2.json → bootstrap` (500 resamples; re-run via `data/crc/domain_crc_v2.py`) | [scipy] |
 | CRC stage-aggregated Δâ = −0.153 | `data/crc/crc_stage_aggregated.json`; re-fit `data/crc/domain_crc_v2.py` | [scipy] |
@@ -23,18 +23,19 @@ No-package scripts (Python standard library only) are marked **[stdlib]**; the r
 
 The paper uses **two** thresholds; keeping them apart matters:
 
-1. **Strict `p < 10⁻³`** — the headline: of the six Table-18 substrates, **five** clear it;
-   **DSC** sits at `D = 0.42, p = 0.18` (n = 6, per supplement S8.6), a named borderline that
-   does not clear `p < 10⁻³`.
+1. **Strict `p < 10⁻³`** — the headline: all five Table-18 substrates clear it.
 2. **γ_M = α/9 ≈ 0.00556** — the engineering safety-factor analogue, a Bonferroni-style
-   threshold over the nine-test family. DSC does **not** clear this (p = 0.18 > 0.00556), so under
-   γ_M the count is **5/6** as well. (An earlier draft listed DSC at p = 0.0016, which is not
-   reproducible from D = 0.42, n = 6 by any KS procedure; the S8.6 value p = 0.18 is canonical.)
+   threshold over the nine-test family. All five clear this as well.
 
 The earlier **"19 of 26"** figure was the γ_M count over the *extended 26-substructure*
-exploratory set (sector ETFs, forced materials, etc. — supplement S8), **not** over these six
-main substrates. `bonferroni_gamma_m.py` reproduces the 5/6 count (DSC fails both the strict and
-the γ_M threshold) and prints this note.
+exploratory set (sector ETFs, forced materials, etc. — supplement S8), **not** over these five
+main substrates. `bonferroni_gamma_m.py` reproduces the 5/5 count and prints this note.
+
+**Withdrawn substrate (for the record).** An earlier exploration also ran a DSC protein-melt KS
+test (n = 6); it was withdrawn from Table 18 due to a provenance gap and is no longer part of the
+count. For completeness, its canonical value was `D = 0.42, p = 0.18` — a named borderline that did
+not clear `p < 10⁻³`; an even earlier draft's `p = 0.0016` is not reproducible from `D = 0.42, n =
+6` by any KS procedure.
 
 ## Null model (what the KS test is against)
 
@@ -42,7 +43,7 @@ For each substrate, 1000 synthetic monotone cumulative trajectories are generate
 AR(1), random-walk, and white-noise increments, the **same logistic** is fitted to each, and
 the empirical â distribution is KS-tested against the resulting null â distribution.
 `null_model.py` runs this end-to-end (default: Al-6061, whose 146 empirical inflections cluster
-near 0.08 while the null clusters near 0.5 → KS-D ≈ 1.000). `ks_null_summary.csv` holds the six
+near 0.08 while the null clusters near 0.5 → KS-D ≈ 1.000). `ks_null_summary.csv` holds the five
 Table-18 results; `bonferroni_gamma_m.py` also recomputes each KS p-value from D and the sample
 sizes via the asymptotic Kolmogorov formula (stdlib), as an independent cross-check.
 

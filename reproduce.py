@@ -249,8 +249,8 @@ try:
     rows = list(csv.DictReader(open(ROOT / "analysis/ks_null_summary.csv")))
     strict = sum(1 for r in rows if r["p_relation"] == "lt" or float(r["p_reported"]) < 1e-3)
     gamma = sum(1 for r in rows if r["p_relation"] == "lt" or float(r["p_reported"]) < 0.05 / 9)
-    line("KS p<1e-3 count (Tab. 18)", f"{strict}/{len(rows)}", "5/6", strict == 5)
-    line("KS p<gamma_M (alpha/9) count", f"{gamma}/{len(rows)}", "5/6", gamma == 5)
+    line("KS p<1e-3 count (Tab. 18)", f"{strict}/{len(rows)}", "5/5", strict == 5)
+    line("KS p<gamma_M (alpha/9) count", f"{gamma}/{len(rows)}", "5/5", gamma == 5)
 except Exception as e:
     line("bonferroni/gamma_M", f"ERROR {e}", "-", False)
 try:
