@@ -18,7 +18,7 @@ folder) and the **raw source** is linked (so the fit itself can be re-run end-to
 |---|---|---|---|---|
 | 1 | Wood (DIN EN 408) | r = −0.83; ã = 0.567; n = 230 | `data/holz_master/wood_data_all.csv` | Zenodo `10.5281/zenodo.18340365` |
 | 2 | Al-6061 tensile | ã = 0.084 (median, n = 146); ρ = −0.703; KS-D = 1.000 | `data/al6061/per_specimen_al6061.tsv`, `summary_al6061.tsv` | Mendeley `10.17632/rd6jm9tyb6.2` |
-| 3 | Multi-material multiaxial fatigue | ã = 0.578; n = 914 (136 metals) | `data/fatigue/multiaxial_fatigue_results.json` | Chen et al. 2024 Sci Data `10.1038/s41597-024-03862-4` |
+| 3 | Multi-material multiaxial fatigue | ã = 0.578; n = 914 (136 materials) | `data/fatigue/multiaxial_fatigue_results.json` | Chen et al. 2024 Sci Data `10.1038/s41597-024-03862-4` |
 | 4 | Battery CALB | ã = 0.646; KS-D = 0.733; ρ(EOL) = +0.18 n.s. | `data/battery/battery_calb_results.json` | HF `Battery-Life/BatteryLife_Raw` (arXiv:2502.18807) |
 | 5 | Earthquakes USGS | ã = 0.452; median R² = 0.965; ρ(mainshock) = +0.673; n = 284 | `data/earthquake/earthquake_results.csv` (+ `usgs_earthquakes.csv`) | USGS FDSN `earthquake.usgs.gov/fdsnws/event/1/` |
 | 6 | Colorectal TCGA | **stage** MSI 0.286 / MSS 0.439 (Δ = −0.153); KS-D = 0.350; n = 579 | `data/crc/crc_stage_aggregated.json` + `crc_results_v2.json` | re-fit: `python3 data/crc/domain_crc_v2.py` (pandas+scipy) on `data/crc/tcga_crc_combined.csv` |
