@@ -29,6 +29,24 @@ folder) and the **raw source** is linked (so the fit itself can be re-run end-to
 | 11 | DP1180 high-strength steel (Tab. 18) | ã = 0.975; KS-D = 1.000; n = 19 | `data/dp1180/numisheet_results.json` | NIST Numisheet 2020 (`data.nist.gov`, DIC uniaxial tension) |
 | 12 | ParlaMint ℓ₃→ℓ₄ pilot (§5; *not* a substrate) | NC2 ρ=−0.34 (BCa [−0.48,−0.09]); â-discourse 4/4 neg.; country-perm p=0.207 | `data/parlamint/pilot_country_year.csv` + `pilot_inference.json` | ParlaMint CLARIN + V-Dem |
 
+## Structure → value: Pisot inflation eigenvalues (Sec. 2.5)
+
+The characteristic value of a structured family is algebraically *determined*, not fitted:
+it is the Perron–Frobenius eigenvalue of the symmetry-specific substitution matrix (a Pisot
+number of degree φ_Eul(n)/2). Verify standalone (standard library only):
+
+```bash
+python3 analysis/pisot_eigenvalues.py      # expected: RESULT: all 7 checks PASSED.
+```
+
+This checks golden φ (5-fold, x²−x−1), silver 1+√2 (8-fold, x²−2x−1), 1+√3 (12-fold),
+and the 7-fold irreducibly cubic root of x³−2x²−x+1 (which breaks the quadratic case),
+plus the degree law φ_Eul(n)/2. The value 1/φ = 0.618 is the golden Galois conjugate —
+one of a spectrum, **not** a universal constant (the constructive complement of the no-go).
+The exact Pisot/Galois verification was additionally done firsthand (python-flint);
+literature triangulation: Nakakura et al. 2019 (Nat. Commun. 10:4235), Pautze 2017
+(Symmetry 9(2):19), Hare, Masáková & Vávra 2016 (arXiv:1612.09285).
+
 ## Notes on two values that are *deliberately* dual
 
 - **Colorectal Δã.** The canonical headline is the **stage-aggregated** result (MSI 0.286 < MSS 0.439, Δ = −0.153): along the stage/load axis the mismatch-repair-deficient class yields earlier (pre-specified negative sign). Sorting the population by FGA or within-stage by mutation count gives Δ = +0.05/+0.09 — a counting-sort artefact, stored in `crc_results_v2.json → group_results`, **not** the headline. Both are kept so the artefact is transparent. `crc_stage_aggregated.json` holds the headline; `domain_crc_v2.py` (ANALYSIS 2) re-derives it.
