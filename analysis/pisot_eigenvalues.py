@@ -6,7 +6,7 @@ Structure -> value: within a structured family the characteristic scale value is
 Perron-Frobenius eigenvalue of the symmetry-specific substitution matrix -- algebraically
 DETERMINED, not fitted. In aperiodic order it is a Pisot number of degree phi_Eul(n)/2
 (Euler totient): quadratic for 5-/8-/12-fold, cubic from 7-fold on. The value 1/phi = 0.618
-is the golden (5-fold) Galois conjugate -- one of a spectrum, NOT a universal constant.
+is the inverse PF scale of the golden (5-fold) case (algebraic conjugate -1/phi) -- one of a spectrum, NOT a universal constant.
 This is the constructive complement of the no-go theorem (no universal value, no
 cross-disjoint law; only the form is universal).
 
@@ -62,7 +62,7 @@ def main():
     res7 = l7 ** 3 - 2 * l7 ** 2 - l7 + 1
     chk("7-fold cubic   lambda  (x^3-2x^2-x+1)", f"{l7:.6f} (res {res7:+.0e})",
         "2.246980 (deg 3)", abs(res7) < 1e-5)
-    chk("1/phi golden conjugate (golden-family value, not universal)", f"{1 / phi:.6f}",
+    chk("1/phi = inverse golden PF scale (conjugate -1/phi, not universal)", f"{1 / phi:.6f}",
         "0.618034 (one of a spectrum)", abs(1 / phi - 0.618034) < 1e-5)
     chk("degree law phi_Eul(n)/2, n=5,8,12 -> 2",
         str([phi_eul(n) // 2 for n in (5, 8, 12)]), "[2, 2, 2]",

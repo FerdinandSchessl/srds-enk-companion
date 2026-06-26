@@ -41,7 +41,7 @@ python3 analysis/pisot_eigenvalues.py      # expected: RESULT: all 7 checks PASS
 
 This checks golden φ (5-fold, x²−x−1), silver 1+√2 (8-fold, x²−2x−1), 1+√3 (12-fold),
 and the 7-fold irreducibly cubic root of x³−2x²−x+1 (which breaks the quadratic case),
-plus the degree law φ_Eul(n)/2. The value 1/φ = 0.618 is the golden Galois conjugate —
+plus the degree law φ_Eul(n)/2. The value 1/φ = 0.618 is the inverse PF scale of the golden case (algebraic conjugate −1/φ) —
 one of a spectrum, **not** a universal constant (the constructive complement of the no-go).
 The exact Pisot/Galois verification was additionally done with python-flint;
 literature triangulation: Nakakura et al. 2019 (Nat. Commun. 10:4235), Pautze 2017
