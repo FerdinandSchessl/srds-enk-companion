@@ -1,6 +1,6 @@
 # Companion — SRDS+ENK Paper
 
-**Paper:** "SRDS+ENK — Selbstreferentielle Dissipative Systeme als Klassen-Theorie cross-substrater Sigmoid-Inflektion" (Schessl 2026, arXiv submission in preparation, DE 45p / EN 43p).
+**Paper:** "SRDS+ENK — Selbstreferentielle Dissipative Systeme als Klassen-Theorie cross-substrater Sigmoid-Inflektion" (Schessl 2026, arXiv submission in preparation, DE 50p / EN 48p).
 
 Dieser Ordner enthält alle Reproduktions-Artefakte, die das Paper allein abdecken (Lean-4 Beweise, Roh/Fit-Daten der zehn Substrate, Pipeline-Skripte, Genealogie). Der Ordner ist so strukturiert, dass ein Reviewer ihn isoliert klonen, navigieren **und nachrechnen** kann.
 

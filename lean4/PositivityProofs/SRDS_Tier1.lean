@@ -7,8 +7,8 @@ Self-contained Lean 4 formalization of the tractable / discrete results of
 `SRDS_Formal_Framework.tex`, verified against Mathlib. No `sorry`, no new axioms.
 
 Tier 1 covers the parts that need only existing Mathlib:
-* `srds_sigma_c_root`  — Conjecture 9.6 (algebraic core): the positive root of
-  `Σ² + Σ − 1 = 0` is `(√5 − 1)/2 = 1/φ`.
+* `srds_sigma_c_root`  — algebraic fact: the positive root of
+  `Σ² + Σ − 1 = 0` is `(√5 − 1)/2 = 1/φ`, the golden Galois conjugate (Sec. 2.5).
 * `srds_budget_bound`  — Theorem 11.3 (forward): `∏ κₖ ≤ exp(−∑(1 − κₖ))`.
 -/
 
@@ -16,8 +16,8 @@ open scoped BigOperators
 
 namespace SRDS
 
-/-- **Conjecture 9.6 (algebraic core).** `(√5 − 1)/2` is the positive root of `x² + x − 1 = 0`
-(the self-similar candidate `Σ_c = 1/φ`). -/
+/-- **Algebraic fact.** `(√5 − 1)/2` is the positive root of `x² + x − 1 = 0`, i.e. `1/φ`,
+the golden Galois conjugate of aperiodic order (not a universal SRDS constant; see Sec. 2.5). -/
 theorem srds_sigma_c_root :
     ((Real.sqrt 5 - 1) / 2) ^ 2 + ((Real.sqrt 5 - 1) / 2) - 1 = 0
       ∧ 0 < (Real.sqrt 5 - 1) / 2 := by

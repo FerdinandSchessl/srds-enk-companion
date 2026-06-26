@@ -62,7 +62,7 @@ def main():
     res7 = l7 ** 3 - 2 * l7 ** 2 - l7 + 1
     chk("7-fold cubic   lambda  (x^3-2x^2-x+1)", f"{l7:.6f} (res {res7:+.0e})",
         "2.246980 (deg 3)", abs(res7) < 1e-5)
-    chk("1/phi golden conjugate (cited as Sigma_c)", f"{1 / phi:.6f}",
+    chk("1/phi golden conjugate (golden-family value, not universal)", f"{1 / phi:.6f}",
         "0.618034 (one of a spectrum)", abs(1 / phi - 0.618034) < 1e-5)
     chk("degree law phi_Eul(n)/2, n=5,8,12 -> 2",
         str([phi_eul(n) // 2 for n in (5, 8, 12)]), "[2, 2, 2]",
