@@ -65,8 +65,6 @@ Details je Substrat im `REPRODUCIBILITY_MANIFEST.md` (§-Nummern rechts).
 | `data/cross_corpus/` | §6 Cross-Corpus-Aggregate (Avrami-Kinetik je Korpus); 12 Roh-Korpora extern (Lizenzen) |
 | `data/musik_companion/pipeline/` | Pipeline-Skripte für MetaMIDI/Tagtraum/music21 ($\ell_2$-Substrat) |
 | `data/musik_companion/outputs/` | Pipeline-Outputs (`musik_l2_lakh_cross_genre.json`, `musik_l2_music21_all_raw.json`, Shuffled-Control) |
-| `analysis/sigma_operationalisierung.py` | Operative Spezifikation der $\Sigma_c$-Konjektur (§9.2 Programm C) |
-| `analysis/sigma_operationalisierung_report.md` | Begleit-Report zur $\Sigma_c$-Operationalisierung |
 
 ## Externe Daten-Quellen (nicht in diesem Ordner, weil extern publiziert)
 

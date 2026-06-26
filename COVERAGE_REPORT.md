@@ -59,7 +59,7 @@ the canonical headline ρ=−0.359 / n=202 needs the gold corpus and is **not** 
 The §3 disclosure-vocabulary "whitelist" percentages (0.4 %/0.9 % etc.) are an **editing checklist**
 in the section markdown and appear **0× in the built `paper.tex`**. The "5/10" and "2/9" Bonferroni
 figures are explicitly cited as *superseded/removed*. Grouping counts ("eight research fields",
-"four reproducibility layers") and the definitional conjecture root 1/φ≈0.618 are not measurements.
+"four reproducibility layers") and the golden-family value 1/φ≈0.618 (one Galois conjugate of a Pisot spectrum, not universal) are not measurements.
 
 ## Bottom line
 

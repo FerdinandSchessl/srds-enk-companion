@@ -13,8 +13,8 @@ cross-disjoint law; only the form is universal).
 Pre-registered before the literature dive and before this computation, then triangulated
 against the aperiodic-order literature (Nakakura et al. 2019, Nat. Commun. 10:4235;
 Pautze 2017, Symmetry 9(2):19; Hare, Masakova & Vavra 2016, arXiv:1612.09285). The exact
-Pisot/Galois-conjugate verification was additionally carried out firsthand (python-flint).
-See paper Sec. 2.5 and Fig. F_PISOT.
+Pisot/Galois-conjugate verification was additionally carried out with python-flint.
+See paper Sec. 2.5.
 
 Self-contained: Python standard library only.   Run:  python3 pisot_eigenvalues.py
 """

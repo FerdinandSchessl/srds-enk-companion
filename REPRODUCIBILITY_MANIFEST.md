@@ -109,10 +109,10 @@
   - Schessl 2026 ENK Minimal-Disclosure: `10.5281/zenodo.18475921`
   - Schessl 2026 Autocorrelation Blind Spot: `arXiv:2604.14414`
 
-## 5. $\Sigma_c$-Konjektur (§9.2 Programm C)
+## 5. Struktur-zu-Wert / Pisot-Befund (§2.5)
 
-- **Skript:** `analysis/sigma_operationalisierung.py` — drei Hypothesen C1/C2/C3 mit Datenquelle, Mess-Größe, erwartete Bande, Falsifikations-Schwelle
-- **Report:** `analysis/sigma_operationalisierung_report.md` — operative Spezifikation
+- **Skript:** `analysis/pisot_eigenvalues.py`: Pisot-/Galois-Verifikation (golden $\varphi$ / silver $1+\sqrt2$ / kubisch), 7/7 PASS, self-contained (stdlib)
+- *(Die frühere $\Sigma_c$-Konjektur-Operationalisierung wurde mit Programm C nach `analysis/deprecated/` verschoben.)*
 
 ## 6. Falsifikations-Anker (§8.1)
 
