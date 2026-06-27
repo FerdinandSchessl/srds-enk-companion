@@ -1,7 +1,7 @@
 # Reproducibility Manifest — Paper
 
 **Stand:** 2026-06-23
-**Paper:** "SRDS+ENK — Selbstreferentielle Dissipative Systeme als Klassen-Theorie cross-substrater Sigmoid-Inflektion" (Schessl 2026, arXiv submission).
+**Paper:** "Selbstreferentielle Dissipative Systeme: Eine Werkstoffprüfung über zehn Substrate" (EN: "Self-Referential Dissipative Systems: A Materials Test Across Ten Substrates") (Schessl 2026, arXiv submission).
 **Zweck:** Jede im Paper genannte Zahl ist über diesen Manifest auf eine Quell-Datei rückverfolgbar — entweder in den gebündelten Ordnern (`data/`, `lean4/`, `analysis/`) oder über die externen URLs in `README.md`.
 **Verifikation:** `python3 reproduce.py` rechnet alle Headline-Zahlen aus den gebündelten Daten neu (33 Checks inkl. Statistik-Ebene, PASS/FAIL, Exit ≠ 0 bei Abweichung). `REPRODUCE.md` = Landkarte Zahl → Datei → Roh-Quelle → Test; `STATISTICS.md` + `analysis/` = Inferenz-Schicht (KS-Null, Permutation, γ_M/Bonferroni, Bootstrap).
 
