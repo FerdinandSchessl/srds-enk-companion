@@ -3,9 +3,9 @@
 
 Standard library only, seeded (reproducible). Reads `../data/holz_master/wood_data_all.csv`,
 computes the observed Pearson r, then shuffles sigma_break N times and counts how often the
-permuted |r| reaches the observed |r|. The paper reports p_perm < 1e-30 (analytic tail); a
-finite permutation run can only bound it as p_perm < 1/N — here 0 of N permutations reach the
-observed correlation, consistent with the reported value.
+permuted |r| reaches the observed |r|. The paper reports the parametric Pearson p < 1e-30; a
+finite permutation run can only bound the non-parametric p_perm < 1/N — here 0 of N permutations
+reach the observed correlation, consistent with that significance.
 
 Run:  python3 permutation_test.py [N]   (default N = 10000)
 """
@@ -48,7 +48,7 @@ for _ in range(N):
 p_perm = (ge + 1) / (N + 1)        # add-one (conservative) estimator
 print(f"Permutationen N = {N}:  {ge} mit |r_perm| >= |r_obs|")
 print(f"p_perm (add-one) = {p_perm:.2e}   ->  p_perm < {1.0/N:.0e}")
-print(f"Paper: r = -0.83, p_perm < 1e-30 (analytischer Schwanz). Reproduktion: 0/{N} -> Befund bestaetigt.")
+print(f"Paper: r = -0.83, Pearson p < 1e-30 (parametrisch); Permutation 0/{N} -> p_perm < 1/N, Befund bestaetigt.")
 ok = (ge == 0 and r_obs < -0.8)
 print("REPRODUKTION:", "OK" if ok else "ABWEICHUNG")
 raise SystemExit(0 if ok else 1)

@@ -27,7 +27,7 @@
 ### §4.1 Holz (Anker) — DIN EN 408:2012-10
 - **Roh-Daten:** Zenodo-DOI `10.5281/zenodo.18340365` ($n = 319$ Prüfkörper, balanced $n = 230$ aus S7+S10+S13; Verweis in `data/holz_master/README.md`)
 - **Externe Quelle:** Master-Thesis Schessl 2025, Zenodo `10.5281/zenodo.18340365`
-- **Werte:** $\tilde{a} = 0.567$ (Mean), $r(\hat{a}, \sigma_\text{break}) = -0.83$ (Pearson; Spearman $\rho = -0.99$), $p_\mathrm{perm} < 10^{-30}$
+- **Werte:** $\tilde{a} = 0.567$ (Mean), $r(\hat{a}, \sigma_\text{break}) = -0.83$ (Pearson; Spearman $\rho = -0.99$), $p < 10^{-30}$
 
 ### §4.2 Multi-Material Multiaxial Fatigue (Boundary)
 - **Externe Quelle:** Chen et al. 2024 Sci Data (`doi:10.1038/s41597-024-03862-4`), 914 strain-kontrollierte Proben über 136 Materialien
