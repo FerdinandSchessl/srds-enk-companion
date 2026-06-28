@@ -12,7 +12,7 @@ No-package scripts (Python standard library only) are marked **[stdlib]**; the r
 |---|---|---|
 | KS-D vs synthetic null per substrate (Table 18) | `analysis/null_model.py` (regenerates the AR(1)/RW/WN null + KS; Al-6061 example from bundled â) | [scipy] |
 | "5 of 5 main substrates p < 10⁻³" + γ_M scheme | `analysis/bonferroni_gamma_m.py` (+ `analysis/ks_null_summary.csv`) | [stdlib] |
-| Wood permutation p_perm < 10⁻³⁰ | `analysis/permutation_test.py` (10⁴ permutations of r, seeded) | [stdlib] |
+| Wood Pearson p < 10⁻³⁰ (permutation: 0/10⁴ exceedances) | `analysis/permutation_test.py` (10⁴ permutations of r, seeded) | [stdlib] |
 | CRC bootstrap (MSI/MSS, KS-D = 0.350) | `data/crc/crc_results_v2.json → bootstrap` (500 resamples; re-run via `data/crc/domain_crc_v2.py`) | [scipy] |
 | CRC stage-aggregated Δâ = −0.153 | `data/crc/crc_stage_aggregated.json`; re-fit `data/crc/domain_crc_v2.py` | [scipy] |
 | ENK cluster-robust ρ = −0.359 (turn-pair level) | aggregate in `data/enk/ahat_convergence.csv`; **full cluster-robust needs the raw turn-pairs (under DUA, not redistributable)** | limited |
