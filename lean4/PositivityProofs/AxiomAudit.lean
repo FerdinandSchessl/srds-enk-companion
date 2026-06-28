@@ -173,7 +173,7 @@ The verification chain (verified-numerics/verified_computation.py):
      where A_2(ε) is the heat-kernel constant from B0.2 (explicit Arb formula)
    - Defect d := (I - L) Q̃ - b for piecewise-linear interpolant Q̃
    - Box enclosure of |d| on each [x_i, x_{i+1}] with subbox refinement
-     (K=500) to control Arb interval dependency inflation
+     (K_SUBBOX=4000 default, 500 in verify-fast) to control Arb interval dependency inflation
    - Identity Q̇ - Q̃ = -(I - L)⁻¹ d ⟹ ‖Q̇ - Q̃‖_∞ ≤ ρ_inv_cont · ‖d‖_∞
 
 J-symmetry cross-check: violation ≤ 1.11 × 10⁻¹⁶ (verifies Q*_0 J-symm).
