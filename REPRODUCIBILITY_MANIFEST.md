@@ -1,131 +1,131 @@
 # Reproducibility Manifest — Paper
 
-**Stand:** 2026-06-23
-**Paper:** "Selbstreferentielle Dissipative Systeme: Eine Werkstoffprüfung über zehn Substrate" (EN: "Self-Referential Dissipative Systems: A Materials Test Across Ten Substrates") (Schessl 2026, arXiv submission).
-**Zweck:** Jede im Paper genannte Zahl ist über diesen Manifest auf eine Quell-Datei rückverfolgbar — entweder in den gebündelten Ordnern (`data/`, `lean4/`, `analysis/`) oder über die externen URLs in `README.md`.
-**Verifikation:** `python3 reproduce.py` rechnet alle Headline-Zahlen aus den gebündelten Daten neu (33 Checks inkl. Statistik-Ebene, PASS/FAIL, Exit ≠ 0 bei Abweichung). `REPRODUCE.md` = Landkarte Zahl → Datei → Roh-Quelle → Test; `STATISTICS.md` + `analysis/` = Inferenz-Schicht (KS-Null, Permutation, γ_M/Bonferroni, Bootstrap).
+**Last updated:** 2026-06-23
+**Paper:** "Self-Referential Dissipative Systems: A Materials Test Across Ten Substrates" (Schessl 2026, arXiv submission).
+**Purpose:** Every number stated in the paper is traceable through this manifest to a source file — either in the bundled folders (`data/`, `lean4/`, `analysis/`) or via the external URLs in `README.md`.
+**Verification:** `python3 reproduce.py` recomputes all headline numbers from the bundled data (33 checks incl. the statistics layer, PASS/FAIL, exit ≠ 0 on mismatch). `REPRODUCE.md` = map number → file → raw source → test; `STATISTICS.md` + `analysis/` = inference layer (KS null, permutation, γ_M/Bonferroni, bootstrap).
 
 ---
 
-## 1. Theorie (Lean 4)
+## 1. Theory (Lean 4)
 
-### Axiome A0–A4, Regularitäts-Bedingungen L1–L4, Theoreme T1–T3, No-Go-Theorem (§2)
-- **Beweise:** `lean4/PositivityProofs/`
-  - `AxiomAudit.lean` — Axiom-Konsistenz-Check
-  - `Basic.lean` — Grundlagen-Definitionen
-  - `HilbertMetric.lean` — Hilbert-Metrik für $TP_2$-Kernel
-  - `NoGo.lean` — zertifiziertes `nogo_theorem_certified` (sorry-frei; 12 Projekt-Axiome via `#print axioms`); allgemeines `nogo_theorem` (alle ε,η) = Konjektur/Axiom
-  - `Main.lean` — Top-level Statements
-  - `NumericalCertificate.lean` — Zertifizierte Spektralschranke $\rho < 0.45$
-  - `SpectralGap.lean`, `Symmetry.lean`, `TP2Kernels.lean`, `IFTBridge.lean`, `TwoPointGauge.lean`, `SRDS_Tier1/2/3.lean`, `SRDS_Lyapunov.lean` — Hilfs-Lemmas + IFT-Bridge-/Tier-Formalisierung
-  - `CheckAxioms.lean` — `#print axioms`-Verifizierer: druckt die **exakte** Axiom-Abhängigkeit des No-Go-Theorems
-- **Status (firsthand gebaut, Lean v4.29.0-rc1 + gepinnte mathlib):** `lake env lean PositivityProofs/CheckAxioms.lean` läuft **ohne `sorryAx`/Fehler** — Beleg `lean4/CHECKAXIOMS_OUTPUT.txt`. Das zertifizierte **`nogo_theorem_certified`** (Paper: computer-assistiert via Arb-Zertifikat Q̇(½)∈Intervall) hängt laut `#print axioms` von **12 Projekt-Axiomen** ab: 2 Numerik-Zertifikat (`Q_dot_half_continuum`, `…_in_interval`) + 10 IFT-Bridge (`Q_star`/`Sigma_c`-Familie), plus die 3 Lean-Grundaxiome (`propext`, `Classical.choice`, `Quot.sound`). Das **allgemeine** `nogo_theorem` (alle ε,η) bleibt **Konjektur** (als Axiom geführt). **Drei wohldefinierte Bezugsgrößen (Auflösung der 17/21/27-Verwechslung):** `#print axioms` = **12 Projekt-Axiome** (worauf das zertifizierte No-Go ruht, maßgeblich) · `AxiomAudit.lean`-Inventar = **18** (Gesamt-Formalisierung inkl. struktureller Birkhoff-Hopf-Achse, die das zertifizierte Theorem nicht nutzt) · `grep '^axiom'` = **27** Deklarationen im Bundle.
-- **Build:** Lean 4 + Mathlib (`lean4/lakefile.lean`, `lean4/lean-toolchain`); Mathlib-Rev in `lean4/lake-manifest.json` gepinnt
+### Axioms A0–A4, regularity conditions L1–L4, theorems T1–T3, no-go theorem (§2)
+- **Proofs:** `lean4/PositivityProofs/`
+  - `AxiomAudit.lean` — axiom consistency check
+  - `Basic.lean` — foundational definitions
+  - `HilbertMetric.lean` — Hilbert metric for $TP_2$ kernels
+  - `NoGo.lean` — certified `nogo_theorem_certified` (sorry-free; 12 project axioms via `#print axioms`); general `nogo_theorem` (all ε,η) = conjecture/axiom
+  - `Main.lean` — top-level statements
+  - `NumericalCertificate.lean` — certified spectral bound $\rho < 0.45$
+  - `SpectralGap.lean`, `Symmetry.lean`, `TP2Kernels.lean`, `IFTBridge.lean`, `TwoPointGauge.lean`, `SRDS_Tier1/2/3.lean`, `SRDS_Lyapunov.lean` — helper lemmas + IFT-bridge/tier formalization
+  - `CheckAxioms.lean` — `#print axioms` verifier: prints the **exact** axiom dependency of the no-go theorem
+- **Status (built firsthand, Lean v4.29.0-rc1 + pinned mathlib):** `lake env lean PositivityProofs/CheckAxioms.lean` runs **without `sorryAx`/errors** — evidence `lean4/CHECKAXIOMS_OUTPUT.txt`. The certified **`nogo_theorem_certified`** (paper: computer-assisted via Arb certificate Q̇(½)∈interval) depends, per `#print axioms`, on **12 project axioms**: 2 numerical-certificate (`Q_dot_half_continuum`, `…_in_interval`) + 10 IFT-bridge (`Q_star`/`Sigma_c` family), plus the 3 Lean foundational axioms (`propext`, `Classical.choice`, `Quot.sound`). The **general** `nogo_theorem` (all ε,η) remains a **conjecture** (kept as an axiom). **Three well-defined reference counts (do not conflate them):** `#print axioms` = **12 project axioms** (what the certified no-go rests on, authoritative) · `AxiomAudit.lean` inventory = **18** (the full formalization incl. the structural Birkhoff-Hopf axis, which the certified theorem does not use) · `grep '^axiom'` = **27** declarations in the bundle.
+- **Build:** Lean 4 + Mathlib (`lean4/lakefile.lean`, `lean4/lean-toolchain`); Mathlib rev pinned in `lean4/lake-manifest.json`
 
-## 2. Cross-Domain Substrate (§4)
+## 2. Cross-domain substrates (§4)
 
-### §4.1 Holz (Anker) — DIN EN 408:2012-10
-- **Roh-Daten:** Zenodo-DOI `10.5281/zenodo.18340365` ($n = 319$ Prüfkörper, balanced $n = 230$ aus S7+S10+S13; Verweis in `data/holz_master/README.md`)
-- **Externe Quelle:** Master-Thesis Schessl 2025, Zenodo `10.5281/zenodo.18340365`
-- **Werte:** $\tilde{a} = 0.567$ (Mean), $r(\hat{a}, \sigma_\text{break}) = -0.83$ (Pearson; Spearman $\rho = -0.99$), $p < 10^{-30}$
+### §4.1 Timber (anchor) — DIN EN 408:2012-10
+- **Raw data:** Zenodo DOI `10.5281/zenodo.18340365` ($n = 319$ specimens, balanced $n = 230$ from S7+S10+S13; reference in `data/holz_master/README.md`)
+- **External source:** master's thesis Schessl 2025, Zenodo `10.5281/zenodo.18340365`
+- **Values:** $\tilde{a} = 0.567$ (mean), $r(\hat{a}, \sigma_\text{break}) = -0.83$ (Pearson; Spearman $\rho = -0.99$), $p < 10^{-30}$
 
-### §4.2 Multi-Material Multiaxial Fatigue (Boundary)
-- **Externe Quelle:** Chen et al. 2024 Sci Data (`doi:10.1038/s41597-024-03862-4`), 914 strain-kontrollierte Proben über 136 Materialien
-- **Werte:** $R^2 \geq 0.5$ in 74% der Materialien, cross-material aggregiert n.s.
+### §4.2 Multi-material multiaxial fatigue (boundary)
+- **External source:** Chen et al. 2024 Sci Data (`doi:10.1038/s41597-024-03862-4`), 914 strain-controlled specimens across 136 materials
+- **Values:** $R^2 \geq 0.5$ in 74% of materials, cross-material aggregated n.s.
 
 ### §4.3 Finance SPY
-- **Externe Quelle:** Yahoo Finance via `yfinance`, SPY 1993–2026
-- **Werte:** Crash $R^2 = 0.973 \pm 0.025$ ($n=10$), Calm $R^2 = 0.483$ ($n=135$)
+- **External source:** Yahoo Finance via `yfinance`, SPY 1993–2026
+- **Values:** crash $R^2 = 0.973 \pm 0.025$ ($n=10$), calm $R^2 = 0.483$ ($n=135$)
 
-### §4.4 Lignin / Lignin-Carbohydrate-Complexes (SP-LCC)
-- **Externe Quelle:** Alopaeus et al. 2025, *SP-LCC*, Scientific Data 12, **doi:10.1038/s41597-025-05327-8** (95 LCC-Proben, AqSO-Biorefinery)
-- **Daten (gebündelt):** `data/lignin/sp_lcc_data_master.csv` (72-Proben-Subset: p-factor, b-O-4, RSI, Tg, Oberflächenspannung, chain-length)
-- **Werte (firsthand aus CSV):** $\rho_S(\beta\text{-O-4}, \text{P-Faktor}) = -0.78$ ($n = 72$; `reproduce.py` [15]); Form = Weibull (Mode (ii) seriell-kaskadiert), aus dem Aggregations-Modus, nicht aus AICc. **Kein inneres $\hat{a}$:** breite β-O-4-Festigkeitsverteilung → konkav ab Ursprung ($m<1$), keine Dauerfestigkeit, Inflektion unterhalb des getesteten Schärfebereichs (firsthand Re-Anker + Schlee 2023 / Mattsson 2017). *(Früherer Draft: −0,77/n=90 aus verschollenem Text-Modul; maßgeblich sind die data-backed −0,78/n=72.)*
+### §4.4 Lignin / lignin-carbohydrate complexes (SP-LCC)
+- **External source:** Alopaeus et al. 2025, *SP-LCC*, Scientific Data 12, **doi:10.1038/s41597-025-05327-8** (95 LCC samples, AqSO biorefinery)
+- **Data (bundled):** `data/lignin/sp_lcc_data_master.csv` (72-sample subset: p-factor, b-O-4, RSI, Tg, surface tension, chain-length)
+- **Values (firsthand from CSV):** $\rho_S(\beta\text{-O-4}, \text{P-factor}) = -0.78$ ($n = 72$; `reproduce.py` [15]); form = Weibull (mode (ii) serial-cascaded), from the aggregation mode, not from AICc. **No interior $\hat{a}$:** broad β-O-4 strength distribution → concave from the origin ($m<1$), no endurance limit, inflection below the tested severity range (firsthand re-anchoring + Schlee 2023 / Mattsson 2017). *(Earlier draft: −0.77/n=90 from a lost text module; the data-backed −0.78/n=72 are authoritative.)*
 
-### §4.5 V-Dem Autokratisierungen
-- **Externe Quelle:** V-Dem ERT-v14 (`v-dem.net/data/ert/`), 117 Episoden
-- **Werte:** $n = 117$, Median $R^2 = 0.983$ über 89 gefittete Episoden
+### §4.5 V-Dem autocratizations
+- **External source:** V-Dem ERT-v14 (`v-dem.net/data/ert/`), 117 episodes
+- **Values:** $n = 117$, median $R^2 = 0.983$ over 89 fitted episodes
 
-### §4.6 Politische Reden (Bundestag/ParlaMint)
-- **Externe Quelle:** Bundestag Open Data + ParlaMint (HU+PL+RS+SI), CLARIN ERIC (öffentlich)
-- **Werte:** Cantilever-Bauteil-Vorhersage, $n_\text{Bundestag} = 6{,}874$
-- **ℓ₃→ℓ₄-Pilot (§5, kein Tab-1-Substrat):** `data/parlamint/pilot_country_year.csv` (65 Country-Years) + `pilot_inference.json`; NC2 $\rho=-0.34$ (BCa-CI $[-0.48,-0.09]$, $p=0.006$), â-Diskurs 4/4 Cluster negativ (BCa $[-0.34,-0.15]$), Country-Permutation $p=0.207$ (G=4, tail-arm, nicht load-bearing). Reproduktion: `reproduce.py` Block [13]. Status: POSTULIERT (Operationalisierung offen).
+### §4.6 Political speeches (Bundestag/ParlaMint)
+- **External source:** Bundestag Open Data + ParlaMint (HU+PL+RS+SI), CLARIN ERIC (public)
+- **Values:** cantilever-member prediction, $n_\text{Bundestag} = 6{,}874$
+- **ℓ₃→ℓ₄ pilot (§5, not a Tab-1 substrate):** `data/parlamint/pilot_country_year.csv` (65 country-years) + `pilot_inference.json`; NC2 $\rho=-0.34$ (BCa CI $[-0.48,-0.09]$, $p=0.006$), â-discourse 4/4 clusters negative (BCa $[-0.34,-0.15]$), country permutation $p=0.207$ (G=4, tail-arm, not load-bearing). Reproduction: `reproduce.py` block [13]. Status: POSTULATED (operationalization open).
 
-### §4.7 Erdbeben USGS
-- **Roh-Daten:** `data/earthquake/usgs_earthquakes.csv` (Quell-Daten), `data/earthquake/earthquake_results.csv` (Sigmoid-Fits)
-- **Externe Quelle:** USGS-FDSN-API (`earthquake.usgs.gov/fdsnws/event/1/`)
-- **Werte:** $n = 284$ Sequenzen, 6 Regionen, $\rho(\hat{a}, \text{Mainshock}) = +0.673$ Bonferroni
+### §4.7 Earthquakes USGS
+- **Raw data:** `data/earthquake/usgs_earthquakes.csv` (source data), `data/earthquake/earthquake_results.csv` (sigmoid fits)
+- **External source:** USGS-FDSN API (`earthquake.usgs.gov/fdsnws/event/1/`)
+- **Values:** $n = 284$ sequences, 6 regions, $\rho(\hat{a}, \text{mainshock}) = +0.673$ Bonferroni
 
-### §4.8 Batterie CALB (real)
-- **Roh-Daten:** HF `Battery-Life/BatteryLife_Raw` CALB ($n = 26$ Zellen, 3 Temperaturen); Ergebnis mitgeliefert: `data/battery/battery_calb_results.json` (Analyse-Skript extern, Roh-Daten via HF-Quelle)
-- **Externe Quelle:** BatteryLife (arXiv:2502.18807)
-- **Werte:** KS-D $= 0.733$ ($p = 5.7 \cdot 10^{-14}$), $\tilde{a} = 0.646$ (Median), $\rho(\hat{a}, \text{EOL}) = +0.18$ n.s. (7/26 bis EOL, rechts-zensiert). *(War NASA-PCoE-Surrogat $+0.853$ / $0.616$ — synthetisch, superseded durch CALB-Real-Lauf 06-03.)*
+### §4.8 Battery CALB (real)
+- **Raw data:** HF `Battery-Life/BatteryLife_Raw` CALB ($n = 26$ cells, 3 temperatures); result included: `data/battery/battery_calb_results.json` (analysis script external, raw data via the HF source)
+- **External source:** BatteryLife (arXiv:2502.18807)
+- **Values:** KS-D $= 0.733$ ($p = 5.7 \cdot 10^{-14}$), $\tilde{a} = 0.646$ (median), $\rho(\hat{a}, \text{EOL}) = +0.18$ n.s. (7/26 reaching EOL, right-censored). *(Was a NASA-PCoE surrogate $+0.853$ / $0.616$ — synthetic, superseded by the real CALB run on 06-03.)*
 
-### §4.9 Kolorektal TCGA
-- **Roh-Daten:** `data/crc/tcga_crc_combined.csv` (Quell-Daten), `data/crc/crc_results_v2.json` (Population/Mutations/Bootstrap, MSI/MSS getrennt: $n_\text{MSI}=76$, $n_\text{MSS}=503$)
-- **Stage-Headline:** `data/crc/crc_stage_aggregated.json` (MSI $\hat{a}=0.286$ / MSS $0.439$, $\Delta=-0.153$); Re-Fit `python3 data/crc/domain_crc_v2.py` (+ `srds_core.py`) auf der CSV
-- **Externe Quelle:** TCGA Pan-Cancer-Atlas (`portal.gdc.cancer.gov`)
-- **Werte:** $n = 579$; **kanonisch (Last-Achse) stage-aggregiert** MSI–MSS $\Delta\hat{a} = -0.153$; Population/Count-Sortierung $+0.05$ = Zähl-Artefakt (`crc_results_v2.json → group_results`)
+### §4.9 Colorectal TCGA
+- **Raw data:** `data/crc/tcga_crc_combined.csv` (source data), `data/crc/crc_results_v2.json` (population/mutation/bootstrap, MSI/MSS separated: $n_\text{MSI}=76$, $n_\text{MSS}=503$)
+- **Stage headline:** `data/crc/crc_stage_aggregated.json` (MSI $\hat{a}=0.286$ / MSS $0.439$, $\Delta=-0.153$); re-fit `python3 data/crc/domain_crc_v2.py` (+ `srds_core.py`) on the CSV
+- **External source:** TCGA Pan-Cancer Atlas (`portal.gdc.cancer.gov`)
+- **Values:** $n = 579$; **canonical (load axis) stage-aggregated** MSI–MSS $\Delta\hat{a} = -0.153$; population/count ordering $+0.05$ = counting artifact (`crc_results_v2.json → group_results`)
 
-### §4.10 LLM Konversationen (ENK Gold)
-- **Roh-Daten:** ENK Gold-Korpus ($n = 202$, Auf-Anfrage unter Data-Use-Agreement — siehe Paper §9.3 Disclosure)
-- **Werte:** $\rho = -0.359$ cluster-robust, Ridge $\rho = 0.700 \pm 0.076$
+### §4.10 LLM conversations (ENK Gold)
+- **Raw data:** ENK gold corpus ($n = 202$, on request under a Data-Use Agreement — see paper §9.3 disclosure)
+- **Values:** $\rho = -0.359$ cluster-robust, ridge $\rho = 0.700 \pm 0.076$
 
-### §4.11 Musik (MetaMIDI + music21 + Tagtraum)
-- **Pre-Registrierung:** Musik-L2-Präregistrierung (datiert 2026-05-16, auf Anfrage)
-- **Pipeline-Skripte:** `data/musik_companion/pipeline/`
-  - `musik_l2_lakh_cross_genre.py` — Hauptpipeline für 5 Lakh-Pop-Genres
-  - `musik_l2_ahat_run.py` — Sigmoid-Fit + $\hat{a}$-Extraktion
-  - `musik_substrat_run.py` — Substrat-Aggregation
-  - `musik_l2_shuffled_control.py` — Shuffled-Control Negativkontrolle
+### §4.11 Music (MetaMIDI + music21 + Tagtraum)
+- **Pre-registration:** music-L2 pre-registration (dated 2026-05-16, on request)
+- **Pipeline scripts:** `data/musik_companion/pipeline/`
+  - `musik_l2_lakh_cross_genre.py` — main pipeline for 5 Lakh pop genres
+  - `musik_l2_ahat_run.py` — sigmoid fit + $\hat{a}$ extraction
+  - `musik_substrat_run.py` — substrate aggregation
+  - `musik_l2_shuffled_control.py` — shuffled-control negative control
 - **Outputs:** `data/musik_companion/outputs/`
-  - `musik_l2_lakh_cross_genre.json` — Lakh-Genre-Ergebnisse
+  - `musik_l2_lakh_cross_genre.json` — Lakh genre results
   - `musik_l2_music21_all_raw.json` — Bach via music21
-  - `musik_l2_music21_all_summary.json` — Bach-Aggregation
-  - `musik_l2_sanity_bach_n50.json` — Sanity-Subset $n=50$
-  - `musik_l2_shuffled_control.json` — Negativkontrolle-Resultat
-  - `musik_l2_lakh_run.log`, `musik_l2_shuffled_control.log` — Pipeline-Logs
-- **Externe Daten-Quellen:** MetaMIDI Dataset Zenodo `10.5281/zenodo.5142664` (Ens & Pasquier 2021); Tagtraum CD2C `tagtraum.com/genres/msd_tagtraum_cd2c.cls.zip`
-- **Werte:** $n = 2{,}840$ MIDI-Stücke, 6-Genre Mann-Kendall $\tau = +1.000$, $p = 0.003$, Median $R^2 = 0.975$
+  - `musik_l2_music21_all_summary.json` — Bach aggregation
+  - `musik_l2_sanity_bach_n50.json` — sanity subset $n=50$
+  - `musik_l2_shuffled_control.json` — negative-control result
+  - `musik_l2_lakh_run.log`, `musik_l2_shuffled_control.log` — pipeline logs
+- **External data sources:** MetaMIDI Dataset Zenodo `10.5281/zenodo.5142664` (Ens & Pasquier 2021); Tagtraum CD2C `tagtraum.com/genres/msd_tagtraum_cd2c.cls.zip`
+- **Values:** $n = 2{,}840$ MIDI pieces, 6-genre Mann-Kendall $\tau = +1.000$, $p = 0.003$, median $R^2 = 0.975$
 
-### §4.12 Tabelle-18 Forced-Materials (Al-6061, DP1180) und Fatigue-Fit
-- **Al-6061:** `data/al6061/per_specimen_al6061.tsv` + `summary_al6061.tsv`; $\tilde{a}=0.084$ (Median `logistic_inflection`, 146 valide Fits), $\rho(\hat{a},\sigma_{\max})=-0.703$, KS-D $=1.000$. Roh-Spannungs-Dehnung: Mendeley `10.17632/rd6jm9tyb6.2`.
-- **DP1180:** `data/dp1180/numisheet_results.json`; $\tilde{a}=0.975$ ($a\_hat\_mean$, $n=19$), KS-D $=1.000$. Roh: NIST Numisheet 2020 (`data.nist.gov`).
-- **Multiaxial Fatigue:** `data/fatigue/multiaxial_fatigue_results.json`; $\tilde{a}=0.578$, $n_\text{strain}=914$. Roh: Chen 2024 Sci Data `10.1038/s41597-024-03862-4`.
+### §4.12 Table-18 forced materials (Al-6061, DP1180) and the fatigue fit
+- **Al-6061:** `data/al6061/per_specimen_al6061.tsv` + `summary_al6061.tsv`; $\tilde{a}=0.084$ (median `logistic_inflection`, 146 valid fits), $\rho(\hat{a},\sigma_{\max})=-0.703$, KS-D $=1.000$. Raw stress-strain: Mendeley `10.17632/rd6jm9tyb6.2`.
+- **DP1180:** `data/dp1180/numisheet_results.json`; $\tilde{a}=0.975$ ($a\_hat\_mean$, $n=19$), KS-D $=1.000$. Raw: NIST Numisheet 2020 (`data.nist.gov`).
+- **Multiaxial fatigue:** `data/fatigue/multiaxial_fatigue_results.json`; $\tilde{a}=0.578$, $n_\text{strain}=914$. Raw: Chen 2024 Sci Data `10.1038/s41597-024-03862-4`.
 
-## 3. Cross-Corpus Konversationen (§6)
+## 3. Cross-corpus conversations (§6)
 
-- 12 Konversations-Korpora ($\approx 35{,}300$ Gespräche): ENK-Gold, BothBosu v3, GasConv, Awry (CGA Wikipedia), LegalCon, MentalManip, P4G, SafeDialBench, CoSafe, ProsocialDialog, Sotopia, Google COVID Mobility
-- **Cross-Method-Triangulation:** DUA-begrenztes ENK-Subset, auf Anfrage (Methoden publiziert, vgl. Paper §6.4)
+- 12 conversation corpora ($\approx 35{,}300$ dialogues): ENK Gold, BothBosu v3, GasConv, Awry (CGA Wikipedia), LegalCon, MentalManip, P4G, SafeDialBench, CoSafe, ProsocialDialog, Sotopia, Google COVID Mobility
+- **Cross-method triangulation:** DUA-limited ENK subset, on request (methods published, cf. paper §6.4)
 
-## 4. Genealogie (§9.4)
+## 4. Genealogy (§9.4)
 
-- **Vorform-Klassen:** `genealogy_of_frames.md` (8 datierte Frame-Klassen)
-- **Eigen-Refs (alle Zenodo-DOIs):**
-  - Schessl 2025 Master-Thesis: `10.5281/zenodo.18340365`
-  - Schessl 2025 Emergente Narrative Kontrolle: `10.5281/zenodo.17556213`
-  - Schessl 2025 Leben als organisierte Dissipation: `10.5281/zenodo.17445178`
-  - Schessl 2025 Self-Reference Axiom: `10.5281/zenodo.17509367`
-  - Schessl 2026 ENK Minimal-Disclosure: `10.5281/zenodo.18475921`
+- **Precursor classes:** `genealogy_of_frames.md` (8 dated frame classes)
+- **Self-references (all Zenodo DOIs):**
+  - Schessl 2025 master's thesis: `10.5281/zenodo.18340365`
+  - Schessl 2025 *Emergente Narrative Kontrolle*: `10.5281/zenodo.17556213`
+  - Schessl 2025 *Leben als organisierte Dissipation*: `10.5281/zenodo.17445178`
+  - Schessl 2025 *Self-Reference Axiom*: `10.5281/zenodo.17509367`
+  - Schessl 2026 ENK minimal disclosure: `10.5281/zenodo.18475921`
   - Schessl 2026 Autocorrelation Blind Spot: `arXiv:2604.14414`
 
-## 5. Struktur-zu-Wert / Pisot-Befund (§2.5)
+## 5. Structure-to-value / Pisot finding (§2.5)
 
-- **Skript:** `analysis/pisot_eigenvalues.py`: Pisot-/Galois-Verifikation (golden $\varphi$ / silver $1+\sqrt2$ / kubisch), 7/7 PASS, self-contained (stdlib)
-- *(Die frühere $\Sigma_c$-Konjektur-Operationalisierung wurde mit Programm C nach `analysis/deprecated/` verschoben.)*
+- **Script:** `analysis/pisot_eigenvalues.py`: Pisot/Galois verification (golden $\varphi$ / silver $1+\sqrt2$ / cubic), 7/7 PASS, self-contained (stdlib)
+- *(The earlier $\Sigma_c$ conjecture operationalization was moved, together with Program C, to `analysis/deprecated/`.)*
 
-## 6. Falsifikations-Anker (§8.1)
+## 6. Falsification anchors (§8.1)
 
-- **Synthetische Null-Prüfkörper (Schicht 1):** 1.000 Prüfkörper pro Substrat (AR(1) / Random Walk / White Noise); alle fünf Haupt-Substrate (Tab 18) trennen mit KS-Test $p < 10^{-3}$. Die frühere „19 von 26"-Zählung war die $\gamma_M$-Schwelle [$\alpha/9$] über die erweiterte 26-Substruktur-Aufstellung. (Ein früher mitgeführter DSC-Protein-Schmelz-Test, $n = 6$, wurde wegen einer Provenienz-Lücke aus Tab 18 zurückgezogen.)
-- **Vorhergesagte Nulls (Schicht 2):** ProsocialDialog (L1-Violation), Sotopia (A0-Violation), Google COVID Mobility (L3-Violation) — alle drei bestätigt
-- **Pre-Reg-Hold-out (Schicht 3):** $n = 50$ Tier B, 3/6 strikte Konformität unter Holm-Bonferroni
+- **Synthetic null specimens (layer 1):** 1,000 specimens per substrate (AR(1) / random walk / white noise); all five main substrates (Tab 18) separate with a KS test $p < 10^{-3}$. The earlier "19 of 26" count was the $\gamma_M$ threshold [$\alpha/9$] over the extended 26-substructure tally. (A DSC protein-melt test, $n = 6$, carried earlier, was withdrawn from Tab 18 due to a provenance gap.)
+- **Predicted nulls (layer 2):** ProsocialDialog (L1 violation), Sotopia (A0 violation), Google COVID Mobility (L3 violation) — all three confirmed
+- **Pre-reg hold-out (layer 3):** $n = 50$ Tier B, 3/6 strict conformity under Holm-Bonferroni
 
 ## 7. Disclosure (§9.5)
 
-- **Modell:** Responsible Disclosure — offener Mechanismus, zurückgehaltene „Dosis" (**kein Patent-Bezug**).
-- **Zurückgehalten:** ausschließlich die operativen Kalibrier-Schwellwerte der Budget-Zustandsmaschine; die Architektur ist schwellwert-unabhängig.
-- **Publiziert:** Axiomatik, Theoreme, Lean-4-Beweise, Architektur, alle hier dokumentierten Substrate.
+- **Model:** responsible disclosure — open mechanism, withheld "dose" (**no patent reference**).
+- **Withheld:** exclusively the operative calibration thresholds of the budget state machine; the architecture is threshold-independent.
+- **Published:** the axiomatics, theorems, Lean-4 proofs, architecture, all substrates documented here.
 
 ---
 
-**Diese Reproduktions-Datei reicht aus, um jede Tabelle, Abbildung und Aussage des Papers nachzuvollziehen. Wo Roh-Daten extern sind (USGS, TCGA, V-Dem, MetaMIDI), enthält Sektion 2 die direkten URLs.**
+**This reproduction file suffices to follow every table, figure, and statement of the paper. Where raw data are external (USGS, TCGA, V-Dem, MetaMIDI), Section 2 contains the direct URLs.**
