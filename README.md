@@ -4,6 +4,8 @@
 
 This folder contains all reproduction artifacts that cover the paper on their own (Lean-4 proofs, raw/fit data for the ten substrates, pipeline scripts, genealogy). It is structured so that a reviewer can clone it in isolation, navigate it, **and recompute** the numbers.
 
+**Reference state.** The manuscript cites this repository by URL, which resolves to its current state. The state carried on the submission date is tagged [`snapshot-2026-06-29`](https://github.com/FerdinandSchessl/srds-enk-companion/tree/snapshot-2026-06-29). Every repository path cited in the manuscript is identical in that state and in the current one; the changes since then are confined to `formal_framework/`, which the manuscript does not cite.
+
 ## Reproduction (one command)
 
 ```bash
