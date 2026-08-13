@@ -1,10 +1,10 @@
 # Companion — SRDS+ENK Paper
 
-**Paper:** "Self-Referential Dissipative Systems: A Materials Test Across Ten Substrates" (Schessl 2026, submitted to arXiv in June 2026, identifier to follow on announcement, DE 52p / EN 50p).
+**Paper:** "Self-Referential Dissipative Systems: A Materials Test Across Ten Substrates" (Schessl 2026, DE 52p / EN 50p).
 
 This folder contains all reproduction artifacts that cover the paper on their own (Lean-4 proofs, raw/fit data for the ten substrates, pipeline scripts, genealogy). It is structured so that a reviewer can clone it in isolation, navigate it, **and recompute** the numbers.
 
-**Reference state.** The manuscript cites this repository by URL, which resolves to its current state. The state carried on the submission date is tagged [`snapshot-2026-06-29`](https://github.com/FerdinandSchessl/srds-enk-companion/tree/snapshot-2026-06-29). Every repository path cited in the manuscript is identical in that state and in the current one; the changes since then are confined to `formal_framework/`, which the manuscript does not cite.
+**Reference state.** The manuscript cites this repository by URL, which resolves to its current state. The state as of 2026-06-29 is tagged [`snapshot-2026-06-29`](https://github.com/FerdinandSchessl/srds-enk-companion/tree/snapshot-2026-06-29). Every repository path cited in the manuscript is identical in that state and in the current one; the changes since then are confined to `formal_framework/`, which the manuscript does not cite.
 
 ## Reproduction (one command)
 
@@ -49,7 +49,7 @@ Per-substrate detail in `REPRODUCIBILITY_MANIFEST.md` (§-numbers on the right).
 | `analysis/null_model.py` | [scipy] Synthetic-null generator (AR(1)/RW/WN) + KS, Al-6061 example |
 | `analysis/ks_null_summary.csv` | Five Tab.-18 substrates: KS-D + p (source of the γ_M count) |
 | `REPRODUCIBILITY_MANIFEST.md` | Per paper table/figure: script path, raw-data path, external URLs |
-| `formal_framework/` | Standalone mathematical development: axioms and regularity conditions, reduction theorem, T1–T3, renormalization fixed point, the No-Go theorems, elimination ledger. Two states side by side — current revision (30 pp.) and the frozen state accompanying the submission (26 pp.); see `formal_framework/README.md` |
+| `formal_framework/` | Standalone mathematical development: axioms and regularity conditions, reduction theorem, T1–T3, renormalization fixed point, the No-Go theorems, elimination ledger. Two states side by side — current revision (30 pp.) and the state frozen in June 2026 (26 pp.); see `formal_framework/README.md` |
 | `lean4/PositivityProofs/` | No-Go in Lean 4, **computer-assisted**: the certified `nogo_theorem_certified` is **sorry-free** (0 `sorryAx` — evidence `lean4/CHECKAXIOMS_OUTPUT.txt`) and, per `#print axioms`, depends on **12 project axioms** (2 numerical-certificate + 10 IFT-bridge) + 3 Lean foundational axioms. The general `nogo_theorem` (all ε,η) is a **conjecture/axiom**. *(Three reference counts: `#print axioms`=12 · `AxiomAudit.lean` inventory=18 · `grep '^axiom'`=27 — all explained in the evidence file.)* |
 | `genealogy_of_frames.md` | 8 dated precursor frame-classes (master's thesis 2025 → SRDS 2026) |
 | `data/earthquake/` | USGS-FDSN API sequences, 284 sequences, six regions (`usgs_earthquakes.csv`, `earthquake_results.csv`) |

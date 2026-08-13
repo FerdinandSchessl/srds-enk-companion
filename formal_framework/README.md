@@ -12,11 +12,11 @@ spectral/contraction substructure.
 | Path | State | Extent |
 |---|---|---|
 | `SRDS_Formal_Framework.{tex,pdf}` | Current revision, 30 July 2026 | 30 pp., Sections 1–13 |
-| `frozen-2026-06/SRDS_Formal_Framework.{tex,pdf}` | The state this repository carried when the manuscript was submitted in June 2026; unchanged since | 26 pp., Sections 1–12 |
+| `frozen-2026-06/SRDS_Formal_Framework.{tex,pdf}` | The state frozen in June 2026; unchanged since | 26 pp., Sections 1–12 |
 
-Neither state was part of the arXiv upload, which comprised the manuscript, its
-bibliography and its figures. The frozen state is the reference for readers of the
-submitted manuscript; the current revision is a standalone document that continues past it.
+Neither state is part of the manuscript, which stands on its own with its
+bibliography and figures. The frozen state is the reference for readers of the
+June 2026 manuscript; the current revision is a standalone document that continues past it.
 
 **Difference.** The current revision adds Section 11, *The Third No-Go: No Specimen-Sure
 Prospective Identification under Prefix Measurement* (the prefix barrier, the

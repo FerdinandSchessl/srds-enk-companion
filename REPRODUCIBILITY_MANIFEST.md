@@ -1,7 +1,7 @@
 # Reproducibility Manifest — Paper
 
 **Last updated:** 2026-06-23
-**Paper:** "Self-Referential Dissipative Systems: A Materials Test Across Ten Substrates" (Schessl 2026, arXiv submission).
+**Paper:** "Self-Referential Dissipative Systems: A Materials Test Across Ten Substrates" (Schessl 2026).
 **Purpose:** Every number stated in the paper is traceable through this manifest to a source file — either in the bundled folders (`data/`, `lean4/`, `analysis/`) or via the external URLs in `README.md`.
 **Verification:** `python3 reproduce.py` recomputes all headline numbers from the bundled data (33 checks incl. the statistics layer, PASS/FAIL, exit ≠ 0 on mismatch). `REPRODUCE.md` = map number → file → raw source → test; `STATISTICS.md` + `analysis/` = inference layer (KS null, permutation, γ_M/Bonferroni, bootstrap).
 
