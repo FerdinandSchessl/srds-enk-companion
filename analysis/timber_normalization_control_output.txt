@@ -1,0 +1,13 @@
+n = 230
+[A] Pearson r(a_hat, sigma_max)  = -0.8290
+[A] Spearman rho(a_hat, sigma_max) = -0.9938
+[A] class S10: n= 71  r=-0.8637  Spearman=-0.9920  mean_a=0.5573
+[A] class S13: n= 15  r=-0.9520  Spearman=-0.9857  mean_a=0.5394
+[A] class S7: n=144  r=-0.8316  Spearman=-0.9899  mean_a=0.5741
+[B] sigma_onset = a_hat*sigma_max: mean=24.12, SD=5.50, CV=0.228
+[B] Pearson r(sigma_onset, sigma_max)  = +0.9962
+[B] Spearman rho(sigma_onset, sigma_max) = +0.9996
+[C] construction baseline (onset independent of sigma_max, 2000 permutations):
+[C]   r_perm mean=-0.7384, SD=0.0235, 99% band=[-0.7867, -0.6587]
+[C]   measured r=-0.8290  ->  z = -3.85 against the baseline
+[C]   permutation p (one-sided, r <= measured): 0/2000
