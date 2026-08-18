@@ -2,7 +2,7 @@
 
 Reviewers of this repository tend to raise a recurring set of objections. Several are built into the study as falsification tests; others mark declared open points. This page indexes both, with the place where each point is tested or stated. The list is not exhaustive. Rows whose test lives in this repository carry a path in backticks and can be recomputed here; rows citing only §-numbers point into the manuscript.
 
-Reading note: the 50-page empirical manuscript is not part of this repository; it is available from the author. It carries the within-substrate correlation evidence, the falsification section (§8), and the substrate chapters cited below.
+Reading note: the 50-page empirical manuscript is included at the repository root as `paper_en_v5_2026-08-12.pdf` (author's version, build of 12 Aug 2026). It carries the within-substrate correlation evidence, the falsification section (§8), and the substrate chapters cited below.
 
 Reference state: empirical manuscript v5 (build of 12 Aug 2026) · formal framework, 30 Jul 2026 · repository snapshot policy in `README.md` (Reference state).
 
