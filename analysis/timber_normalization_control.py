@@ -14,11 +14,19 @@ Three readings, standard library only, seed fixed:
   [B] Onset reading: sigma_onset := a_hat * sigma_max, the absolute stress at
       the inflection. A pure construction artifact requires an onset that is
       unrelated to strength; measured spread and coupling say otherwise.
-  [C] Construction baseline: permute sigma_onset against sigma_max (onset
+  [C] Permutation baseline: permute sigma_onset against sigma_max (onset
       independent of strength, marginals preserved), form
       a_perm = onset_perm / sigma_max, and record r(a_perm, sigma_max) over
-      2000 permutations. This quantifies how much negative correlation the
-      division alone produces; the measured r is compared against that band.
+      2000 permutations. This answers only the narrower question of whether
+      the onset is independent of strength; it is not a test of the
+      deterministic decomposition in [D].
+  [D] Deterministic decomposition (the strongest opposing null): fit the
+      affine onset-strength line sigma_onset = b0 + b1*sigma_max by least
+      squares. With that line, a_hat = sigma_onset/sigma_max is, up to
+      residuals, b1 + b0/sigma_max, a strictly decreasing function of
+      strength; the line alone forces Spearman rho(a_line, sigma_max) = -1,
+      so the near-perfect measured rank order follows arithmetically from
+      the established onset-strength relation.
 
 Expected output (checked values):
   [A] r = -0.829, Spearman = -0.994; within-class r = -0.83 / -0.86 / -0.95;
@@ -26,6 +34,14 @@ Expected output (checked values):
   [B] onset CV = 0.228 (not constant), r(onset, sigma_max) = +0.996.
   [C] baseline mean r = -0.738, 99% band [-0.787, -0.659]; measured r = -0.829
       lies outside the band (z = -3.85; 0 of 2000 permutations reach it).
+  [D] sigma_onset = 5.273 + 0.4329*sigma_max, R^2 = 0.9925; implied
+      a_line = 0.4329 + 5.273/sigma_max: Spearman rho(a_line, sigma_max)
+      = -1.000, Pearson r(a_line, a_hat) = +0.846.
+
+Revision 2026-08-18: reading [D] added. The v6 reading of [C] ("the measured
+r lies outside the construction baseline") overstated what the permutation
+answers: [D] shows the rank order is carried by the established affine
+onset-strength line itself. Readings [A]-[C] and their values are unchanged.
 """
 import csv, math, os, random
 
@@ -93,3 +109,16 @@ print(f"[C]   r_perm mean={mean_r:+.4f}, SD={sd_r:.4f}, 99% band=[{lo:+.4f}, {hi
 print(f"[C]   measured r={real:+.4f}  ->  z = {(real-mean_r)/sd_r:+.2f} against the baseline")
 below = sum(1 for x in rs if x <= real)
 print(f"[C]   permutation p (one-sided, r <= measured): {below}/{len(rs)}")
+
+ms = sum(s)/n
+b1 = sum((si-ms)*(oi-mo) for si, oi in zip(s, onset)) / sum((si-ms)**2 for si in s)
+b0 = mo - b1*ms
+ss_res = sum((oi - (b0 + b1*si))**2 for si, oi in zip(s, onset))
+ss_tot = sum((oi - mo)**2 for oi in onset)
+r2 = 1.0 - ss_res/ss_tot
+a_line = [b1 + b0/si for si in s]
+print("[D] deterministic decomposition (affine onset-strength line):")
+print(f"[D]   sigma_onset = {b0:.3f} + {b1:.4f}*sigma_max, R^2 = {r2:.4f}")
+print(f"[D]   implied a_line = {b1:.4f} + {b0:.3f}/sigma_max")
+print(f"[D]   Spearman rho(a_line, sigma_max) = {spearman(a_line, s):+.4f} (line alone forces -1)")
+print(f"[D]   Pearson r(a_line, a_hat) = {pearson(a_line, a):+.4f}")

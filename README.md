@@ -1,6 +1,6 @@
 # Companion — SRDS+ENK Paper
 
-**Paper:** "Self-Referential Dissipative Systems: A Materials Test Across Ten Substrates" (Schessl 2026, DE 52p / EN 50p). The English author's version is included: `paper_en_v6_2026-08-18.pdf` (build of 18 Aug 2026, md5 `470bb997…`; incorporates the four items of `REVISION_NOTES.md`). The previous state `paper_en_v5_2026-08-12.pdf` (md5 `92e15af9…`) stays byte-identical next to it.
+**Paper:** "Self-Referential Dissipative Systems: A Materials Test Across Ten Substrates" (Schessl 2026, DE 52p / EN 50p). The English author's version is included: `paper_en_v7_2026-08-18.pdf` (build of 18 Aug 2026, md5 `09e51a79…`; incorporates points 6 and 7 of `REVISION_NOTES.md`: the timber onset-strength decomposition and the music shuffle control reported against the pre-registration). The previous states `paper_en_v6_2026-08-18.pdf` (md5 `470bb997…`) and `paper_en_v5_2026-08-12.pdf` (md5 `92e15af9…`) stay byte-identical next to it.
 
 This folder contains all reproduction artifacts that cover the paper on their own (Lean-4 proofs, raw/fit data for the ten substrates, pipeline scripts, genealogy). It is structured so that a reviewer can clone it in isolation, navigate it, **and recompute** the numbers.
 
@@ -50,7 +50,8 @@ Per-substrate detail in `REPRODUCIBILITY_MANIFEST.md` (§-numbers on the right).
 | `analysis/ks_null_summary.csv` | Five Tab.-18 substrates: KS-D + p (source of the γ_M count) |
 | `REPRODUCIBILITY_MANIFEST.md` | Per paper table/figure: script path, raw-data path, external URLs |
 | `OBJECTIONS_AND_TESTS.md` | Index of standard reviewer objections with the place where each is tested or declared open |
-| `paper_en_v6_2026-08-18.pdf` | The empirical manuscript, English author's version (build of 18 Aug 2026, md5 `470bb997…`) |
+| `paper_en_v7_2026-08-18.pdf` | The empirical manuscript, English author's version (build of 18 Aug 2026, md5 `09e51a79…`) |
+| `paper_en_v6_2026-08-18.pdf` | Previous author's version (build of 18 Aug 2026, md5 `470bb997…`), kept byte-identical |
 | `paper_en_v5_2026-08-12.pdf` | Previous author's version (build of 12 Aug 2026, md5 `92e15af9…`), kept byte-identical |
 | `REVISION_NOTES.md` | Revision ledger: each item with its evidence artifact and its status in the v6 build |
 | `formal_framework/` | Standalone mathematical development: axioms and regularity conditions, reduction theorem, T1–T3, renormalization fixed point, the No-Go theorems, elimination ledger. Two states side by side — current revision (30 pp.) and the state frozen in June 2026 (26 pp.); see `formal_framework/README.md` |
@@ -70,6 +71,8 @@ Per-substrate detail in `REPRODUCIBILITY_MANIFEST.md` (§-numbers on the right).
 | `data/parlamint/` | ParlaMint ℓ₃→ℓ₄ pilot (§5, **not** a Tab-1 substrate): country-year aggregate + `pilot_inference.json`; NC2 ρ=−0.34, â-discourse 4/4 neg., perm-p=0.207 |
 | `data/model_comparison/` | §2 form-class typology (AIC win rates per substrate: battery 100%, FKM ~80%, …) |
 | `data/cross_corpus/` | §6 cross-corpus aggregates (Avrami kinetics per corpus); 12 raw corpora external (licenses) |
+| `data/musik_companion/preregistration_musik_l2.md` | Pre-registration for the music substrate (16 May 2026, German, frozen; byte-identical copy of the internal original) |
+| `data/musik_companion/PREREGISTRATION_PROVENANCE.md` | Provenance of the pre-registration: source commit, hashes, deviations of the executed run |
 | `data/musik_companion/pipeline/` | Pipeline scripts for MetaMIDI/Tagtraum/music21 ($\ell_2$ substrate) |
 | `data/musik_companion/outputs/` | Pipeline outputs (`musik_l2_lakh_cross_genre.json`, `musik_l2_music21_all_raw.json`, shuffled control) |
 

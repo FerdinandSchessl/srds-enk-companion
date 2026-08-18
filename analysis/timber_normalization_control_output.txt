@@ -11,3 +11,8 @@ n = 230
 [C]   r_perm mean=-0.7384, SD=0.0235, 99% band=[-0.7867, -0.6587]
 [C]   measured r=-0.8290  ->  z = -3.85 against the baseline
 [C]   permutation p (one-sided, r <= measured): 0/2000
+[D] deterministic decomposition (affine onset-strength line):
+[D]   sigma_onset = 5.273 + 0.4329*sigma_max, R^2 = 0.9925
+[D]   implied a_line = 0.4329 + 5.273/sigma_max
+[D]   Spearman rho(a_line, sigma_max) = -1.0000 (line alone forces -1)
+[D]   Pearson r(a_line, a_hat) = +0.8464

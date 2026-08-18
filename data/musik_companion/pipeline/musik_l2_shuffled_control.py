@@ -6,28 +6,36 @@ Vocabulary-Größen-Artefakt ist oder Sequenz-Geometrie trägt.
 Permutiert pro Stück die Note-Reihenfolge (Multimenge bleibt gleich),
 re-fittet Sigmoid, vergleicht Genre-Ordnung mit echtem Run.
 
-Falsifikationsbedingung (Wortlaut wie Manuskript §4.11):
-  - Der Note-Order-Shuffle muss die Genre-MONOTONIE zerstören
-    (Mann-Kendall n.s.); die â-Werte clustern dann eng, statt die
-    monotone Genre-Ordnung des echten Runs zu reproduzieren.
-  - Hohes R² bleibt auch im Shuffle erwartbar (kumulative monotone
-    Fits erzeugen die S-Form generisch, Manuskript §8.2 Layer 1b);
-    R² ist hier kein Prüfwert.
-  - Bestünde die monotone Genre-Ordnung den Shuffle, wäre das der
-    Vocabulary-Effekt statt Sequenz-Geometrie: Falsifikation.
+Erwartung und Falsifikationsbedingung (Wortlaut der Pre-Registrierung
+§5 vom 2026-05-16, veröffentlicht: ../preregistration_musik_l2.md):
+  - Erwartung: „â-Verteilung degeneriert zu engem Gauß um 0.5
+    (cum_unique_edges wird quasi-linear), Genre-Trennung verschwindet."
+  - Falsifikations-Bedingung: „Wenn Genre-Trennung im Shuffled-Run
+    BLEIBT → Effekt ist nicht sequenzielle Geometrie, sondern
+    Vocabulary-Größen-Aggregations-Artefakt → Befund auf
+    ,Vocabulary-Effekt, kein Sigmoid-Geometrie-Effekt' reduzieren."
 
-Ergebnis (outputs/musik_l2_shuffled_control.json): Monotonie zerstört,
-â-Cluster ca. 0.27 bis 0.34, Ordnung des echten Runs bricht; Bedingung
-erfüllt. Der Restabstand des vokabularreichsten Genres (Jazz) bleibt im
-Shuffle sichtbar und markiert den statischen Multimengen-Anteil.
+Ergebnis (outputs/musik_l2_shuffled_control.json), gemischt gegen die
+Erwartung: kein 0.5-Kollaps (â clustern bei 0.27 bis 0.34); die
+monotone Genre-Ordnung des echten Runs bricht (Mann-Kendall n.s.;
+Rap wandert vom niedrigsten Wert ins Mittelfeld); das Jazz-Niveau
+bleibt im Shuffle abgesetzt. Nach der Reduktions-Klausel der
+Pre-Registrierung: die monotone Ordnung ist sequenzgetragen, das
+Jazz-Niveau trägt einen Vokabular-Anteil (statische Noten-Multimenge).
+Manuskript §4.11 berichtet die Kontrolle in dieser Form (seit v7).
+Hohes R² bleibt auch im Shuffle erwartbar (kumulative monotone Fits
+erzeugen die S-Form generisch, Manuskript §8.2 Layer 1b); R² ist
+hier kein Prüfwert.
 
-Revision 2026-08-18: Die frühere Docstring-Erwartung („â-Verteilung
-degeneriert zu engem Gauß um 0.5, Genre-Trennung verschwindet") war
-strenger formuliert als die Falsifikationsbedingung des Manuskripts
-und ist an dessen Wortlaut angeglichen; Pipeline und Messwerte sind
+Revision 2026-08-18 (zweiter Stand): Docstring auf den Wortlaut der
+Pre-Registrierung zurückgestellt; sie ist die maßgebliche Quelle vor
+dem Manuskript. Die Angleichung an den Manuskript-Wortlaut vom selben
+Tag entfällt damit. Pipeline und Messwerte sind in beiden Revisionen
 unverändert.
 
-Konstrukt-Anker: Musik-L2-Praeregistrierung (intern, 2026-05-16)
+Konstrukt-Anker: Pre-Registrierung Musik-ℓ₂ 2026-05-16
+(preregistration_musik_l2.md, dieser Ordner; Provenienz:
+PREREGISTRATION_PROVENANCE.md)
 """
 
 import argparse
@@ -131,7 +139,7 @@ def main():
     args.output.write_text(json.dumps(out, indent=2))
 
     print()
-    print("=== SHUFFLED-CONTROL SUMMARY (Negativkontroll-Erwartung: ã alle ~0.5, Genre-Trennung verschwindet) ===")
+    print("=== SHUFFLED-CONTROL SUMMARY (Pre-Reg-§5-Erwartung: enger Cluster um 0.5, Genre-Trennung verschwindet; Ergebnis gemischt, siehe Docstring) ===")
     print(f'n_total={out["n_total"]}, n_valid={out["n_valid"]}, median R²={out["median_R2"]:.3f}')
     for g, s in sorted(summary.items(), key=lambda kv: kv[1]["median_ahat"]):
         print(f'  {g:12s} n={s["n"]:4d} ã={s["median_ahat"]:.3f} IQR=[{s["P25"]:.3f}, {s["P75"]:.3f}] σ={s["std"]:.3f}')
