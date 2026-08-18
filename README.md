@@ -1,6 +1,6 @@
 # Companion — SRDS+ENK Paper
 
-**Paper:** "Self-Referential Dissipative Systems: A Materials Test Across Ten Substrates" (Schessl 2026, DE 52p / EN 50p). The English author's version is included: `paper_en_v6_2026-08-18.pdf` (build of 18 Aug 2026, md5 `5e738ee8…`; incorporates the four items of `REVISION_NOTES.md`). The previous state `paper_en_v5_2026-08-12.pdf` (md5 `92e15af9…`) stays byte-identical next to it.
+**Paper:** "Self-Referential Dissipative Systems: A Materials Test Across Ten Substrates" (Schessl 2026, DE 52p / EN 50p). The English author's version is included: `paper_en_v6_2026-08-18.pdf` (build of 18 Aug 2026, md5 `470bb997…`; incorporates the four items of `REVISION_NOTES.md`). The previous state `paper_en_v5_2026-08-12.pdf` (md5 `92e15af9…`) stays byte-identical next to it.
 
 This folder contains all reproduction artifacts that cover the paper on their own (Lean-4 proofs, raw/fit data for the ten substrates, pipeline scripts, genealogy). It is structured so that a reviewer can clone it in isolation, navigate it, **and recompute** the numbers.
 
@@ -50,7 +50,7 @@ Per-substrate detail in `REPRODUCIBILITY_MANIFEST.md` (§-numbers on the right).
 | `analysis/ks_null_summary.csv` | Five Tab.-18 substrates: KS-D + p (source of the γ_M count) |
 | `REPRODUCIBILITY_MANIFEST.md` | Per paper table/figure: script path, raw-data path, external URLs |
 | `OBJECTIONS_AND_TESTS.md` | Index of standard reviewer objections with the place where each is tested or declared open |
-| `paper_en_v6_2026-08-18.pdf` | The empirical manuscript, English author's version (build of 18 Aug 2026, md5 `5e738ee8…`) |
+| `paper_en_v6_2026-08-18.pdf` | The empirical manuscript, English author's version (build of 18 Aug 2026, md5 `470bb997…`) |
 | `paper_en_v5_2026-08-12.pdf` | Previous author's version (build of 12 Aug 2026, md5 `92e15af9…`), kept byte-identical |
 | `REVISION_NOTES.md` | Revision ledger: each item with its evidence artifact and its status in the v6 build |
 | `formal_framework/` | Standalone mathematical development: axioms and regularity conditions, reduction theorem, T1–T3, renormalization fixed point, the No-Go theorems, elimination ledger. Two states side by side — current revision (30 pp.) and the state frozen in June 2026 (26 pp.); see `formal_framework/README.md` |
