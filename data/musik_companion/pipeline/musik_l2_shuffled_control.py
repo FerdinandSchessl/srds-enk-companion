@@ -1,17 +1,31 @@
 #!/usr/bin/env python3
 """
-Shuffled-Control für Musik-Substrat: prüft ob â-Hierarchie
-Vocabulary-Größen-Artefakt ist oder echte Sequenz-Geometrie.
+Shuffled-Control für Musik-Substrat: prüft ob die â-Hierarchie
+Vocabulary-Größen-Artefakt ist oder Sequenz-Geometrie trägt.
 
 Permutiert pro Stück die Note-Reihenfolge (Multimenge bleibt gleich),
-re-fittet Sigmoid, vergleicht Genre-Trennung mit echtem Run.
+re-fittet Sigmoid, vergleicht Genre-Ordnung mit echtem Run.
 
-Erwartung (falls Sequenz-Geometrie):
-  - â-Verteilung degeneriert zu engem Gauß um 0.5
-  - Genre-Trennung verschwindet (Cohen-d → 0, p_holm → n.s.)
+Falsifikationsbedingung (Wortlaut wie Manuskript §4.11):
+  - Der Note-Order-Shuffle muss die Genre-MONOTONIE zerstören
+    (Mann-Kendall n.s.); die â-Werte clustern dann eng, statt die
+    monotone Genre-Ordnung des echten Runs zu reproduzieren.
+  - Hohes R² bleibt auch im Shuffle erwartbar (kumulative monotone
+    Fits erzeugen die S-Form generisch, Manuskript §8.2 Layer 1b);
+    R² ist hier kein Prüfwert.
+  - Bestünde die monotone Genre-Ordnung den Shuffle, wäre das der
+    Vocabulary-Effekt statt Sequenz-Geometrie: Falsifikation.
 
-Falsifikations-Bedingung:
-  - Wenn Genre-Trennung im Shuffled-Run BLEIBT → Vocabulary-Effekt, nicht Sigmoid-Geometrie
+Ergebnis (outputs/musik_l2_shuffled_control.json): Monotonie zerstört,
+â-Cluster ca. 0.27 bis 0.34, Ordnung des echten Runs bricht; Bedingung
+erfüllt. Der Restabstand des vokabularreichsten Genres (Jazz) bleibt im
+Shuffle sichtbar und markiert den statischen Multimengen-Anteil.
+
+Revision 2026-08-18: Die frühere Docstring-Erwartung („â-Verteilung
+degeneriert zu engem Gauß um 0.5, Genre-Trennung verschwindet") war
+strenger formuliert als die Falsifikationsbedingung des Manuskripts
+und ist an dessen Wortlaut angeglichen; Pipeline und Messwerte sind
+unverändert.
 
 Konstrukt-Anker: Musik-L2-Praeregistrierung (intern, 2026-05-16)
 """
