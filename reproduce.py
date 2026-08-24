@@ -153,7 +153,7 @@ print("\n[5] MULTI-MATERIAL MULTIAXIAL FATIGUE  — data/fatigue/multiaxial_fati
 try:
     av = jvals(D / "fatigue/multiaxial_fatigue_results.json", "a_hat")
     d = json.load(open(D / "fatigue/multiaxial_fatigue_results.json"))
-    line("mean a_hat", f"{d['summary']['a_hat']['mean']:.4f}", "0.578", abs(d['summary']['a_hat']['mean'] - 0.578) < 0.01)
+    line("fatigue mean a_hat (companion-internal)", f"{d['summary']['a_hat']['mean']:.4f}", "0.578 (not a v9 headline; v9 §4.2 uses a-hat<->amplitude, no single a-hat)", abs(d['summary']['a_hat']['mean'] - 0.578) < 0.01)
     line("n strain-controlled", str(d.get("n_strain_controlled", "?")), "914", d.get("n_strain_controlled") == 914)
 except Exception as e:
     line("fatigue", f"ERROR {e}", "-", False)
@@ -164,7 +164,7 @@ try:
     d = json.load(open(D / "crc/crc_results_v2.json"))
     g, bs = d["group_results"], d["bootstrap"]
     line("n (MSI/MSS)", f"{d['n_patients']} ({d['n_msi']}/{d['n_mss']})", "579 (76/503)", d["n_patients"] == 579)
-    line("KS-D (bootstrap)", f"{bs['ks_d']:.3f}", "0.350", abs(bs["ks_d"] - 0.350) < 0.01)
+    line("CRC KS-D bootstrap (companion-internal)", f"{bs['ks_d']:.3f}", "0.350 (not a v9 headline; v9 §4.9 cites the stage-delta -0.153, not KS-D)", abs(bs["ks_d"] - 0.350) < 0.01)
     stg = json.load(open(D / "crc/crc_stage_aggregated.json"))
     line("stage MSI/MSS a_hat (headline)", f"{stg['MSI']['a_hat']:.3f}/{stg['MSS']['a_hat']:.3f}", "0.286/0.439",
          abs(stg['MSI']['a_hat'] - 0.286) < 0.01 and abs(stg['MSS']['a_hat'] - 0.439) < 0.01)
