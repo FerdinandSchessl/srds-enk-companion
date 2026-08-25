@@ -6,6 +6,8 @@ This folder contains all reproduction artifacts that cover the paper on their ow
 
 **Reference state.** The manuscript cites this repository by URL, which resolves to its current state. The state as of 2026-06-29 is tagged [`snapshot-2026-06-29`](https://github.com/FerdinandSchessl/srds-enk-companion/tree/snapshot-2026-06-29). Every repository path cited in the manuscript is identical in that state and in the current one; the changes since then are confined to `formal_framework/`, which the manuscript does not cite.
 
+**Revision 2026-08-26.** The author's-version PDF (`paper_en_v9_2026-08-25.pdf`) was refreshed on 2026-08-25/26 to carry the fracture-mechanics scaling anchor (§2.5) and the gap-test convergence (§9.1); this state is tagged [`snapshot-2026-08-26`](https://github.com/FerdinandSchessl/srds-enk-companion/tree/snapshot-2026-08-26).
+
 ## Reproduction (one command)
 
 ```bash
