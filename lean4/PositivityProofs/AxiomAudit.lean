@@ -10,6 +10,11 @@
   ## Summary
 
   Total axiom declarations: 27 (verified by `grep ^axiom`, 2026-06-19).
+  Three reconciled reference counts (do not conflate; matches REPRODUCIBILITY_MANIFEST):
+    12 = `#print axioms` of the certified No-Go `nogo_theorem_certified` (authoritative for the certified claim)
+    18 = AxiomAudit inventory across the whole formalization (incl. the structural Birkhoff-Hopf axis
+         that the certified theorem does not use)
+    27 = raw `grep ^axiom` declarations in the bundle (incl. superseded/legacy declarations).
   - Category A (standard structural, Mathlib gaps): 12
       HilbertMetric 4, SpectralGap 5, Symmetry/smoothingOp_commutes_J 1, NoGo/renormOp+fixedPoint_smooth 2
   - Category B (numerical certificate): 2 (Q_dot_half_continuum + Q_dot_half_continuum_in_interval)
@@ -269,9 +274,19 @@ The following results are FULLY PROVED in this formalization:
 | J_preserves_normalized | Symmetry.lean | J maps NormalizedProfiles to itself |
 | symmetry_characterization | Symmetry.lean | Q*(1/2)=1/2 ⟺ K-SYM |
 | kernelPerturbation_odd | NoGo.lean | Perturbation kernel is odd |
-| nogo_step5_certified | NoGo.lean | Q̇(1/2) ≠ 0 (from certificate) |
-| Q_dot_half_nonzero | NumericalCertificate.lean | 0 ∉ [1.75, 1.99] |
-| Q_dot_half_pos | NumericalCertificate.lean | Q̇(1/2) > 0 |
-| no_universal_transition | NoGo.lean | No constant Σ_c |
-| no_universal_transition_certified | NoGo.lean | Same, from certificate |
+| Q_dot_half_nonzero | NumericalCertificate.lean | 0 ∉ [1.75, 1.99] (arithmetic on the interval literals) |
+-/
+
+/-! ## Proved from N Declared Axioms (per `#print axioms`)
+
+The following results are PROVED (sorry-free) but are NOT axiom-free: they depend on
+declared project axioms. This is the point of objection 14 ("sorry-free is not
+axiom-free"); the exact per-theorem lists are in `CHECKAXIOMS_OUTPUT.txt`.
+
+| Theorem | File | Depends on (project axioms, per #print axioms) |
+|---------|------|------------------------------------------------|
+| nogo_step5_certified | NoGo.lean | 2: Q_dot_half_continuum, Q_dot_half_continuum_in_interval |
+| Q_dot_half_pos | NumericalCertificate.lean | 2: Q_dot_half_continuum, Q_dot_half_continuum_in_interval |
+| no_universal_transition_certified | NoGo.lean | 12: 2 Category-B certificate + 10 Category-C IFT-bridge atomics |
+| no_universal_transition | NoGo.lean | via the general nogo_theorem (open-conjecture axiom, all ε,η) |
 -/

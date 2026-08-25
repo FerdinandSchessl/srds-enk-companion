@@ -1,6 +1,6 @@
-# Genealogy of Frames — Companion to SRDS+ENK (Schessl 2026)
+# Genealogy of Frames — Companion to SRDS+ENK (Schessl 2026) <!-- lint:allow: author self-citation (Publikations-Register R4 Zitation-Ausnahme) -->
 
-**Status:** Companion material, not part of the main text. Documents the eleven-month trajectory of frame consolidation that led to the SRDS class. Deliberately removed from the main paper (Schessl 2026, *SRDS+ENK*) because the external convergence (§3) supports the frame more strongly than an internal self-genealogy. Kept to locate the work and for a later follow-up paper on the genealogy.
+**Status:** Companion material, not part of the main text, and — by genre — a *process genealogy* rather than a publication-format document: it deliberately records the frame-consolidation trajectory (dates, discarded frame attempts, working titles), content the manuscript itself does not carry and is not meant to. Documents the eleven-month trajectory of frame consolidation that led to the SRDS class. Removed from the main paper (Schessl 2026, *SRDS+ENK*) because the external convergence (§3) carries the frame more directly than an internal self-genealogy. Kept to locate the work and for a later follow-up paper on the genealogy. <!-- lint:allow: author self-citation (Publikations-Register R4 Zitation-Ausnahme) -->
 
 ---
 
@@ -17,7 +17,7 @@ The SRDS class presented here ran through its own trajectory — load uptake, de
 | P2 — Buildup | December 2025 | *Self-Referential Dissipative Systems — A Generalized Framework for Critical Transitions* (internal frame v0) | five axioms A0–A4 explicit; three application domains (yield in materials, fine-grained classification, semantic yield) |
 | P2 — Search phase | February–April 2026 | several discarded frame attempts (mathematical backbones, geometry-centered detection, physics-/quantum-inspired and thermodynamic language) | each attempt hit the notion of self-reference, none the load-bearing operative connecting vocabulary; accumulated deformation |
 | P3 — Inflection | March–April 2026 | materials-testing consolidation; Eurocode load-case combinations transferred onto SRDS | civil-engineering language carries the scale hierarchy without metaphor |
-| P4 — Consolidation | May 2026 | *SRDS+ENK* (Schessl 2026) | the SRDS class, five axioms A0–A4, three core theorems T1–T3, no-go theorem; ten substrates (6/10 Bonferroni-compliant) |
+| P4 — Consolidation | May 2026 | *SRDS+ENK* (Schessl 2026) | the SRDS class, five axioms A0–A4, three core theorems T1–T3, no-go theorem; ten substrates (6/10 Bonferroni-compliant) | <!-- lint:allow: author self-citation (Publikations-Register R4 Zitation-Ausnahme) -->
 
 ---
 
@@ -50,6 +50,6 @@ When researchers in Nature Physics, deep-learning theory, and ICLR **independent
 - 2025-10 — *Leben als organisierte Dissipation* (Zenodo 10.5281/zenodo.17445178)
 - 2025-12 — SRDS frame v0 (internal)
 - 2026-04 — Autocorrelation Blind Spot (arXiv:2604.14414)
-- 2026-05 — SRDS+ENK (Schessl 2026)
+- 2026-05 — SRDS+ENK (Schessl 2026) <!-- lint:allow: author self-citation (Publikations-Register R4 Zitation-Ausnahme) -->
 
 An elaborated follow-up paper on the genealogy of the SRDS consolidation is planned after the main-paper submission.
