@@ -1,12 +1,12 @@
 # Companion — SRDS+ENK Paper
 
-**Paper:** "Self-Referential Dissipative Systems: A Materials Test Across Ten Substrates" (Schessl 2026). The English author's version is included: `paper_en_v9_2026-08-25.pdf` (53 pages). <!-- lint:allow: author self-citation (Publikations-Register R4 Zitation-Ausnahme) -->
+**Paper:** "Self-Referential Dissipative Systems: A Materials Test Across Ten Substrates" (Schessl 2026). The English author's version is included: `paper_en_v9_2026-08-25.pdf` (54 pages). <!-- lint:allow: author self-citation (Publikations-Register R4 Zitation-Ausnahme) -->
 
 This folder contains all reproduction artifacts that cover the paper on their own (Lean-4 proofs, raw/fit data for the ten substrates, pipeline scripts, genealogy). It is structured so that a reviewer can clone it in isolation, navigate it, **and recompute** the numbers.
 
 **Reference state.** The manuscript cites this repository by URL, which resolves to its current state. The state as of 2026-06-29 is tagged [`snapshot-2026-06-29`](https://github.com/FerdinandSchessl/srds-enk-companion/tree/snapshot-2026-06-29). Every repository path cited in the manuscript is identical in that state and in the current one; the changes since then are confined to `formal_framework/`, which the manuscript does not cite.
 
-**Revision 2026-08-26.** The author's-version PDF (`paper_en_v9_2026-08-25.pdf`) was refreshed on 2026-08-25/26 to carry the fracture-mechanics scaling anchor (§2.5) and the gap-test convergence (§9.1); this state is tagged [`snapshot-2026-08-26`](https://github.com/FerdinandSchessl/srds-enk-companion/tree/snapshot-2026-08-26).
+**Revision 2026-08-26.** The author's-version PDF (`paper_en_v9_2026-08-25.pdf`) was refreshed on 2026-08-25/26 to carry the fracture-mechanics scaling anchor (§2.5) and the gap-test convergence (§9.1); this state is tagged [`snapshot-2026-08-26`](https://github.com/FerdinandSchessl/srds-enk-companion/tree/snapshot-2026-08-26). A further refresh on 2026-08-26 adds a polymer/glass stress-deconcentration convergence (§9.1, Steck et al. 2025), bringing the author's version to 54 pages.
 
 ## Reproduction (one command)
 
